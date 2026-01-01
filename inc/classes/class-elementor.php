@@ -39,6 +39,7 @@ class Elementor {
         require_once get_template_directory() . '/inc/widgets/elementor/class-testimonials.php';
         require_once get_template_directory() . '/inc/widgets/elementor/class-stats-counter.php';
         require_once get_template_directory() . '/inc/widgets/elementor/class-timeline.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-blog-posts.php';
 
         // Register the widget
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\AI_Advantages() );
@@ -48,6 +49,7 @@ class Elementor {
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Testimonials() );
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Stats_Counter() );
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Timeline() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Blog_Posts() );
     }
 
 	public function add_elementor_support() {

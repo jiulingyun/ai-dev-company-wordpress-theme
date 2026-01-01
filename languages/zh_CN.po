@@ -524,3 +524,19 @@ msgstr "年份/日期"
 #: inc/widgets/elementor/class-timeline.php:76
 msgid "Timeline List"
 msgstr "时间线列表"
+
+#: inc/widgets/elementor/class-blog-posts.php:21
+msgid "Blog Posts"
+msgstr "博客文章"
+
+#: inc/widgets/elementor/class-blog-posts.php:50
+msgid "Category"
+msgstr "分类"
+
+#: inc/widgets/elementor/class-blog-posts.php:91
+msgid "Style"
+msgstr "样式"
+
+#: inc/widgets/elementor/class-blog-posts.php:164
+msgid "No posts found."
+msgstr "未找到文章。"
