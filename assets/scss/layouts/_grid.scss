@@ -14,6 +14,21 @@
   }
 }
 
+/* Grid Column Spans */
+@for $i from 1 through 12 {
+  .grid-column-span-#{$i} {
+    grid-column: span $i;
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .grid-column-span-lg-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
 /* Flexbox Utilities */
 .d-flex { display: flex; }
 .flex-column { flex-direction: column; }

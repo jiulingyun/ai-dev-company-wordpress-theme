@@ -11,7 +11,7 @@
     
     <div class="container position-relative z-index-1">
         <div class="grid grid--12 align-center">
-            <div class="hero-home__content grid-column-span-12 grid-column-span-lg-8">
+            <div class="hero-home__content grid-column-span-12 grid-column-span-lg-10">
                 <h1 class="hero-home__title glitch-text" data-text="BUILDING THE FUTURE WITH AI">
                     BUILDING THE FUTURE WITH AI
                 </h1>
