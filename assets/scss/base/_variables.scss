@@ -1,0 +1,23 @@
+:root {
+  /* Color System */
+  --color-primary: #3a86ff;
+  --color-secondary: #8338ec;
+  --color-accent: #ff006e;
+  --color-dark: #1a1a2e;
+  --color-light: #f8f9fa;
+  
+  /* Font System */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Roboto Mono', monospace;
+  --font-size-base: 16px;
+  
+  /* Spacing System */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Transitions */
+  --transition-base: 300ms ease;
+}

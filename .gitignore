@@ -1,0 +1,31 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+*.log
+.htaccess
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build
+assets/css/*.css
+assets/css/*.css.map
+assets/js/build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+.trae/
+
+# Docker
+db_data/
+wp_content/
+
+# OS
+Thumbs.db

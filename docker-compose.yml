@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      # Mount the current directory as the theme directory
+      - ./:/var/www/html/wp-content/themes/ai-dev-company-wordpress-theme
+      # Persist wp-content (excluding our theme mount) so uploads/plugins are saved
+      # Note: We need to be careful not to overwrite our theme mount. 
+      # Docker handles specific mounts over broad mounts, so the above line takes precedence.
+      - wp_content:/var/www/html/wp-content
+
+volumes:
+  db_data:
+  wp_content:

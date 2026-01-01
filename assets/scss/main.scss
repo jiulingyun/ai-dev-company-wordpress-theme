@@ -1,0 +1,26 @@
+/* Reset */
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/utilities';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/navigation';
+@import 'components/modals';
+
+/* Layouts */
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+@import 'layouts/grid';
+
+/* Pages */
+@import 'pages/home';
+@import 'pages/products';
+@import 'pages/contact';
+
+/* Vendors */
+@import 'vendors/elementor';

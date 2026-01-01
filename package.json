@@ -1,0 +1,19 @@
+{
+  "name": "ai-dev-company-wordpress-theme",
+  "version": "1.0.0",
+  "description": "A modern WordPress theme for AI-driven software development companies.",
+  "author": "羊羊羊",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "sass assets/scss/main.scss assets/css/main.css --style compressed --no-source-map",
+    "build:js": "wp-scripts build assets/js/src/main.js --output-path=assets/js/build",
+    "start": "npm run start:css & npm run start:js",
+    "start:css": "sass --watch assets/scss/main.scss assets/css/main.css",
+    "start:js": "wp-scripts start assets/js/src/main.js --output-path=assets/js/build"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.0.0",
+    "sass": "^1.69.0"
+  }
+}
