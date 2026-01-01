@@ -457,7 +457,7 @@ msgstr "技术列表"
 msgid "Team Members"
 msgstr "团队成员"
 
-#: inc/widgets/elementor/class-team-grid.php:47
+#: inc/widgets/elementor/class-team-grid.php:47, inc/widgets/elementor/class-contact-form.php:80
 msgid "Name"
 msgstr "姓名"
 
@@ -569,10 +569,6 @@ msgstr "[contact-form-7 id=\"123\"...]"
 msgid "Paste your Contact Form 7 or other form shortcode here. If empty, a default HTML form will be displayed."
 msgstr "在此粘贴 Contact Form 7 或其他表单短代码。如果留空，将显示默认的 HTML 表单。"
 
-#: inc/widgets/elementor/class-contact-form.php:80
-msgid "Name"
-msgstr "姓名"
-
 #: inc/widgets/elementor/class-contact-form.php:81
 msgid "Your Name"
 msgstr "您的姓名"
@@ -641,7 +637,7 @@ msgstr "为什么选择我们"
 msgid "Description (Grey)"
 msgstr "描述（灰色）"
 
-#: inc/widgets/elementor/class-section-title.php:62
+#: inc/widgets/elementor/class-section-title.php:62, front-page.php:109
 msgid "End-to-end solutions powered by intelligence"
 msgstr "由智能驱动的端到端解决方案"
 
@@ -649,7 +645,7 @@ msgstr "由智能驱动的端到端解决方案"
 msgid "Button Text"
 msgstr "按钮文字"
 
-#: inc/widgets/elementor/class-section-title.php:71, inc/widgets/elementor/class-project-showcase.php:81
+#: inc/widgets/elementor/class-section-title.php:71, inc/widgets/elementor/class-project-showcase.php:81, front-page.php:161
 msgid "View All"
 msgstr "查看全部"
 
@@ -941,10 +937,6 @@ msgstr "方框 2 标签"
 msgid "Core Capabilities"
 msgstr "核心能力"
 
-#: front-page.php:109
-msgid "End-to-end solutions powered by intelligence"
-msgstr "由智能驱动的端到端解决方案"
-
 #: front-page.php:119
 msgid "AI Agent Integration"
 msgstr "AI 智能体集成"
@@ -976,7 +968,3 @@ msgstr "精选案例"
 #: front-page.php:158
 msgid "See what we have built"
 msgstr "查看我们的成果"
-
-#: front-page.php:161
-msgid "View All"
-msgstr "查看全部"

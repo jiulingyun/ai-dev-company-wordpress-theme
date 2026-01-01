@@ -19,5 +19,6 @@ class AI_Dev_Theme {
 		CPT_Projects::get_instance();
 		Elementor::get_instance();
 		Customizer::get_instance();
+        SEO::get_instance();
 	}
 }
