@@ -10,10 +10,12 @@
     "build:js": "wp-scripts build assets/js/src/main.js --output-path=assets/js/build",
     "start": "npm run start:css & npm run start:js",
     "start:css": "sass --watch assets/scss/main.scss assets/css/main.css",
-    "start:js": "wp-scripts start assets/js/src/main.js --output-path=assets/js/build"
+    "start:js": "wp-scripts start assets/js/src/main.js --output-path=assets/js/build",
+    "translate": "wp-pot --src '**/*.php' --dest-file 'languages/ai-dev-theme.pot' --package 'AI Dev Company WordPress Theme' --domain 'ai-dev-theme' --email 'yang@example.com'"
   },
   "devDependencies": {
     "@wordpress/scripts": "^26.0.0",
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "wp-pot-cli": "^1.5.0"
   }
 }

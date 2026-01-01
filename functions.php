@@ -8,6 +8,9 @@ if ( ! defined( 'AI_DEV_THEME_VERSION' ) ) {
 }
 
 function ai_dev_theme_setup() {
+	// Make theme available for translation.
+	load_theme_textdomain( 'ai-dev-theme', get_template_directory() . '/languages' );
+
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'html5', array(
