@@ -19,6 +19,11 @@ while ( have_posts() ) :
     $client_name   = get_post_meta( get_the_ID(), 'project_client', true );
     $project_url   = get_post_meta( get_the_ID(), 'project_url', true );
     $delivery_time = get_post_meta( get_the_ID(), 'project_delivery_time', true );
+    $ai_code_pct   = get_post_meta( get_the_ID(), 'project_ai_code_pct', true );
+    $team_size     = get_post_meta( get_the_ID(), 'project_team_size', true );
+    $demo_qr       = get_post_meta( get_the_ID(), 'project_demo_qr', true );
+    $demo_user     = get_post_meta( get_the_ID(), 'project_demo_user', true );
+    $demo_pass     = get_post_meta( get_the_ID(), 'project_demo_pass', true );
 	?>
 
 	<main id="primary" class="site-main">
@@ -56,6 +61,52 @@ while ( have_posts() ) :
 
             </div>
         </section>
+        
+        <!-- AI Efficiency Dashboard -->
+        <section class="ai-efficiency-dashboard bg-surface border-bottom border-secondary border-opacity-25 py-lg">
+            <div class="container">
+                <div class="row align-center text-center text-lg-start">
+                    <div class="col-lg-4 mb-md mb-lg-0 border-end-lg border-secondary border-opacity-25">
+                        <div class="d-flex align-center justify-center justify-lg-start">
+                            <div class="icon-box me-4 text-primary">
+                                <i class="fas fa-bolt fa-2x"></i>
+                            </div>
+                            <div>
+                                <span class="d-block text-muted text-uppercase letter-spacing-sm small mb-1"><?php esc_html_e( 'Delivery Time', 'ai-dev-theme' ); ?></span>
+                                <h3 class="h4 mb-0"><?php echo $delivery_time ? esc_html( $delivery_time ) : '--'; ?> <span class="badge badge--tech ms-2" style="vertical-align: middle;">6x Faster</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-md mb-lg-0 border-end-lg border-secondary border-opacity-25">
+                        <div class="d-flex align-center justify-center justify-lg-start">
+                            <div class="icon-box me-4 text-accent">
+                                <i class="fas fa-microchip fa-2x"></i>
+                            </div>
+                            <div class="flex-grow-1" style="max-width: 200px;">
+                                <div class="d-flex justify-between mb-1">
+                                    <span class="text-muted text-uppercase letter-spacing-sm small"><?php esc_html_e( 'AI Code', 'ai-dev-theme' ); ?></span>
+                                    <span class="fw-bold text-accent"><?php echo $ai_code_pct ? esc_html( $ai_code_pct ) : '0'; ?>%</span>
+                                </div>
+                                <div class="progress-bar bg-dark rounded-pill overflow-hidden" style="height: 6px;">
+                                    <div class="progress-bar__fill bg-accent h-100" style="width: <?php echo $ai_code_pct ? esc_attr( $ai_code_pct ) : '0'; ?>%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex align-center justify-center justify-lg-start">
+                            <div class="icon-box me-4 text-secondary">
+                                <i class="fas fa-users fa-2x"></i>
+                            </div>
+                            <div>
+                                <span class="d-block text-muted text-uppercase letter-spacing-sm small mb-1"><?php esc_html_e( 'Team Size', 'ai-dev-theme' ); ?></span>
+                                <h3 class="h4 mb-0"><?php echo $team_size ? esc_html( $team_size ) : '--'; ?></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 		<div class="container project-content-wrapper py-xl">
             <div class="row">
@@ -73,24 +124,50 @@ while ( have_posts() ) :
                 <div class="col-lg-4">
                     <aside class="project-sidebar sticky-top" style="top: var(--spacing-xl);">
                         
+                        <!-- Actions -->
+                        <?php if ( $project_url ) : ?>
+                            <div class="project-action card p-lg mb-lg border-primary" style="background: rgba(0, 240, 255, 0.05);">
+                                <h3 class="h5 mb-md text-primary"><?php esc_html_e( 'Experience It', 'ai-dev-theme' ); ?></h3>
+                                <a href="<?php echo esc_url( $project_url ); ?>" target="_blank" rel="noopener noreferrer" class="button button--primary button--block w-100 text-center mb-md">
+                                    <i class="fas fa-external-link-alt me-2"></i>
+                                    <?php esc_html_e( 'Visit Live Site', 'ai-dev-theme' ); ?>
+                                </a>
+
+                                <?php if ( $demo_user || $demo_pass ) : ?>
+                                    <div class="demo-credentials bg-dark p-sm rounded mb-md border border-secondary border-opacity-25">
+                                        <p class="text-muted small mb-2 text-uppercase letter-spacing-sm text-center"><?php esc_html_e( 'Demo Credentials', 'ai-dev-theme' ); ?></p>
+                                        <?php if ( $demo_user ) : ?>
+                                            <div class="d-flex justify-between align-center mb-1">
+                                                <span class="text-muted small"><?php esc_html_e( 'User:', 'ai-dev-theme' ); ?></span>
+                                                <code class="text-accent"><?php echo esc_html( $demo_user ); ?></code>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if ( $demo_pass ) : ?>
+                                            <div class="d-flex justify-between align-center">
+                                                <span class="text-muted small"><?php esc_html_e( 'Pass:', 'ai-dev-theme' ); ?></span>
+                                                <code class="text-accent"><?php echo esc_html( $demo_pass ); ?></code>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if ( $demo_qr ) : ?>
+                                    <div class="demo-qr text-center mt-md pt-md border-top border-secondary border-opacity-25">
+                                        <p class="text-muted small mb-2"><?php esc_html_e( 'Scan for Mobile Preview', 'ai-dev-theme' ); ?></p>
+                                        <img src="<?php echo esc_url( $demo_qr ); ?>" alt="Mobile Preview QR" class="d-block mx-auto rounded border border-secondary" style="width: 120px; height: 120px;">
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                        
                         <!-- Key Stats Card -->
-                        <div class="card p-lg mb-lg border-primary" style="background: rgba(0, 240, 255, 0.05);">
-                            <h3 class="h5 mb-lg text-primary"><?php esc_html_e( 'Project Data', 'ai-dev-theme' ); ?></h3>
+                        <div class="card p-lg mb-lg">
+                            <h3 class="h5 mb-lg text-white"><?php esc_html_e( 'Project Data', 'ai-dev-theme' ); ?></h3>
                             
                             <?php if ( $client_name ) : ?>
                                 <div class="stat-item mb-md">
                                     <span class="text-muted d-block text-uppercase font-secondary" style="font-size: 0.8rem;"><?php esc_html_e( 'Client', 'ai-dev-theme' ); ?></span>
                                     <span class="fw-bold"><?php echo esc_html( $client_name ); ?></span>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if ( $delivery_time ) : ?>
-                                <div class="stat-item mb-md">
-                                    <span class="text-muted d-block text-uppercase font-secondary" style="font-size: 0.8rem;"><?php esc_html_e( 'AI Delivery Time', 'ai-dev-theme' ); ?></span>
-                                    <span class="fw-bold text-accent">
-                                        <i class="fas fa-bolt me-1"></i>
-                                        <?php echo esc_html( $delivery_time ); ?>
-                                    </span>
                                 </div>
                             <?php endif; ?>
 
