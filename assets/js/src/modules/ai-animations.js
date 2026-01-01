@@ -6,6 +6,60 @@ class AIAnimations {
   constructor() {
     this.initScrollObserver();
     this.initTypingEffect();
+    this.initCounters();
+  }
+
+  /**
+   * Initialize Number Counters
+   */
+  initCounters() {
+    const counters = document.querySelectorAll('.counter');
+    
+    const observerOptions = {
+      root: null,
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          
+          if (!target) return;
+          
+          this.animateCounter(counter, target);
+          observer.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach(counter => observer.observe(counter));
+  }
+
+  animateCounter(element, target) {
+    let start = 0;
+    const duration = 2000; // 2 seconds
+    const startTime = performance.now();
+
+    const update = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Ease out quart
+      const ease = 1 - Math.pow(1 - progress, 4);
+      
+      const current = Math.floor(start + (target - start) * ease);
+      element.textContent = current;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = target;
+      }
+    };
+
+    requestAnimationFrame(update);
   }
 
   /**

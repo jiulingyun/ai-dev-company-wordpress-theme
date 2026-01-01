@@ -25,7 +25,30 @@ class Elementor {
 		
 		// Enqueue Elementor editor scripts
 		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'enqueue_editor_scripts' ] );
+
+        // Register custom widgets
+        add_action( 'elementor/widgets/register', [ $this, 'register_widgets' ] );
 	}
+
+    public function register_widgets( $widgets_manager ) {
+        // Require the widget class
+        require_once get_template_directory() . '/inc/widgets/elementor/class-ai-advantages.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-project-showcase.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-tech-stack.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-team-grid.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-testimonials.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-stats-counter.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-timeline.php';
+
+        // Register the widget
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\AI_Advantages() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Project_Showcase() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Tech_Stack() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Team_Grid() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Testimonials() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Stats_Counter() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Timeline() );
+    }
 
 	public function add_elementor_support() {
 		add_theme_support( 'elementor' );
