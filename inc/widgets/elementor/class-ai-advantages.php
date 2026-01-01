@@ -119,13 +119,14 @@ class AI_Advantages extends Widget_Base {
 			<?php foreach ( $settings['advantages'] as $index => $item ) : 
 				$delay = ($index + 1) * 100; 
 				?>
-				<div class="card service-card fade-in-up elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?>" style="animation-delay: <?php echo $delay; ?>ms;">
-					<div class="card__content">
-						<div class="service-icon mb-md">
-							<?php \Elementor\Icons_Manager::render_icon( $item['icon'], [ 'aria-hidden' => 'true' ] ); ?>
+				<div class="card service-card fade-in-up elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?> h-100" style="animation-delay: <?php echo $delay; ?>ms;">
+					<div class="card__content p-xl">
+						<div class="service-icon mb-lg d-inline-flex align-center justify-center rounded-circle bg-surface border border-secondary" style="width: 64px; height: 64px;">
+							<?php \Elementor\Icons_Manager::render_icon( $item['icon'], [ 'aria-hidden' => 'true', 'class' => 'fa-lg' ] ); ?>
 						</div>
-						<h3 class="card__title"><?php echo esc_html( $item['title'] ); ?></h3>
-						<p class="card__excerpt"><?php echo esc_html( $item['description'] ); ?></p>
+						<h3 class="card__title h4 mb-md"><?php echo esc_html( $item['title'] ); ?></h3>
+						<p class="card__excerpt text-muted mb-lg"><?php echo esc_html( $item['description'] ); ?></p>
+                        <a href="#" class="text-primary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
 					</div>
 				</div>
 			<?php endforeach; ?>

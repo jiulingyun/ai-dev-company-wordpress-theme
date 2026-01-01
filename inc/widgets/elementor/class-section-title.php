@@ -56,6 +56,38 @@ class Section_Title extends Widget_Base {
 		);
 
         $this->add_control(
+			'description',
+			[
+				'label'       => __( 'Description (Grey)', 'ai-dev-theme' ),
+				'type'        => Controls_Manager::TEXTAREA,
+				'default'     => __( 'End-to-end solutions powered by intelligence', 'ai-dev-theme' ),
+                'rows'        => 2,
+			]
+		);
+
+        $this->add_control(
+			'link_text',
+			[
+				'label'       => __( 'Button Text', 'ai-dev-theme' ),
+				'type'        => Controls_Manager::TEXT,
+				'default'     => __( 'View All', 'ai-dev-theme' ),
+                'separator'   => 'before',
+			]
+		);
+
+        $this->add_control(
+			'link_url',
+			[
+				'label'       => __( 'Button Link', 'ai-dev-theme' ),
+				'type'        => Controls_Manager::URL,
+				'placeholder' => __( 'https://your-link.com', 'ai-dev-theme' ),
+				'default'     => [
+					'url' => '#',
+				],
+			]
+		);
+
+        $this->add_control(
 			'align',
 			[
 				'label'   => __( 'Alignment', 'ai-dev-theme' ),
@@ -84,14 +116,39 @@ class Section_Title extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
         $align_class = 'text-' . $settings['align'];
+        
+        // Flex alignment classes for the header container if button exists
+        $header_class = 'section-header mb-xl fade-in-up';
+        if ( ! empty( $settings['link_text'] ) && ! empty( $settings['link_url']['url'] ) ) {
+            $header_class .= ' d-flex justify-between align-end';
+            // Override alignment if button exists to standard split layout
+            $align_class = 'text-left'; 
+        } else {
+            $header_class .= ' ' . $align_class;
+        }
 		?>
-		<div class="section-header mb-xl fade-in-up <?php echo esc_attr( $align_class ); ?>">
-            <?php if ( $settings['subtitle'] ) : ?>
-			    <span class="d-block text-primary h6 text-uppercase letter-spacing-sm mb-2"><?php echo esc_html( $settings['subtitle'] ); ?></span>
-            <?php endif; ?>
-            
-            <?php if ( $settings['title'] ) : ?>
-			    <h2 class="h2 mb-0"><?php echo esc_html( $settings['title'] ); ?></h2>
+		<div class="<?php echo esc_attr( $header_class ); ?>">
+            <div>
+                <?php if ( $settings['subtitle'] ) : ?>
+                    <span class="d-block text-primary h6 text-uppercase letter-spacing-sm mb-2"><?php echo esc_html( $settings['subtitle'] ); ?></span>
+                <?php endif; ?>
+                
+                <?php if ( $settings['title'] ) : ?>
+                    <h2 class="h2 mb-0"><?php echo esc_html( $settings['title'] ); ?></h2>
+                <?php endif; ?>
+
+                <?php if ( $settings['description'] ) : ?>
+                    <p class="section-subtitle mt-sm text-muted"><?php echo esc_html( $settings['description'] ); ?></p>
+                <?php endif; ?>
+            </div>
+
+            <?php if ( ! empty( $settings['link_text'] ) && ! empty( $settings['link_url']['url'] ) ) : 
+                $target = $settings['link_url']['is_external'] ? ' target="_blank"' : '';
+                $nofollow = $settings['link_url']['nofollow'] ? ' rel="nofollow"' : '';
+                ?>
+                <a href="<?php echo esc_url( $settings['link_url']['url'] ); ?>" class="button button--secondary"<?php echo $target . $nofollow; ?>>
+                    <?php echo esc_html( $settings['link_text'] ); ?>
+                </a>
             <?php endif; ?>
 		</div>
 		<?php

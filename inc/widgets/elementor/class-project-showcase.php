@@ -73,6 +73,27 @@ class Project_Showcase extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'view_all_text',
+			[
+				'label' => __( 'View All Button Text', 'ai-dev-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => __( 'View All', 'ai-dev-theme' ),
+			]
+		);
+
+		$this->add_control(
+			'view_all_link',
+			[
+				'label' => __( 'View All Button Link', 'ai-dev-theme' ),
+				'type' => Controls_Manager::URL,
+				'placeholder' => __( 'https://your-link.com', 'ai-dev-theme' ),
+				'default' => [
+					'url' => '#',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -103,6 +124,18 @@ class Project_Showcase extends Widget_Base {
 				wp_reset_postdata();
 				?>
 			</div>
+
+            <?php if ( ! empty( $settings['view_all_text'] ) && ! empty( $settings['view_all_link']['url'] ) ) : 
+                $target = $settings['view_all_link']['is_external'] ? ' target="_blank"' : '';
+                $nofollow = $settings['view_all_link']['nofollow'] ? ' rel="nofollow"' : '';
+                ?>
+                <div class="text-center mt-xl fade-in-up">
+                    <a href="<?php echo esc_url( $settings['view_all_link']['url'] ); ?>" class="button button--secondary"<?php echo $target . $nofollow; ?>>
+                        <?php echo esc_html( $settings['view_all_text'] ); ?>
+                    </a>
+                </div>
+            <?php endif; ?>
+
 			<?php
 		else :
 			echo '<p>' . esc_html__( 'No projects found.', 'ai-dev-theme' ) . '</p>';
