@@ -8,8 +8,21 @@
 }
 
 .scanline {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  pointer-events: none;
+  z-index: 1; /* Middle layer: Above grid (z-0) but below content (z-2) */
+  
+  /* Vignette effect - Darker corners */
+  background: radial-gradient(
+    circle,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
 
   &::after {
     content: " ";
@@ -19,12 +32,14 @@
     left: 0;
     bottom: 0;
     right: 0;
+    
+    /* High Visibility Scanlines - Reduced opacity for balance */
     background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0) 50%,
-      rgba(0, 240, 255, 0.2) 50%,
-      rgba(0, 240, 255, 0.2)
+      rgba(0, 240, 255, 0.15) 50%,
+      rgba(0, 240, 255, 0.15)
     );
     background-size: 100% 4px;
     z-index: 2;
@@ -35,16 +50,24 @@
 
 /* CRT Screen Effect Overlay */
 .crt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Same as scanline, below content */
+  pointer-events: none;
+  
+  /* High Visibility Pixel Grid */
   background: linear-gradient(
     rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
+    rgba(0, 0, 0, 0.5) 50%
   ),
   linear-gradient(
     90deg,
-    rgba(255, 0, 0, 0.06),
-    rgba(0, 255, 0, 0.02),
-    rgba(0, 0, 255, 0.06)
+    rgba(255, 0, 0, 0.15),
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 0, 255, 0.15)
   );
   background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
 }

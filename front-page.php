@@ -12,45 +12,137 @@ get_header();
 
     <?php get_template_part( 'template-parts/hero/home' ); ?>
 
+    <!-- AI Advantage Section (New) -->
+    <section id="ai-advantage" class="section py-2xl overflow-hidden">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6 mb-xl mb-lg-0 fade-in-up">
+                    <h2 class="h1 mb-lg">
+                        <span class="text-primary d-block h5 text-uppercase letter-spacing-sm mb-2"><?php esc_html_e( 'The AI Advantage', 'ai-dev-theme' ); ?></span>
+                        <?php esc_html_e( 'Why Choose AI-Driven Development?', 'ai-dev-theme' ); ?>
+                    </h2>
+                    <p class="lead text-muted mb-xl">
+                        <?php esc_html_e( 'Traditional software development is slow and error-prone. We use autonomous AI agents to write, test, and deploy code at speeds previously impossible.', 'ai-dev-theme' ); ?>
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item d-flex mb-lg">
+                            <div class="icon-box me-4 text-primary">
+                                <i class="fas fa-bolt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-2"><?php esc_html_e( '10x Faster Delivery', 'ai-dev-theme' ); ?></h3>
+                                <p class="text-muted mb-0"><?php esc_html_e( 'Weeks become days. We launch MVPs in record time without compromising quality.', 'ai-dev-theme' ); ?></p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex mb-lg">
+                            <div class="icon-box me-4 text-accent">
+                                <i class="fas fa-bug fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-2"><?php esc_html_e( 'Zero-Defect Code', 'ai-dev-theme' ); ?></h3>
+                                <p class="text-muted mb-0"><?php esc_html_e( 'AI agents run thousands of test cases instantly, catching bugs before they exist.', 'ai-dev-theme' ); ?></p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex">
+                            <div class="icon-box me-4 text-secondary">
+                                <i class="fas fa-coins fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-2"><?php esc_html_e( 'Cost Efficiency', 'ai-dev-theme' ); ?></h3>
+                                <p class="text-muted mb-0"><?php esc_html_e( 'Reduce development costs by up to 60% by automating repetitive coding tasks.', 'ai-dev-theme' ); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="position-relative">
+                        <!-- Decorative Elements -->
+                        <div class="position-absolute top-0 end-0 translate-middle-y bg-primary opacity-25 blur-3xl rounded-circle" style="width: 300px; height: 300px; z-index: 0;"></div>
+                        
+                        <div class="card p-0 border-secondary overflow-hidden position-relative z-1">
+                            <div class="card-header bg-dark border-bottom border-secondary p-sm d-flex justify-between align-center">
+                                <span class="text-muted small">AI Performance Metrics</span>
+                                <div class="d-flex gap-xs">
+                                    <span class="rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span>
+                                    <span class="rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span>
+                                </div>
+                            </div>
+                            <div class="card-body p-lg bg-surface">
+                                <!-- Simulated Chart/Graph -->
+                                <div class="mb-lg">
+                                    <div class="d-flex justify-between mb-2">
+                                        <span class="small fw-bold">Development Speed</span>
+                                        <span class="small text-primary">AI vs Traditional</span>
+                                    </div>
+                                    <div class="progress-bar bg-dark rounded-pill mb-2" style="height: 8px;">
+                                        <div class="progress-bar__fill bg-primary h-100" style="width: 95%;"></div>
+                                    </div>
+                                    <div class="progress-bar bg-dark rounded-pill" style="height: 8px; opacity: 0.3;">
+                                        <div class="progress-bar__fill bg-white h-100" style="width: 20%;"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid--2 gap-md">
+                                    <div class="stat-box p-md bg-dark rounded border border-secondary border-opacity-25 text-center">
+                                        <span class="d-block h2 text-accent mb-1">99.9%</span>
+                                        <span class="small text-muted text-uppercase">Uptime</span>
+                                    </div>
+                                    <div class="stat-box p-md bg-dark rounded border border-secondary border-opacity-25 text-center">
+                                        <span class="d-block h2 text-primary mb-1">&lt;24h</span>
+                                        <span class="small text-muted text-uppercase">MVP Launch</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services" class="section py-2xl">
+    <section id="services" class="section py-2xl bg-surface-alt">
         <div class="container">
             <header class="section-header text-center mb-xl fade-in-up">
-                <h2 class="section-title"><?php esc_html_e( 'Our Capabilities', 'ai-dev-theme' ); ?></h2>
-                <p class="section-subtitle"><?php esc_html_e( 'Cutting-edge technology for modern problems', 'ai-dev-theme' ); ?></p>
+                <h2 class="section-title"><?php esc_html_e( 'Core Capabilities', 'ai-dev-theme' ); ?></h2>
+                <p class="section-subtitle"><?php esc_html_e( 'End-to-end solutions powered by intelligence', 'ai-dev-theme' ); ?></p>
             </header>
 
             <div class="grid grid--auto-fit gap-lg">
                 <!-- Service 1 -->
-                <div class="card service-card fade-in-up delay-100">
-                    <div class="card__content">
-                        <div class="service-icon mb-md">
-                            <span class="dashicons dashicons-superhero" style="font-size: 2rem; color: var(--color-primary);"></span>
+                <div class="card service-card fade-in-up delay-100 h-100">
+                    <div class="card__content p-xl">
+                        <div class="service-icon mb-lg d-inline-flex align-center justify-center rounded-circle bg-surface border border-secondary" style="width: 64px; height: 64px;">
+                            <i class="fas fa-brain fa-lg text-primary"></i>
                         </div>
-                        <h3 class="card__title"><?php esc_html_e( 'AI Integration', 'ai-dev-theme' ); ?></h3>
-                        <p class="card__excerpt"><?php esc_html_e( 'Seamlessly integrate LLMs and computer vision into your existing workflows.', 'ai-dev-theme' ); ?></p>
+                        <h3 class="card__title h4 mb-md"><?php esc_html_e( 'AI Agent Integration', 'ai-dev-theme' ); ?></h3>
+                        <p class="card__excerpt text-muted mb-lg"><?php esc_html_e( 'Deploy autonomous agents that handle customer support, data analysis, and process automation 24/7.', 'ai-dev-theme' ); ?></p>
+                        <a href="#" class="text-primary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="card service-card fade-in-up delay-200">
-                    <div class="card__content">
-                        <div class="service-icon mb-md">
-                            <span class="dashicons dashicons-cloud" style="font-size: 2rem; color: var(--color-secondary);"></span>
+                <div class="card service-card fade-in-up delay-200 h-100">
+                    <div class="card__content p-xl">
+                        <div class="service-icon mb-lg d-inline-flex align-center justify-center rounded-circle bg-surface border border-secondary" style="width: 64px; height: 64px;">
+                            <i class="fas fa-code-branch fa-lg text-secondary"></i>
                         </div>
-                        <h3 class="card__title"><?php esc_html_e( 'Cloud Native', 'ai-dev-theme' ); ?></h3>
-                        <p class="card__excerpt"><?php esc_html_e( 'Scalable, resilient microservices architectures built on AWS and Azure.', 'ai-dev-theme' ); ?></p>
+                        <h3 class="card__title h4 mb-md"><?php esc_html_e( 'Generative UI/UX', 'ai-dev-theme' ); ?></h3>
+                        <p class="card__excerpt text-muted mb-lg"><?php esc_html_e( 'Dynamic interfaces that adapt to user behavior in real-time using generative design algorithms.', 'ai-dev-theme' ); ?></p>
+                        <a href="#" class="text-secondary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="card service-card fade-in-up delay-300">
-                    <div class="card__content">
-                        <div class="service-icon mb-md">
-                            <span class="dashicons dashicons-shield" style="font-size: 2rem; color: var(--color-accent);"></span>
+                <div class="card service-card fade-in-up delay-300 h-100">
+                    <div class="card__content p-xl">
+                        <div class="service-icon mb-lg d-inline-flex align-center justify-center rounded-circle bg-surface border border-secondary" style="width: 64px; height: 64px;">
+                            <i class="fas fa-shield-alt fa-lg text-accent"></i>
                         </div>
-                        <h3 class="card__title"><?php esc_html_e( 'Cyber Security', 'ai-dev-theme' ); ?></h3>
-                        <p class="card__excerpt"><?php esc_html_e( 'Next-gen threat detection and automated security protocols.', 'ai-dev-theme' ); ?></p>
+                        <h3 class="card__title h4 mb-md"><?php esc_html_e( 'AI Security', 'ai-dev-theme' ); ?></h3>
+                        <p class="card__excerpt text-muted mb-lg"><?php esc_html_e( 'Self-healing infrastructure that detects and neutralizes threats before they impact your business.', 'ai-dev-theme' ); ?></p>
+                        <a href="#" class="text-accent text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -58,7 +150,7 @@ get_header();
     </section>
 
     <!-- Latest Projects -->
-    <section id="projects" class="section py-2xl bg-surface-alt">
+    <section id="projects" class="section py-2xl">
         <div class="container">
             <header class="section-header d-flex justify-between align-end mb-xl fade-in-up">
                 <div>

@@ -104,6 +104,7 @@ class AIAnimations {
       // Clear content initially
       el.textContent = '';
       el.classList.add('typing-cursor');
+      el.style.visibility = 'visible'; // Ensure visibility
       
       setTimeout(() => {
         this.typeText(el, text, speed);
@@ -114,6 +115,9 @@ class AIAnimations {
   typeText(element, text, speed) {
     let i = 0;
     
+    // Safety check
+    if (!element) return;
+
     const type = () => {
       if (i < text.length) {
         element.textContent += text.charAt(i);

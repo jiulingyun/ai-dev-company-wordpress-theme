@@ -25,9 +25,32 @@
   }
 }
 
-.glitch-text {
+/* New Animation: Text Scan */
+@keyframes text-scan {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.glitch, .glitch-text {
   position: relative;
   display: inline-block;
+  
+  /* Text Scan Effect */
+  background: linear-gradient(to bottom, 
+      var(--color-text-main) 0%, 
+      var(--color-text-main) 50%, 
+      rgba(255, 255, 255, 0.2) 50%, 
+      var(--color-text-main) 55%
+  );
+  background-size: 100% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-scan 3s linear infinite;
 
   &::before,
   &::after {
@@ -37,20 +60,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-background);
+    background: transparent; /* Changed from background color to transparent */
+    opacity: 0.8;
   }
 
   &::before {
     left: 2px;
     text-shadow: -1px 0 var(--color-accent);
-    clip: rect(24px, 550px, 90px, 0);
+    clip-path: inset(10% 0 80% 0); /* Use clip-path instead of deprecated clip */
     animation: glitch 3s infinite linear alternate-reverse;
   }
 
   &::after {
     left: -2px;
     text-shadow: -1px 0 var(--color-primary);
-    clip: rect(85px, 550px, 140px, 0);
+    clip-path: inset(80% 0 10% 0);
     animation: glitch 2s infinite linear alternate-reverse;
   }
 }

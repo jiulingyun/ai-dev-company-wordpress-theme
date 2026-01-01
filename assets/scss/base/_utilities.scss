@@ -70,6 +70,20 @@ img[loading="lazy"] {
 .ms-4 { margin-left: 1.5rem !important; }
 .ms-5 { margin-left: 3rem !important; }
 
+/* Gap Utilities */
+.gap-xs { gap: 0.5rem !important; }
+.gap-sm { gap: 1rem !important; }
+.gap-md { gap: 1.5rem !important; }
+.gap-lg { gap: 2rem !important; }
+.gap-xl { gap: 3rem !important; }
+.gap-2xl { gap: 4rem !important; }
+
+/* Translate Middle */
+.translate-middle-y { transform: translateY(-50%) !important; }
+
+/* Blur Effects */
+.blur-3xl { filter: blur(64px) !important; }
+
 /* Print Styles Optimization */
 @media print {
     .hero-home__bg,
@@ -83,4 +97,17 @@ img[loading="lazy"] {
         color: #000 !important;
         background: #fff !important;
     }
+}
+
+/* Typing Effect Cursor */
+.typing-cursor::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+    color: var(--color-primary);
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
