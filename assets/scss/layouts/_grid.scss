@@ -1,0 +1,99 @@
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+  
+  /* 12 Column Grid */
+  &--12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  /* Auto-fit Grid (Responsive Cards) */
+  &--auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Flexbox Utilities */
+.d-flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+.align-center { align-items: center; }
+.align-start { align-items: flex-start; }
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+
+/* Spacing Utilities */
+@each $space, $value in (
+  'xs': 0.25rem,
+  'sm': 0.5rem,
+  'md': 1rem,
+  'lg': 1.5rem,
+  'xl': 2rem,
+  '2xl': 4rem
+) {
+  .m-#{$space} { margin: #{$value}; }
+  .mt-#{$space} { margin-top: #{$value}; }
+  .mb-#{$space} { margin-bottom: #{$value}; }
+  .my-#{$space} { margin-top: #{$value}; margin-bottom: #{$value}; }
+  
+  .p-#{$space} { padding: #{$value}; }
+  .pt-#{$space} { padding-top: #{$value}; }
+  .pb-#{$space} { padding-bottom: #{$value}; }
+  .py-#{$space} { padding-top: #{$value}; padding-bottom: #{$value}; }
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-md);
+  padding-left: var(--spacing-md);
+  
+  @media (min-width: 640px) { max-width: 640px; }
+  @media (min-width: 768px) { max-width: 768px; }
+  @media (min-width: 1024px) { max-width: 1024px; }
+  @media (min-width: 1280px) { max-width: 1280px; }
+}
+
+/* Layout Specifics */
+.site-main {
+  min-height: 80vh;
+  padding-bottom: var(--spacing-2xl);
+}
+
+.alignwide {
+  margin-left: -100px;
+  margin-right: -100px;
+  max-width: 1200px;
+  width: auto;
+}
+
+.alignfull {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
+}
+
+/* Sidebar Layouts */
+.page-with-sidebar {
+  display: grid;
+  gap: var(--spacing-xl);
+  
+  @media (min-width: 992px) {
+    grid-template-columns: 2fr 1fr;
+    
+    &--left {
+      grid-template-columns: 1fr 2fr;
+      
+      .content-area { order: 2; }
+      .widget-area { order: 1; }
+    }
+  }
+}

@@ -12,6 +12,12 @@
 @import 'components/modals';
 @import 'components/theme-toggle';
 
+/* Animations */
+@import 'animations/glitch';
+@import 'animations/scanline';
+@import 'animations/fade';
+@import 'animations/typing';
+
 /* Layouts */
 @import 'layouts/header';
 @import 'layouts/footer';

@@ -1,0 +1,12 @@
+/* Typing Cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor::after {
+  content: '|';
+  color: var(--color-primary);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
