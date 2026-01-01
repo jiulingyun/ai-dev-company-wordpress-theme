@@ -1,0 +1,119 @@
+/* Cards */
+.card, .project-card, .post-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  position: relative;
+  
+  /* Glassmorphism effect in Dark Mode */
+  [data-theme="dark"] & {
+    background-color: rgba(21, 26, 54, 0.7);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: var(--glow-primary);
+    
+    [data-theme="dark"] & {
+      border-color: rgba(0, 240, 255, 0.5);
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    /* Image zoom on hover */
+    .card:hover &, .project-card:hover & {
+      img {
+        transform: scale(1.05);
+      }
+    }
+    
+    /* Overlay effect */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(11, 16, 38, 0.6) 100%);
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+    
+    .card:hover &::after, .project-card:hover &::after {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    padding: var(--spacing-lg);
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    
+    a {
+      color: var(--color-text-main);
+      
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  
+  &__excerpt {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+}
+
+/* Badge / Tags */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  border-radius: 100px;
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  margin-right: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+  
+  &--tech {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: var(--color-primary);
+    border-color: rgba(0, 240, 255, 0.2);
+    
+    &:hover {
+      background-color: rgba(0, 240, 255, 0.2);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    }
+  }
+}

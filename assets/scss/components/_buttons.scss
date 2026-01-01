@@ -1,0 +1,63 @@
+/* Buttons */
+.button, button, input[type="submit"], input[type="reset"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 1.5em;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+
+  /* Primary Button style (Neon Cyan) */
+  &.button--primary, &[type="submit"] {
+    color: var(--color-background);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: var(--glow-primary);
+
+    &:hover, &:focus {
+      background-color: transparent;
+      color: var(--color-primary);
+      box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.5), var(--glow-primary);
+      text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+    }
+  }
+
+  /* Secondary Button style (Outline) */
+  &.button--secondary {
+    color: var(--color-text-main);
+    border-color: var(--color-border);
+    background-color: transparent;
+
+    &:hover, &:focus {
+      border-color: var(--color-secondary);
+      color: var(--color-secondary);
+      box-shadow: var(--glow-secondary);
+    }
+  }
+  
+  /* Block Button */
+  &.button--block {
+    display: flex;
+    width: 100%;
+  }
+
+  /* Disabled State */
+  &:disabled, &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(100%);
+  }
+}
