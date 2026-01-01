@@ -286,7 +286,7 @@ class AI_Split_Feature extends Widget_Base {
                                 <div class="mb-lg">
                                     <div class="d-flex justify-between mb-2">
                                         <span class="small fw-bold"><?php echo esc_html( $settings['metric_1_label'] ); ?></span>
-                                        <span class="small text-primary">AI vs Traditional</span>
+                                        <span class="small text-primary"><?php esc_html_e( 'AI vs Traditional', 'ai-dev-theme' ); ?></span>
                                     </div>
                                     <div class="progress-bar bg-dark rounded-pill mb-2" style="height: 8px;">
                                         <div class="progress-bar__fill bg-primary h-100" style="width: <?php echo esc_attr( $settings['metric_1_value']['size'] ); ?>%;"></div>

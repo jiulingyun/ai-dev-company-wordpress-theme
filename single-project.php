@@ -73,7 +73,7 @@ while ( have_posts() ) :
                             </div>
                             <div>
                                 <span class="d-block text-muted text-uppercase letter-spacing-sm small mb-1"><?php esc_html_e( 'Delivery Time', 'ai-dev-theme' ); ?></span>
-                                <h3 class="h4 mb-0"><?php echo $delivery_time ? esc_html( $delivery_time ) : '--'; ?> <span class="badge badge--tech ms-2" style="vertical-align: middle;">6x Faster</span></h3>
+                                <h3 class="h4 mb-0"><?php echo $delivery_time ? esc_html( $delivery_time ) : '--'; ?> <span class="badge badge--tech ms-2" style="vertical-align: middle;"><?php esc_html_e( '6x Faster', 'ai-dev-theme' ); ?></span></h3>
                             </div>
                         </div>
                     </div>
@@ -250,8 +250,7 @@ while ( have_posts() ) :
             the_post_navigation(
                 array(
                     'prev_text' => '<div class="nav-label text-muted text-uppercase mb-1" style="font-size: 0.8rem;">' . esc_html__( 'Previous Project', 'ai-dev-theme' ) . '</div><h4 class="h5 mb-0">%title</h4>',
-                    'next_text' => '<div class="nav-label text-muted text-uppercase mb-1 text-end" style="font-size: 0.8rem;">' . esc_html__( 'Next Project', 'ai-dev-theme' ) . '</div><h4 class="h5 mb-0">%title</h4>',
-                    'class'     => 'd-flex justify-between align-center'
+                    'next_text' => '<div class="nav-label text-muted text-uppercase mb-1 text-end" style="font-size: 0.8rem;">' . esc_html__( 'Next Project', 'ai-dev-theme' ) . '</div><h4 class="h5 mb-0 text-end">%title</h4>',
                 )
             );
             ?>

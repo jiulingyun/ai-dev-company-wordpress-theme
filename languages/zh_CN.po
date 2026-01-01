@@ -968,3 +968,164 @@ msgstr "精选案例"
 #: front-page.php:158
 msgid "See what we have built"
 msgstr "查看我们的成果"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:289
+msgid "AI vs Traditional"
+msgstr "AI 对比传统开发"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:217
+msgid "Uptime"
+msgstr "运行时间"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:236
+msgid "MVP Launch"
+msgstr "MVP 发布"
+
+#: archive-project.php:20
+msgid "Product Showcase"
+msgstr "产品展示"
+
+#: archive-project.php:21
+msgid "Explore our AI-driven software solutions and success stories."
+msgstr "探索我们由 AI 驱动的软件解决方案和成功案例。"
+
+#: archive-project.php:35
+msgid "Search projects..."
+msgstr "搜索项目..."
+
+#: archive-project.php:46
+msgid "All"
+msgstr "全部"
+
+#: archive-project.php:82
+msgid "Previous"
+msgstr "上一页"
+
+#: archive-project.php:83
+msgid "Next"
+msgstr "下一页"
+
+#: archive-project.php:94
+msgid "View All Projects"
+msgstr "查看所有项目"
+
+#: archive-project.php:92
+msgid "Try different keywords or check your spelling."
+msgstr "尝试不同的关键词或检查拼写。"
+
+#: footer.php:91
+msgid "Newsletter"
+msgstr "订阅简报"
+
+#: footer.php:92
+msgid "Subscribe to our newsletter for the latest updates."
+msgstr "订阅我们的简报以获取最新更新。"
+
+#: footer.php:95
+msgid "Email address"
+msgstr "电子邮箱地址"
+
+#: footer.php:63
+msgid "Company"
+msgstr "公司"
+
+#: footer.php:66
+msgid "Careers"
+msgstr "招贤纳士"
+
+#: footer.php:79
+msgid "Documentation"
+msgstr "文档"
+
+#: footer.php:80
+msgid "API Reference"
+msgstr "API 参考"
+
+#: footer.php:81
+msgid "Community"
+msgstr "社区"
+
+#: footer.php:82
+msgid "Support"
+msgstr "支持"
+
+#. translators: %s: Theme author.
+#: footer.php:110
+msgid "Theme by %s."
+msgstr "主题由 %s 制作。"
+
+#: single-project.php:75
+msgid "Delivery Time"
+msgstr "交付时间"
+
+#: single-project.php:76
+msgid "6x Faster"
+msgstr "快 6 倍"
+
+#: single-project.php:87
+msgid "AI Code"
+msgstr "AI 代码"
+
+#: single-project.php:102
+msgid "Team Size"
+msgstr "团队规模"
+
+#: single-project.php:116
+msgid "Project Overview"
+msgstr "项目概览"
+
+#: single-project.php:130
+msgid "Experience It"
+msgstr "立即体验"
+
+
+msgid "Demo Credentials"
+msgstr "演示凭证"
+
+#: single-project.php:141
+msgid "User:"
+msgstr "用户:"
+
+#: single-project.php:147
+msgid "Pass:"
+msgstr "密码:"
+
+#: single-project.php:156
+msgid "Scan for Mobile Preview"
+msgstr "扫码移动端预览"
+
+#: single-project.php:165
+msgid "Project Data"
+msgstr "项目数据"
+
+#: single-project.php:169
+msgid "Client"
+msgstr "客户"
+
+#: single-project.php:236
+msgid "Related Projects"
+msgstr "相关项目"
+
+#: single-project.php:252
+msgid "Previous Project"
+msgstr "上一个项目"
+
+#: single-project.php:253
+msgid "Next Project"
+msgstr "下一个项目"
+
+#: 404.php:23
+msgid "System Error: Page Not Found"
+msgstr "系统错误：页面未找到"
+
+#: 404.php:39
+msgid "The requested resource has been moved, deleted, or never existed. Our AI agents are baffled."
+msgstr "请求的资源已移动、删除或从未存在。我们的 AI 智能体也感到困惑。"
+
+#: 404.php:43
+msgid "Return Home"
+msgstr "返回首页"
+
+#: 404.php:46
+msgid "Go Back"
+msgstr "返回上一页"

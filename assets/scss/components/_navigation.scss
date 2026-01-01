@@ -1,14 +1,135 @@
-/* Navigation */
-.main-navigation {
-  position: relative;
-  
-  ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: var(--spacing-lg);
+  /* Navigation */
+  .main-navigation {
+    position: relative;
+    
+    ul {
+      display: flex;
+      align-items: center; /* Ensure vertical alignment for all items */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: var(--spacing-lg);
+    }
+
+  /* Dropdown Menus (Submenus) */
+  ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-primary);
+    padding: var(--spacing-xs);
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    backdrop-filter: blur(10px);
+    margin-top: var(--spacing-xs);
+    
+    li {
+      width: 100%;
+      margin: 0;
+    }
+
+    a {
+      padding: var(--spacing-xs) var(--spacing-sm);
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-transform: none;
+      letter-spacing: normal;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+
+      /* Hide brackets in dropdown to keep it clean */
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        background-color: rgba(0, 240, 255, 0.1);
+        color: var(--color-primary);
+        padding-left: var(--spacing-md); /* Slide effect */
+        transition: all var(--transition-fast);
+      }
+    }
   }
+
+  /* Show Dropdown on Hover */
+  li:hover > ul,
+  li:focus-within > ul {
+    display: flex;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  /* Polylang Switcher Specifics - FIXED v7 (Targeting img directly in nav) */
+  .main-navigation li.lang-item,
+  .main-navigation li.pll-parent-menu-item {
+    width: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    
+    a {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      width: auto !important;
+      height: 100% !important;
+      white-space: nowrap !important;
+      padding: var(--spacing-xs) 0 !important;
+      border: none !important;
+      
+      /* Target the image specifically with high specificity */
+      & > img,
+      img {
+        display: inline-block !important;
+        width: 18px !important;
+        height: auto !important;
+        min-width: 18px !important;
+        max-width: 18px !important;
+        margin: 0 8px 0 0 !important; /* Space between flag and text */
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 2px !important;
+        flex-shrink: 0 !important;
+        vertical-align: middle !important;
+        float: none !important;
+      }
+      
+      span {
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
+        line-height: 1.2 !important;
+      }
+
+      /* Hide brackets */
+      &::before,
+      &::after {
+        display: none !important;
+        content: none !important;
+      }
+    }
+  }
+
+  /* Specific fix for Dropdown parent item if it doesn't have lang-item class but has image */
+  .main-navigation > ul > li > a > img {
+      display: inline-block !important;
+      vertical-align: middle !important;
+      margin-right: 8px !important;
+      width: 18px !important;
+      height: auto !important;
+  }
+
+  /* Hide current language in dropdown if needed (optional based on user preference) */
+  /* .lang-item.current-lang { display: none; } */
 
   li {
     position: relative;
