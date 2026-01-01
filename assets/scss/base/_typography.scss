@@ -1,22 +1,35 @@
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
 }
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color var(--transition-base);
+  transition: all var(--transition-fast);
+  position: relative;
   
   &:hover {
     color: var(--color-secondary);
+    text-shadow: var(--glow-secondary);
   }
+}
+
+code, pre {
+  font-family: var(--font-secondary);
 }

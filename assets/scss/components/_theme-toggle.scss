@@ -1,0 +1,30 @@
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: var(--spacing-md);
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--glow-primary);
+    color: var(--color-primary);
+  }
+
+  .theme-toggle-icon::before {
+    font-family: "Dashicons";
+    content: "\f177"; // Sun
+    font-size: 1.25rem;
+  }
+}
+
+[data-theme="dark"] .theme-toggle .theme-toggle-icon::before {
+  content: "\f568"; // Moon
+}

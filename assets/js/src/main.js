@@ -1,5 +1,6 @@
 import AIAnimations from './modules/ai-animations';
 import AINavigation from './modules/ai-navigation';
+import './modules/theme-toggle';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('AI Dev Theme Initialized');
