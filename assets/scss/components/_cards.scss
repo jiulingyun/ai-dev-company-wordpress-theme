@@ -105,6 +105,7 @@
   border: 1px solid var(--color-border);
   margin-right: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
+  white-space: nowrap; /* Prevent line breaks inside badges */
   
   &--tech {
     background-color: rgba(0, 240, 255, 0.1);

@@ -19,7 +19,87 @@ class CPT_Projects {
 	protected function setup_hooks() {
 		add_action( 'init', [ $this, 'create_projects_cpt' ], 0 );
 		add_action( 'init', [ $this, 'create_project_taxonomies' ], 0 );
+        add_action( 'add_meta_boxes', [ $this, 'add_project_meta_boxes' ] );
+        add_action( 'save_post', [ $this, 'save_project_meta' ] );
 	}
+
+    public function add_project_meta_boxes() {
+        add_meta_box(
+            'project_details',
+            __( 'Project Details', 'ai-dev-theme' ),
+            [ $this, 'render_project_meta_box' ],
+            'project',
+            'normal',
+            'high'
+        );
+    }
+
+    public function render_project_meta_box( $post ) {
+        // Add an nonce field so we can check for it later.
+        wp_nonce_field( 'ai_dev_theme_project_meta_box', 'ai_dev_theme_project_meta_box_nonce' );
+
+        $subtitle      = get_post_meta( $post->ID, 'project_subtitle', true );
+        $client        = get_post_meta( $post->ID, 'project_client', true );
+        $url           = get_post_meta( $post->ID, 'project_url', true );
+        $delivery_time = get_post_meta( $post->ID, 'project_delivery_time', true );
+        ?>
+        <p>
+            <label for="project_subtitle"><?php esc_html_e( 'Subtitle', 'ai-dev-theme' ); ?></label>
+            <input type="text" id="project_subtitle" name="project_subtitle" value="<?php echo esc_attr( $subtitle ); ?>" class="widefat" />
+        </p>
+        <p>
+            <label for="project_client"><?php esc_html_e( 'Client Name', 'ai-dev-theme' ); ?></label>
+            <input type="text" id="project_client" name="project_client" value="<?php echo esc_attr( $client ); ?>" class="widefat" />
+        </p>
+        <p>
+            <label for="project_url"><?php esc_html_e( 'Project URL (Demo)', 'ai-dev-theme' ); ?></label>
+            <input type="url" id="project_url" name="project_url" value="<?php echo esc_attr( $url ); ?>" class="widefat" />
+        </p>
+        <p>
+            <label for="project_delivery_time"><?php esc_html_e( 'Delivery Time (e.g. "2 Weeks")', 'ai-dev-theme' ); ?></label>
+            <input type="text" id="project_delivery_time" name="project_delivery_time" value="<?php echo esc_attr( $delivery_time ); ?>" class="widefat" />
+            <span class="description"><?php esc_html_e( 'Highlight AI development efficiency.', 'ai-dev-theme' ); ?></span>
+        </p>
+        <?php
+    }
+
+    public function save_project_meta( $post_id ) {
+        // Check if our nonce is set.
+        if ( ! isset( $_POST['ai_dev_theme_project_meta_box_nonce'] ) ) {
+            return;
+        }
+
+        // Verify that the nonce is valid.
+        if ( ! wp_verify_nonce( $_POST['ai_dev_theme_project_meta_box_nonce'], 'ai_dev_theme_project_meta_box' ) ) {
+            return;
+        }
+
+        // If this is an autosave, our form has not been submitted, so we don't want to do anything.
+        if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+            return;
+        }
+
+        // Check the user's permissions.
+        if ( isset( $_POST['post_type'] ) && 'project' === $_POST['post_type'] ) {
+            if ( ! current_user_can( 'edit_post', $post_id ) ) {
+                return;
+            }
+        }
+
+        // Update the meta field in the database.
+        if ( isset( $_POST['project_subtitle'] ) ) {
+            update_post_meta( $post_id, 'project_subtitle', sanitize_text_field( $_POST['project_subtitle'] ) );
+        }
+        if ( isset( $_POST['project_client'] ) ) {
+            update_post_meta( $post_id, 'project_client', sanitize_text_field( $_POST['project_client'] ) );
+        }
+        if ( isset( $_POST['project_url'] ) ) {
+            update_post_meta( $post_id, 'project_url', esc_url_raw( $_POST['project_url'] ) );
+        }
+        if ( isset( $_POST['project_delivery_time'] ) ) {
+            update_post_meta( $post_id, 'project_delivery_time', sanitize_text_field( $_POST['project_delivery_time'] ) );
+        }
+    }
 
 	public function create_projects_cpt() {
 
