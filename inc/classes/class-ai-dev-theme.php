@@ -16,5 +16,6 @@ class AI_Dev_Theme {
 		// Load class.
 		Assets::get_instance();
 		Setup::get_instance();
+		CPT_Projects::get_instance();
 	}
 }
