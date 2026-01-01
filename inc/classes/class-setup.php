@@ -96,5 +96,8 @@ class Setup {
 			'flex-width'  => true,
 			'flex-height' => true,
 		] );
+
+        // Add support for Elementor
+        add_theme_support( 'elementor' );
 	}
 }

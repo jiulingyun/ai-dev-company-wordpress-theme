@@ -40,6 +40,9 @@ class Elementor {
         require_once get_template_directory() . '/inc/widgets/elementor/class-stats-counter.php';
         require_once get_template_directory() . '/inc/widgets/elementor/class-timeline.php';
         require_once get_template_directory() . '/inc/widgets/elementor/class-blog-posts.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-contact-form.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-about-hero.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-section-title.php';
 
         // Register the widget
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\AI_Advantages() );
@@ -50,6 +53,9 @@ class Elementor {
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Stats_Counter() );
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Timeline() );
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Blog_Posts() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Contact_Form() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\About_Hero() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Section_Title() );
     }
 
 	public function add_elementor_support() {
