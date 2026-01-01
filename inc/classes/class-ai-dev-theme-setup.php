@@ -22,6 +22,19 @@ class Setup {
 		 * Actions.
 		 */
 		add_action( 'after_setup_theme', [ $this, 'setup_theme' ] );
+		add_action( 'widgets_init', [ $this, 'register_sidebars' ] );
+	}
+
+	public function register_sidebars() {
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar', 'ai-dev-theme' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'ai-dev-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
 	}
 
 	public function setup_theme() {
