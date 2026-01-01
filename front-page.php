@@ -83,7 +83,7 @@ get_header();
                         
                         <div class="card p-0 border-secondary overflow-hidden position-relative z-1">
                             <div class="card-header bg-dark border-bottom border-secondary p-sm d-flex justify-between align-center">
-                                <span class="text-muted small">AI Performance Metrics</span>
+                                <span class="text-muted small"><?php esc_html_e( 'AI Performance Metrics', 'ai-dev-theme' ); ?></span>
                                 <div class="d-flex gap-xs">
                                     <span class="rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span>
                                     <span class="rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span>
@@ -93,8 +93,8 @@ get_header();
                                 <!-- Simulated Chart/Graph -->
                                 <div class="mb-lg">
                                     <div class="d-flex justify-between mb-2">
-                                        <span class="small fw-bold">Development Speed</span>
-                                        <span class="small text-primary">AI vs Traditional</span>
+                                        <span class="small fw-bold"><?php esc_html_e( 'Development Speed', 'ai-dev-theme' ); ?></span>
+                                        <span class="small text-primary"><?php esc_html_e( 'AI vs Traditional', 'ai-dev-theme' ); ?></span>
                                     </div>
                                     <div class="progress-bar bg-dark rounded-pill mb-2" style="height: 8px;">
                                         <div class="progress-bar__fill bg-primary h-100" style="width: 95%;"></div>
@@ -107,11 +107,11 @@ get_header();
                                 <div class="grid grid--2 gap-md">
                                     <div class="stat-box p-md bg-dark rounded border border-secondary border-opacity-25 text-center">
                                         <span class="d-block h2 text-accent mb-1">99.9%</span>
-                                        <span class="small text-muted text-uppercase">Uptime</span>
+                                        <span class="small text-muted text-uppercase"><?php esc_html_e( 'Uptime', 'ai-dev-theme' ); ?></span>
                                     </div>
                                     <div class="stat-box p-md bg-dark rounded border border-secondary border-opacity-25 text-center">
                                         <span class="d-block h2 text-primary mb-1">&lt;24h</span>
-                                        <span class="small text-muted text-uppercase">MVP Launch</span>
+                                        <span class="small text-muted text-uppercase"><?php esc_html_e( 'MVP Launch', 'ai-dev-theme' ); ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ get_header();
                         </div>
                         <h3 class="card__title h4 mb-md"><?php esc_html_e( 'AI Agent Integration', 'ai-dev-theme' ); ?></h3>
                         <p class="card__excerpt text-muted mb-lg"><?php esc_html_e( 'Deploy autonomous agents that handle customer support, data analysis, and process automation 24/7.', 'ai-dev-theme' ); ?></p>
-                        <a href="#" class="text-primary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        <a href="#" class="text-primary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors"><?php esc_html_e( 'Learn More', 'ai-dev-theme' ); ?> <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@ get_header();
                         </div>
                         <h3 class="card__title h4 mb-md"><?php esc_html_e( 'Generative UI/UX', 'ai-dev-theme' ); ?></h3>
                         <p class="card__excerpt text-muted mb-lg"><?php esc_html_e( 'Dynamic interfaces that adapt to user behavior in real-time using generative design algorithms.', 'ai-dev-theme' ); ?></p>
-                        <a href="#" class="text-secondary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        <a href="#" class="text-secondary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors"><?php esc_html_e( 'Learn More', 'ai-dev-theme' ); ?> <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
@@ -163,7 +163,7 @@ get_header();
                         </div>
                         <h3 class="card__title h4 mb-md"><?php esc_html_e( 'AI Security', 'ai-dev-theme' ); ?></h3>
                         <p class="card__excerpt text-muted mb-lg"><?php esc_html_e( 'Self-healing infrastructure that detects and neutralizes threats before they impact your business.', 'ai-dev-theme' ); ?></p>
-                        <a href="#" class="text-accent text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        <a href="#" class="text-accent text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors"><?php esc_html_e( 'Learn More', 'ai-dev-theme' ); ?> <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>

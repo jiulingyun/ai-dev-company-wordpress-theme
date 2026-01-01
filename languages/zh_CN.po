@@ -1129,3 +1129,31 @@ msgstr "返回首页"
 #: 404.php:46
 msgid "Go Back"
 msgstr "返回上一页"
+
+#: template-parts/content/content.php:59
+msgid "Read More"
+msgstr "阅读更多"
+
+#: template-parts/content/content-single.php:76
+msgid "Previous Post"
+msgstr "上一篇"
+
+#: template-parts/content/content-single.php:79
+msgid "Next Post"
+msgstr "下一篇"
+
+#: template-parts/content/content-single.php:37
+msgid "No Comments"
+msgstr "暂无评论"
+
+#: template-parts/content/content-single.php:37
+msgid "1 Comment"
+msgstr "1 条评论"
+
+#: template-parts/content/content-single.php:37
+msgid "% Comments"
+msgstr "% 条评论"
+
+#: front-page.php:142, front-page.php:154, front-page.php:166
+msgid "Learn More"
+msgstr "了解更多"
