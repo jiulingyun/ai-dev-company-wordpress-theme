@@ -17,10 +17,12 @@
 @import 'animations/scanline';
 @import 'animations/fade';
 @import 'animations/typing';
+@import 'animations/scroll-reveal';
 
 /* Layouts */
 @import 'layouts/header';
-@import 'layouts/footer';
+@import 'layouts/grid';
+@import 'layouts/home';
 @import 'layouts/sidebar';
 @import 'layouts/grid';
 

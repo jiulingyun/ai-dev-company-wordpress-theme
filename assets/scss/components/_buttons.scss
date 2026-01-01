@@ -21,10 +21,16 @@
 
   /* Primary Button style (Neon Cyan) */
   &.button--primary, &[type="submit"] {
-    color: var(--color-background);
+    color: var(--color-text-main); /* Changed from --color-background for better contrast on cyan */
     background-color: var(--color-primary);
     border-color: var(--color-primary);
     box-shadow: var(--glow-primary);
+    font-weight: 700; /* Bolder text for better legibility */
+
+    /* Ensure text is dark even in dark mode when button is bright cyan */
+    [data-theme="dark"] & {
+      color: #0b1026; /* Force dark text on bright neon button */
+    }
 
     &:hover, &:focus {
       background-color: transparent;

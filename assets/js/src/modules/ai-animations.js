@@ -1,9 +1,79 @@
-export default class AIAnimations {
+/**
+ * AI Animations Module
+ * Handles scroll animations and interactive effects.
+ */
+class AIAnimations {
   constructor() {
-    this.init();
+    this.initScrollObserver();
+    this.initTypingEffect();
   }
 
-  init() {
-    console.log('Animations module loaded');
+  /**
+   * Initialize Intersection Observer for scroll animations
+   */
+  initScrollObserver() {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          
+          // Optional: Stop observing once animated
+          if (entry.target.dataset.once !== 'false') {
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements with animation classes
+    const animatedElements = document.querySelectorAll('.fade-in-up, .scale-in, .slide-in-left, .slide-in-right');
+    animatedElements.forEach(el => observer.observe(el));
+  }
+
+  /**
+   * Initialize Typing Effect for elements with .typewriter class
+   */
+  initTypingEffect() {
+    const typewriters = document.querySelectorAll('.typewriter');
+    
+    typewriters.forEach(el => {
+      const text = el.dataset.text || el.textContent;
+      const speed = parseInt(el.dataset.speed) || 50;
+      const delay = parseInt(el.dataset.delay) || 0;
+      
+      // Clear content initially
+      el.textContent = '';
+      el.classList.add('typing-cursor');
+      
+      setTimeout(() => {
+        this.typeText(el, text, speed);
+      }, delay);
+    });
+  }
+
+  typeText(element, text, speed) {
+    let i = 0;
+    
+    const type = () => {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // Animation complete
+        // Optional: Remove cursor after typing finishes
+        // element.classList.remove('typing-cursor');
+      }
+    };
+    
+    type();
   }
 }
+
+export default AIAnimations;
