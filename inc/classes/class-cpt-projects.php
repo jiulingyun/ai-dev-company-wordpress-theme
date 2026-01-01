@@ -69,7 +69,7 @@ class CPT_Projects {
 				'page-attributes',
 				'custom-fields',
 			],
-			'taxonomies'          => [],
+			'taxonomies'          => [ 'technology', 'industry' ],
 			'public'              => true,
 			'show_ui'             => true,
 			'show_in_menu'        => true,

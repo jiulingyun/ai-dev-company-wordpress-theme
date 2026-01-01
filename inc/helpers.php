@@ -76,6 +76,10 @@ function ai_dev_theme_autoloader( $resource ) {
 
 	}
 
+	if ( empty( $resource_path ) ) {
+		return;
+	}
+
 	/**
 	 * If $is_valid_file has 0 means valid path or 2 means the file does not exist.
 	 */
