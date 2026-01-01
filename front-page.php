@@ -10,6 +10,27 @@ get_header();
 
 <main id="primary" class="site-main">
 
+    <?php
+    // Check if a static page is set as homepage and it has content (potentially from Elementor)
+    if ( 'page' === get_option( 'show_on_front' ) ) {
+        $front_page_id = get_option( 'page_on_front' );
+        // Check if Elementor is used on this page
+        if ( \Elementor\Plugin::$instance->db->is_built_with_elementor( $front_page_id ) ) {
+            $post = get_post( $front_page_id );
+            $content = apply_filters( 'the_content', $post->post_content );
+            echo $content;
+            
+            // If we are showing Elementor content, we might stop here to avoid duplicating the hardcoded theme sections.
+            // However, the user might want to mix both.
+            // But standard practice is: if Elementor is used, it takes full control.
+            // So we return here.
+            echo '</main>';
+            get_footer();
+            return;
+        }
+    }
+    ?>
+
     <?php get_template_part( 'template-parts/hero/home' ); ?>
 
     <!-- AI Advantage Section (New) -->
