@@ -1,0 +1,18 @@
+// Elementor Integration Styles
+
+// Ensure theme containers play nice with Elementor sections
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1200px; 
+}
+
+// Fix potential z-index issues with header
+.site-header {
+    position: relative;
+    z-index: 100;
+}
+
+// Make sure our typography settings are respected inside Elementor text editor if needed
+.elementor-widget-text-editor {
+    font-family: var(--font-primary);
+    color: var(--color-dark);
+}

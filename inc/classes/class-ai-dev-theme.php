@@ -17,5 +17,6 @@ class AI_Dev_Theme {
 		Assets::get_instance();
 		Setup::get_instance();
 		CPT_Projects::get_instance();
+		Elementor::get_instance();
 	}
 }
