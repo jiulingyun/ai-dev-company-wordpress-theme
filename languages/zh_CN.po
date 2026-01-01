@@ -540,3 +540,443 @@ msgstr "样式"
 #: inc/widgets/elementor/class-blog-posts.php:164
 msgid "No posts found."
 msgstr "未找到文章。"
+
+#: inc/widgets/elementor/class-contact-form.php:21
+msgid "AI Contact Form"
+msgstr "AI 联系表单"
+
+#: inc/widgets/elementor/class-contact-form.php:44
+msgid "Form Title"
+msgstr "表单标题"
+
+#: inc/widgets/elementor/class-contact-form.php:46
+msgid "Send us a message"
+msgstr "给我们留言"
+
+#: inc/widgets/elementor/class-contact-form.php:47
+msgid "Type your title here"
+msgstr "在此输入标题"
+
+#: inc/widgets/elementor/class-contact-form.php:54
+msgid "Form Shortcode"
+msgstr "表单短代码"
+
+#: inc/widgets/elementor/class-contact-form.php:56
+msgid "[contact-form-7 id=\"123\"...]"
+msgstr "[contact-form-7 id=\"123\"...]"
+
+#: inc/widgets/elementor/class-contact-form.php:57
+msgid "Paste your Contact Form 7 or other form shortcode here. If empty, a default HTML form will be displayed."
+msgstr "在此粘贴 Contact Form 7 或其他表单短代码。如果留空，将显示默认的 HTML 表单。"
+
+#: inc/widgets/elementor/class-contact-form.php:80
+msgid "Name"
+msgstr "姓名"
+
+#: inc/widgets/elementor/class-contact-form.php:81
+msgid "Your Name"
+msgstr "您的姓名"
+
+#: inc/widgets/elementor/class-contact-form.php:84
+msgid "Email"
+msgstr "电子邮箱"
+
+#: inc/widgets/elementor/class-contact-form.php:85
+msgid "your@email.com"
+msgstr "your@email.com"
+
+#: inc/widgets/elementor/class-contact-form.php:88
+msgid "Message"
+msgstr "留言内容"
+
+#: inc/widgets/elementor/class-contact-form.php:89
+msgid "How can we help you?"
+msgstr "我们需要怎么帮助您？"
+
+#: inc/widgets/elementor/class-contact-form.php:92
+msgid "Send Message"
+msgstr "发送留言"
+
+#: inc/widgets/elementor/class-about-hero.php:21
+msgid "AI About Hero"
+msgstr "关于我们 Hero"
+
+#: inc/widgets/elementor/class-about-hero.php:44
+msgid "About Us"
+msgstr "关于我们"
+
+#: inc/widgets/elementor/class-about-hero.php:52
+msgid "Subtitle"
+msgstr "副标题"
+
+#: inc/widgets/elementor/class-about-hero.php:54
+msgid "We are a team of AI enthusiasts building the future."
+msgstr "我们是一群构建未来的 AI 狂热者。"
+
+#: inc/widgets/elementor/class-about-hero.php:60
+msgid "Hero Image"
+msgstr "Hero 图片"
+
+#: inc/widgets/elementor/class-section-title.php:21
+msgid "AI Section Title"
+msgstr "AI 章节标题"
+
+#: inc/widgets/elementor/class-section-title.php:44
+msgid "Subtitle (Small)"
+msgstr "副标题（小）"
+
+#: inc/widgets/elementor/class-section-title.php:46
+msgid "Our Features"
+msgstr "我们的特色"
+
+#: inc/widgets/elementor/class-section-title.php:52
+msgid "Title (Large)"
+msgstr "主标题（大）"
+
+#: inc/widgets/elementor/class-section-title.php:54
+msgid "Why Choose Us"
+msgstr "为什么选择我们"
+
+#: inc/widgets/elementor/class-section-title.php:60
+msgid "Description (Grey)"
+msgstr "描述（灰色）"
+
+#: inc/widgets/elementor/class-section-title.php:62
+msgid "End-to-end solutions powered by intelligence"
+msgstr "由智能驱动的端到端解决方案"
+
+#: inc/widgets/elementor/class-section-title.php:69
+msgid "Button Text"
+msgstr "按钮文字"
+
+#: inc/widgets/elementor/class-section-title.php:71, inc/widgets/elementor/class-project-showcase.php:81
+msgid "View All"
+msgstr "查看全部"
+
+#: inc/widgets/elementor/class-section-title.php:78
+msgid "Button Link"
+msgstr "按钮链接"
+
+#: inc/widgets/elementor/class-section-title.php:80, inc/widgets/elementor/class-project-showcase.php:90
+msgid "https://your-link.com"
+msgstr "https://your-link.com"
+
+#: inc/widgets/elementor/class-section-title.php:88
+msgid "Alignment"
+msgstr "对齐方式"
+
+#: inc/widgets/elementor/class-section-title.php:92
+msgid "Left"
+msgstr "居左"
+
+#: inc/widgets/elementor/class-section-title.php:96
+msgid "Center"
+msgstr "居中"
+
+#: inc/widgets/elementor/class-section-title.php:100
+msgid "Right"
+msgstr "居右"
+
+#: inc/widgets/elementor/class-project-showcase.php:79
+msgid "View All Button Text"
+msgstr "查看全部按钮文字"
+
+#: inc/widgets/elementor/class-project-showcase.php:88
+msgid "View All Button Link"
+msgstr "查看全部按钮链接"
+
+#: inc/widgets/elementor/class-home-hero.php:21
+msgid "AI Home Hero"
+msgstr "AI 首页 Hero"
+
+#: inc/widgets/elementor/class-home-hero.php:38
+msgid "Hero Content"
+msgstr "Hero 内容"
+
+#: inc/widgets/elementor/class-home-hero.php:44
+msgid "Badge Text"
+msgstr "徽章文字"
+
+#: inc/widgets/elementor/class-home-hero.php:46, template-parts/hero/home.php:27
+msgid "AI-First Development Agency"
+msgstr "AI 优先的开发机构"
+
+#: inc/widgets/elementor/class-home-hero.php:52
+msgid "Title Line 1"
+msgstr "标题第一行"
+
+#: inc/widgets/elementor/class-home-hero.php:54, template-parts/hero/home.php:30
+msgid "Code the Future"
+msgstr "编织未来"
+
+#: inc/widgets/elementor/class-home-hero.php:60
+msgid "Title Line 2 (Highlighted)"
+msgstr "标题第二行（高亮）"
+
+#: inc/widgets/elementor/class-home-hero.php:62, template-parts/hero/home.php:31
+msgid "With Intelligence"
+msgstr "以智慧"
+
+#: inc/widgets/elementor/class-home-hero.php:68
+msgid "Description (Typewriter)"
+msgstr "描述（打字机效果）"
+
+#: inc/widgets/elementor/class-home-hero.php:70, template-parts/hero/home.php:35
+msgid "We build enterprise-grade software 10x faster using advanced AI agents. 98% of our code is AI-generated, 100% human-verified."
+msgstr "我们利用先进的 AI 智能体将企业级软件开发速度提升 10 倍。98% 的代码由 AI 生成，100% 经人工验证。"
+
+#: inc/widgets/elementor/class-home-hero.php:80
+msgid "Buttons"
+msgstr "按钮"
+
+#: inc/widgets/elementor/class-home-hero.php:86
+msgid "Primary Button Text"
+msgstr "主要按钮文字"
+
+#: inc/widgets/elementor/class-home-hero.php:88, template-parts/hero/home.php:40
+msgid "Start Your Project"
+msgstr "开始您的项目"
+
+#: inc/widgets/elementor/class-home-hero.php:94
+msgid "Primary Button Link"
+msgstr "主要按钮链接"
+
+#: inc/widgets/elementor/class-home-hero.php:103
+msgid "Secondary Button Text"
+msgstr "次要按钮文字"
+
+#: inc/widgets/elementor/class-home-hero.php:105, template-parts/hero/home.php:43
+msgid "View Case Studies"
+msgstr "查看案例研究"
+
+#: inc/widgets/elementor/class-home-hero.php:111
+msgid "Secondary Button Link"
+msgstr "次要按钮链接"
+
+#: inc/widgets/elementor/class-home-hero.php:127
+msgid "Terminal Content"
+msgstr "终端内容"
+
+#: inc/widgets/elementor/class-home-hero.php:133
+msgid "Command"
+msgstr "命令"
+
+#: inc/widgets/elementor/class-home-hero.php:144
+msgid "Line Text"
+msgstr "行文本"
+
+#: inc/widgets/elementor/class-home-hero.php:146
+msgid "Processing..."
+msgstr "处理中..."
+
+#: inc/widgets/elementor/class-home-hero.php:153
+msgid "Line Type"
+msgstr "行类型"
+
+#: inc/widgets/elementor/class-home-hero.php:157
+msgid "Muted (Info)"
+msgstr "灰色（信息）"
+
+#: inc/widgets/elementor/class-home-hero.php:158
+msgid "Success (Green Check)"
+msgstr "成功（绿色对勾）"
+
+#: inc/widgets/elementor/class-home-hero.php:159
+msgid "White (Standard)"
+msgstr "白色（标准）"
+
+#: inc/widgets/elementor/class-home-hero.php:166
+msgid "Terminal Output Lines"
+msgstr "终端输出行"
+
+#: inc/widgets/elementor/class-home-hero.php:171
+msgid "Analyzing requirements..."
+msgstr "分析需求..."
+
+#: inc/widgets/elementor/class-home-hero.php:175
+msgid "Generating architecture..."
+msgstr "生成架构..."
+
+#: inc/widgets/elementor/class-home-hero.php:179
+msgid "Backend structure created"
+msgstr "后端结构已创建"
+
+#: inc/widgets/elementor/class-home-hero.php:183
+msgid "Database schema optimized"
+msgstr "数据库模式已优化"
+
+#: inc/widgets/elementor/class-home-hero.php:187
+msgid "Frontend components generated"
+msgstr "前端组件已生成"
+
+#: inc/widgets/elementor/class-home-hero.php:201
+msgid "Trust Indicators"
+msgstr "信任背书"
+
+#: inc/widgets/elementor/class-home-hero.php:207
+msgid "Trust Text"
+msgstr "信任背书文字"
+
+#: inc/widgets/elementor/class-home-hero.php:209, template-parts/hero/home.php:49
+msgid "Trusted by innovators"
+msgstr "深受创新者信赖"
+
+#: inc/widgets/elementor/class-home-hero.php:218, inc/widgets/elementor/class-ai-split-feature.php:69
+msgid "Icon Class (FontAwesome)"
+msgstr "图标类名 (FontAwesome)"
+
+#: inc/widgets/elementor/class-home-hero.php:228
+msgid "Icons List"
+msgstr "图标列表"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:21
+msgid "AI Split Feature"
+msgstr "AI 分栏特性"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:44, front-page.php:21
+msgid "The AI Advantage"
+msgstr "AI 优势"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:52, front-page.php:22
+msgid "Why Choose AI-Driven Development?"
+msgstr "为什么选择 AI 驱动开发？"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:60, front-page.php:25
+msgid "Traditional software development is slow and error-prone. We use autonomous AI agents to write, test, and deploy code at speeds previously impossible."
+msgstr "传统软件开发缓慢且容易出错。我们使用自主 AI 智能体以以前不可能的速度编写、测试和部署代码。"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:78
+msgid "Icon Class"
+msgstr "图标类名"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:86
+msgid "Icon Color Class"
+msgstr "图标颜色类名"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:97
+msgid "Feature Title"
+msgstr "特性标题"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:99, front-page.php:34
+msgid "10x Faster Delivery"
+msgstr "10倍交付速度"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:105
+msgid "Feature Description"
+msgstr "特性描述"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:107
+msgid "Weeks become days. We launch MVPs in record time."
+msgstr "数周缩短为数天。我们以创纪录的时间推出 MVP。"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:113
+msgid "Features List"
+msgstr "特性列表"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:121, front-page.php:35
+msgid "Weeks become days. We launch MVPs in record time without compromising quality."
+msgstr "数周缩短为数天。我们在不牺牲质量的情况下以创纪录的时间推出 MVP。"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:126, front-page.php:43
+msgid "Zero-Defect Code"
+msgstr "零缺陷代码"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:127, front-page.php:44
+msgid "AI agents run thousands of test cases instantly, catching bugs before they exist."
+msgstr "AI 智能体瞬间运行数千个测试用例，在 Bug 出现之前就将其捕获。"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:132, front-page.php:52
+msgid "Cost Efficiency"
+msgstr "成本效益"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:133, front-page.php:53
+msgid "Reduce development costs by up to 60% by automating repetitive coding tasks."
+msgstr "通过自动化重复性编码任务，将开发成本降低高达 60%。"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:144
+msgid "Metrics Card"
+msgstr "指标卡片"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:150
+msgid "Card Title"
+msgstr "卡片标题"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:152
+msgid "AI Performance Metrics"
+msgstr "AI 性能指标"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:158
+msgid "Metric 1 Label"
+msgstr "指标 1 标签"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:160
+msgid "Development Speed"
+msgstr "开发速度"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:166
+msgid "Metric 1 Value (AI)"
+msgstr "指标 1 数值 (AI)"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:181
+msgid "Metric 1 Value (Traditional)"
+msgstr "指标 1 数值 (传统)"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:196
+msgid "Box 1 Value"
+msgstr "方框 1 数值"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:204
+msgid "Box 1 Label"
+msgstr "方框 1 标签"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:212
+msgid "Box 2 Value"
+msgstr "方框 2 数值"
+
+#: inc/widgets/elementor/class-ai-split-feature.php:220
+msgid "Box 2 Label"
+msgstr "方框 2 标签"
+
+#: front-page.php:108
+msgid "Core Capabilities"
+msgstr "核心能力"
+
+#: front-page.php:109
+msgid "End-to-end solutions powered by intelligence"
+msgstr "由智能驱动的端到端解决方案"
+
+#: front-page.php:119
+msgid "AI Agent Integration"
+msgstr "AI 智能体集成"
+
+#: front-page.php:120
+msgid "Deploy autonomous agents that handle customer support, data analysis, and process automation 24/7."
+msgstr "部署全天候处理客户支持、数据分析和流程自动化的自主智能体。"
+
+#: front-page.php:131
+msgid "Generative UI/UX"
+msgstr "生成式 UI/UX"
+
+#: front-page.php:132
+msgid "Dynamic interfaces that adapt to user behavior in real-time using generative design algorithms."
+msgstr "使用生成式设计算法实时适应用户行为的动态界面。"
+
+#: front-page.php:143
+msgid "AI Security"
+msgstr "AI 安全"
+
+#: front-page.php:144
+msgid "Self-healing infrastructure that detects and neutralizes threats before they impact your business."
+msgstr "在威胁影响您的业务之前检测并中和威胁的自愈基础设施。"
+
+#: front-page.php:157
+msgid "Selected Works"
+msgstr "精选案例"
+
+#: front-page.php:158
+msgid "See what we have built"
+msgstr "查看我们的成果"
+
+#: front-page.php:161
+msgid "View All"
+msgstr "查看全部"
