@@ -6,13 +6,17 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-01 14:11+0000\n"
+"POT-Creation-Date: 2026-01-01 14:32+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../archive-project.php:34, ../page-templates/projects-list.php:49
+msgid "No projects found."
+msgstr ""
 
 #: ../footer.php:3
 msgid "https://wordpress.org/"
@@ -28,12 +32,292 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../functions.php:28
+#: ../header.php:6
+msgid "Toggle Dark Mode"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:27
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:28
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:29
+msgctxt "Admin Menu text"
+msgid "Projects"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:30
+msgctxt "Add New on Toolbar"
+msgid "Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:31
+msgid "Project Archives"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:32
+msgid "Project Attributes"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:33
+msgid "Parent Project:"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:34
+msgid "All Projects"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:35
+msgid "Add New Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:36
+msgid "Add New"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:37
+msgid "New Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:38
+msgid "Edit Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:39
+msgid "Update Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:40
+msgid "View Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:41
+msgid "View Projects"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:42
+msgid "Search Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:43
+msgid "Not found"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:44
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:45
+msgid "Featured Image"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:46
+msgid "Set featured image"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:47
+msgid "Remove featured image"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:48
+msgid "Use as featured image"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:49
+msgid "Insert into Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:50
+msgid "Uploaded to this Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:51
+msgid "Projects list"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:52
+msgid "Projects list navigation"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:53
+msgid "Filter Projects list"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:56
+msgid "Project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:57
+msgid "The projects"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:95
+msgctxt "taxonomy general name"
+msgid "Technologies"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:96
+msgctxt "taxonomy singular name"
+msgid "Technology"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:97
+msgid "Search Technologies"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:98
+msgid "All Technologies"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:99
+msgid "Parent Technology"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:100
+msgid "Parent Technology:"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:101
+msgid "Edit Technology"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:102
+msgid "Update Technology"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:103
+msgid "Add New Technology"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:104
+msgid "New Technology Name"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:105, ../single-project.php:71
+msgid "Technologies"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:109
+msgid "Technologies used in the project"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:124
+msgctxt "taxonomy general name"
+msgid "Industries"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:125
+msgctxt "taxonomy singular name"
+msgid "Industry"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:126
+msgid "Search Industries"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:127
+msgid "All Industries"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:128
+msgid "Parent Industry"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:129
+msgid "Parent Industry:"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:130
+msgid "Edit Industry"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:131
+msgid "Update Industry"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:132
+msgid "Add New Industry"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:133
+msgid "New Industry Name"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:134
+msgid "Industries"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:138
+msgid "Industry of the project"
+msgstr ""
+
+#: ../inc/classes/class-elementor.php:43
+msgid "AI Dev Theme"
+msgstr ""
+
+#: ../inc/classes/class-setup.php:30
+msgid "Sidebar"
+msgstr ""
+
+#: ../inc/classes/class-setup.php:32
+msgid "Add widgets here."
+msgstr ""
+
+#: ../inc/classes/class-setup.php:55, ../template-parts/header/navigation.php:10
 msgid "Primary Menu"
 msgstr ""
 
-#: ../functions.php:29
+#: ../inc/classes/class-setup.php:56
 msgid "Footer Menu"
+msgstr ""
+
+#: ../page-templates/blank.php:3
+msgid "Blank Page (No Header/Footer)"
+msgstr ""
+
+#: ../page-templates/full-width.php:3
+msgid "Full Width Page"
+msgstr ""
+
+#: ../page-templates/projects-list.php:3
+msgid "Projects List"
+msgstr ""
+
+#: ../page-templates/sidebar-left.php:3
+msgid "Left Sidebar Page"
+msgstr ""
+
+#: ../page-templates/sidebar-right.php:3
+msgid "Right Sidebar Page"
+msgstr ""
+
+#: ../single-project.php:33
+msgid "Industry:"
+msgstr ""
+
+#: ../single-project.php:43
+msgid "Client:"
+msgstr ""
+
+#: ../single-project.php:67
+msgid "Project Details"
+msgstr ""
+
+#: ../single-project.php:83
+msgid "Visit Live Site"
+msgstr ""
+
+#: ../single-project.php:96
+msgid "Previous:"
+msgstr ""
+
+#: ../single-project.php:97
+msgid "Next:"
 msgstr ""
 
 #: ../template-parts/content/content-none.php:10
@@ -59,4 +343,8 @@ msgstr ""
 
 #: ../template-parts/content/content.php:46
 msgid "Pages:"
+msgstr ""
+
+#: ../template-parts/projects/card.php:39
+msgid "View Case Study"
 msgstr ""
