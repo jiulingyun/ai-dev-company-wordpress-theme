@@ -23,6 +23,7 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
     volumes:
       # Mount the current directory as the theme directory
       - ./:/var/www/html/wp-content/themes/ai-dev-company-wordpress-theme
