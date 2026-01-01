@@ -1,26 +1,26 @@
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
+// Image Optimization Utilities
 
-.w-100 { width: 100%; }
-.h-100 { height: 100%; }
+/* Lazy Loading Class for Images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    
+    &.loaded {
+        opacity: 1;
+    }
+}
 
-.position-relative { position: relative; }
-.position-absolute { position: absolute; }
-
-.overflow-hidden { overflow: hidden; }
-
-/* Screen Reader Text */
-.screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	word-wrap: normal !important;
+/* Print Styles Optimization */
+@media print {
+    .hero-home__bg,
+    .theme-toggle,
+    .scanline,
+    .crt-overlay {
+        display: none !important;
+    }
+    
+    body {
+        color: #000 !important;
+        background: #fff !important;
+    }
 }
