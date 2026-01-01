@@ -1,0 +1,106 @@
+/* Footer Styles */
+.site-footer {
+    position: relative;
+    background-color: var(--color-background-alt);
+    
+    [data-theme="dark"] & {
+        background-color: #050505; // Even darker than standard dark bg
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .widget-title {
+        font-family: var(--font-secondary);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        position: relative;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 30px;
+            height: 2px;
+            background: var(--color-primary);
+            border-radius: 2px;
+        }
+    }
+
+    .footer-links {
+        list-style: none !important; /* Remove bullets */
+        padding-left: 0 !important;  /* Remove padding */
+        margin-left: 0 !important;   /* Remove margin */
+
+        li {
+            transition: transform var(--transition-fast);
+            list-style-type: none !important; /* Force remove list style type */
+            
+            &:hover {
+                transform: translateX(5px);
+            }
+        }
+    }
+}
+
+.bg-darker {
+    background-color: var(--color-background-alt);
+}
+
+.hover-white:hover {
+    color: var(--color-text) !important;
+}
+
+.hover-primary:hover {
+    color: var(--color-primary) !important;
+}
+
+.transition-colors {
+    transition: color var(--transition-base);
+}
+
+.blur-3xl {
+    filter: blur(64px);
+}
+
+.footer-newsletter {
+    .input-group {
+        display: flex; /* Force flex layout */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        
+        .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            flex: 1; /* Take up available space */
+            
+            &:focus {
+                background-color: var(--color-background);
+                border-color: var(--color-primary);
+                z-index: 2;
+            }
+        }
+        
+        .button {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            white-space: nowrap; /* Prevent button text wrapping */
+        }
+    }
+}
+
+/* Specific Utilities for footer elements */
+.border-light-subtle {
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    
+    [data-theme="dark"] & {
+        border-color: rgba(255, 255, 255, 0.05) !important;
+    }
+}
+
+.text-white {
+    color: var(--color-text) !important; // In light mode it's dark text actually
+    
+    [data-theme="dark"] & {
+        color: #ffffff !important;
+    }
+}

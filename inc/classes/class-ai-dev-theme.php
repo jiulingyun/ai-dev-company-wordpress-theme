@@ -18,5 +18,6 @@ class AI_Dev_Theme {
 		Setup::get_instance();
 		CPT_Projects::get_instance();
 		Elementor::get_instance();
+		Customizer::get_instance();
 	}
 }

@@ -30,11 +30,30 @@ class Setup {
 			'name'          => esc_html__( 'Sidebar', 'ai-dev-theme' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ai-dev-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget %2$s mb-lg">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="widget-title h5 mb-md">',
 			'after_title'   => '</h2>',
 		) );
+
+        $footer_sidebars = [
+            'footer-1' => __( 'Footer Column 1', 'ai-dev-theme' ),
+            'footer-2' => __( 'Footer Column 2', 'ai-dev-theme' ),
+            'footer-3' => __( 'Footer Column 3', 'ai-dev-theme' ),
+            'footer-4' => __( 'Footer Column 4', 'ai-dev-theme' ),
+        ];
+
+        foreach ( $footer_sidebars as $id => $name ) {
+            register_sidebar( array(
+                'name'          => $name,
+                'id'            => $id,
+                'description'   => esc_html__( 'Add widgets here for the footer.', 'ai-dev-theme' ),
+                'before_widget' => '<section id="%1$s" class="widget %2$s mb-lg">',
+                'after_widget'  => '</section>',
+                'before_title'  => '<h2 class="widget-title h5 mb-md text-primary">',
+                'after_title'   => '</h2>',
+            ) );
+        }
 	}
 
 	public function setup_theme() {

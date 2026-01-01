@@ -10,6 +10,50 @@ img[loading="lazy"] {
     }
 }
 
+/* Positioning */
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.top-0 { top: 0 !important; }
+.bottom-0 { bottom: 0 !important; }
+.start-0 { left: 0 !important; }
+.end-0 { right: 0 !important; }
+
+/* Sizing */
+.w-100 { width: 100% !important; }
+.h-100 { height: 100% !important; }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden !important; }
+
+/* Pointer Events */
+.pointer-events-none { pointer-events: none !important; }
+
+/* Z-Index */
+.z-0 { z-index: 0 !important; }
+.z-1 { z-index: 1 !important; }
+.z-2 { z-index: 2 !important; }
+
+/* Colors */
+.bg-primary { background-color: var(--color-primary) !important; }
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.bg-dark { background-color: #0b1026 !important; } /* Fallback or specific dark color */
+.text-white { color: #ffffff !important; }
+.text-primary { color: var(--color-primary) !important; }
+
+/* Opacity */
+.opacity-10 { opacity: 0.1 !important; }
+.opacity-25 { opacity: 0.25 !important; }
+.opacity-50 { opacity: 0.5 !important; }
+
+/* Borders */
+.border-top { border-top: 1px solid var(--color-border) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-opacity-25 { border-color: rgba(112, 0, 255, 0.25) !important; } /* Adjust as needed */
+.rounded-circle { border-radius: 50% !important; }
+
+/* Letter Spacing */
+.letter-spacing-sm { letter-spacing: 0.05em !important; }
+
 /* Print Styles Optimization */
 @media print {
     .hero-home__bg,

@@ -48,6 +48,9 @@ class Assets {
             [], 
             null 
         );
+
+        // Font Awesome 6 (Latest) - Using a distinct handle to ensure loading
+        wp_enqueue_style( 'ai-dev-theme-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1' );
 	}
 
 	public function register_scripts() {
