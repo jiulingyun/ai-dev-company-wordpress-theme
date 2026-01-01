@@ -348,3 +348,179 @@ msgstr "分页："
 #: ../template-parts/projects/card.php:39
 msgid "View Case Study"
 msgstr "查看案例详情"
+
+#: inc/widgets/elementor/class-ai-advantages.php:21
+msgid "AI Advantages"
+msgstr "AI 优势展示"
+
+#: inc/widgets/elementor/class-project-showcase.php:21
+msgid "Project Showcase"
+msgstr "项目案例展示"
+
+#: inc/widgets/elementor/class-tech-stack.php:21
+msgid "Tech Stack"
+msgstr "技术栈展示"
+
+#: inc/widgets/elementor/class-team-grid.php:21
+msgid "Team Grid"
+msgstr "团队成员网格"
+
+#: inc/widgets/elementor/class-testimonials.php:21
+msgid "Testimonials"
+msgstr "客户评价"
+
+#: inc/widgets/elementor/class-stats-counter.php:21
+msgid "Stats Counter"
+msgstr "统计数字"
+
+#: inc/widgets/elementor/class-timeline.php:21
+msgid "Timeline"
+msgstr "时间线"
+
+#: inc/widgets/elementor/class-ai-advantages.php:36
+msgid "Content"
+msgstr "内容"
+
+#: inc/widgets/elementor/class-ai-advantages.php:47
+msgid "Title"
+msgstr "标题"
+
+#: inc/widgets/elementor/class-ai-advantages.php:57
+msgid "Description"
+msgstr "描述"
+
+#: inc/widgets/elementor/class-ai-advantages.php:67
+msgid "Icon"
+msgstr "图标"
+
+#: inc/widgets/elementor/class-ai-advantages.php:78
+msgid "Advantages List"
+msgstr "优势列表"
+
+#: inc/widgets/elementor/class-ai-advantages.php:82
+msgid "Speed"
+msgstr "速度"
+
+#: inc/widgets/elementor/class-ai-advantages.php:83
+msgid "Lightning fast execution."
+msgstr "闪电般的执行速度。"
+
+#: inc/widgets/elementor/class-ai-advantages.php:87
+msgid "Precision"
+msgstr "精准"
+
+#: inc/widgets/elementor/class-ai-advantages.php:88
+msgid "High accuracy results."
+msgstr "高精度的结果。"
+
+#: inc/widgets/elementor/class-ai-advantages.php:100
+msgid "Columns"
+msgstr "列数"
+
+#: inc/widgets/elementor/class-project-showcase.php:36
+msgid "Query"
+msgstr "查询"
+
+#: inc/widgets/elementor/class-project-showcase.php:43
+msgid "Posts Per Page"
+msgstr "每页文章数"
+
+#: inc/widgets/elementor/class-project-showcase.php:52
+msgid "Order By"
+msgstr "排序依据"
+
+#: inc/widgets/elementor/class-project-showcase.php:56
+msgid "Date"
+msgstr "日期"
+
+#: inc/widgets/elementor/class-project-showcase.php:58
+msgid "Random"
+msgstr "随机"
+
+#: inc/widgets/elementor/class-project-showcase.php:64
+msgid "Order"
+msgstr "排序"
+
+#: inc/widgets/elementor/class-tech-stack.php:47
+msgid "Technology Name"
+msgstr "技术名称"
+
+#: inc/widgets/elementor/class-tech-stack.php:65
+msgid "Link"
+msgstr "链接"
+
+#: inc/widgets/elementor/class-tech-stack.php:79
+msgid "Technologies List"
+msgstr "技术列表"
+
+#: inc/widgets/elementor/class-team-grid.php:36
+msgid "Team Members"
+msgstr "团队成员"
+
+#: inc/widgets/elementor/class-team-grid.php:47
+msgid "Name"
+msgstr "姓名"
+
+#: inc/widgets/elementor/class-team-grid.php:57
+msgid "Position"
+msgstr "职位"
+
+#: inc/widgets/elementor/class-team-grid.php:66
+msgid "Photo"
+msgstr "照片"
+
+#: inc/widgets/elementor/class-team-grid.php:76
+msgid "Bio"
+msgstr "简介"
+
+#: inc/widgets/elementor/class-team-grid.php:86
+msgid "LinkedIn URL"
+msgstr "LinkedIn 链接"
+
+#: inc/widgets/elementor/class-team-grid.php:95
+msgid "Twitter URL"
+msgstr "Twitter 链接"
+
+#: inc/widgets/elementor/class-team-grid.php:104
+msgid "GitHub URL"
+msgstr "GitHub 链接"
+
+#: inc/widgets/elementor/class-team-grid.php:114
+msgid "Members List"
+msgstr "成员列表"
+
+#: inc/widgets/elementor/class-testimonials.php:47
+msgid "Testimonials List"
+msgstr "评价列表"
+
+#: inc/widgets/elementor/class-stats-counter.php:36
+msgid "Statistics"
+msgstr "统计数据"
+
+#: inc/widgets/elementor/class-stats-counter.php:47
+msgid "Number"
+msgstr "数值"
+
+#: inc/widgets/elementor/class-stats-counter.php:56
+msgid "Suffix"
+msgstr "后缀"
+
+#: inc/widgets/elementor/class-stats-counter.php:66
+msgid "Label"
+msgstr "标签"
+
+#: inc/widgets/elementor/class-stats-counter.php:76
+msgid "Stats List"
+msgstr "统计列表"
+
+#: inc/widgets/elementor/class-timeline.php:36
+msgid "Timeline Items"
+msgstr "时间线项目"
+
+#: inc/widgets/elementor/class-timeline.php:47
+msgid "Year/Date"
+msgstr "年份/日期"
+
+#: inc/widgets/elementor/class-timeline.php:76
+msgid "Timeline List"
+msgstr "时间线列表"
