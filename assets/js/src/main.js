@@ -1,5 +1,6 @@
 import AIAnimations from './modules/ai-animations';
 import AINavigation from './modules/ai-navigation';
+import initLightbox from './modules/lightbox';
 import './modules/theme-toggle';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,4 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize modules
   new AIAnimations();
   new AINavigation();
+  initLightbox();
 });

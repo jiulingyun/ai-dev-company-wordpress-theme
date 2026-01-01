@@ -2,8 +2,12 @@
 
 /* Lazy Loading Class for Images */
 img[loading="lazy"] {
-    opacity: 0;
+    // opacity: 0; // Removed: This was hiding images until 'loaded' class was added
     transition: opacity 0.3s ease-in;
+    
+    &.lazy-hidden {
+        opacity: 0;
+    }
     
     &.loaded {
         opacity: 1;

@@ -17,5 +17,8 @@
     "@wordpress/scripts": "^26.0.0",
     "sass": "^1.69.0",
     "wp-pot-cli": "^1.5.0"
+  },
+  "dependencies": {
+    "photoswipe": "^5.4.4"
   }
 }
