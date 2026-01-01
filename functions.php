@@ -16,6 +16,7 @@ if ( ! defined( 'AI_DEV_THEME_DIR_URI' ) ) {
 }
 
 require_once AI_DEV_THEME_DIR_PATH . '/inc/helpers.php';
+require_once AI_DEV_THEME_DIR_PATH . '/inc/template-tags.php';
 
 function ai_dev_theme_get_theme_instance() {
 	\AI_Dev_Theme\Inc\Classes\AI_Dev_Theme::get_instance();
