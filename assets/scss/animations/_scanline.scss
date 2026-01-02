@@ -17,34 +17,41 @@
   pointer-events: none;
   z-index: 1; /* Middle layer: Above grid (z-0) but below content (z-2) */
   
-  /* Vignette effect - Darker corners */
-  background: radial-gradient(
-    circle,
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
+  /* Vignette effect - Darker corners (Dark Mode Only) */
+  background: transparent;
+  
+  [data-theme="dark"] & {
+    background: radial-gradient(
+        circle,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+  }
 
   &::after {
     content: " ";
-    display: block;
+    display: none; /* Hide completely in light mode */
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    
-    /* High Visibility Scanlines - Reduced opacity for balance */
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0) 50%,
-      rgba(0, 240, 255, 0.15) 50%,
-      rgba(0, 240, 255, 0.15)
-    );
-    background-size: 100% 4px;
     z-index: 2;
     pointer-events: none;
-    animation: scanline 6s linear infinite;
+
+    /* Only show and animate in dark mode */
+    [data-theme="dark"] & {
+        display: block;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0) 50%,
+            rgba(0, 240, 255, 0.15) 50%,
+            rgba(0, 240, 255, 0.15)
+        );
+        background-size: 100% 4px;
+        animation: scanline 6s linear infinite;
+    }
   }
 }
 
@@ -58,16 +65,22 @@
   z-index: 1; /* Same as scanline, below content */
   pointer-events: none;
   
-  /* High Visibility Pixel Grid */
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.5) 50%
-  ),
-  linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.15),
-    rgba(0, 255, 0, 0.1),
-    rgba(0, 0, 255, 0.15)
-  );
-  background-size: 100% 2px, 3px 100%;
+  /* Hide completely in light mode */
+  display: none;
+
+  /* Enable only in Dark Mode */
+  [data-theme="dark"] & {
+      display: block;
+      background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.5) 50%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.15),
+        rgba(0, 255, 0, 0.1),
+        rgba(0, 0, 255, 0.15)
+      );
+      background-size: 100% 2px, 3px 100%;
+  }
 }

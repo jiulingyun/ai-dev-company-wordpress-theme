@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-01 14:32+0000\n"
+"POT-Creation-Date: 2026-01-02 02:55+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -14,250 +14,631 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../archive-project.php:34, ../page-templates/projects-list.php:49
+#: ../404.php:24
+msgid "System Error: Page Not Found"
+msgstr ""
+
+#: ../404.php:39
+msgid "The requested resource has been moved, deleted, or never existed. Our AI agents are baffled."
+msgstr ""
+
+#: ../404.php:43
+msgid "Return Home"
+msgstr ""
+
+#: ../404.php:46
+msgid "Go Back"
+msgstr ""
+
+#: ../archive-project.php:20, ../taxonomy-industry.php:20, ../taxonomy-technology.php:20
+msgid "Product Showcase"
+msgstr ""
+
+#: ../archive-project.php:21, ../taxonomy-industry.php:21, ../taxonomy-technology.php:21
+msgid "Explore our AI-driven software solutions and success stories."
+msgstr ""
+
+#: ../archive-project.php:35, ../taxonomy-industry.php:35, ../taxonomy-technology.php:35
+msgid "Search projects..."
+msgstr ""
+
+#: ../archive-project.php:46, ../taxonomy-industry.php:46, ../taxonomy-technology.php:46
+msgid "All"
+msgstr ""
+
+#: ../archive-project.php:90, ../inc/widgets/elementor/class-project-showcase.php:141, ../page-templates/projects-list.php:49, ../taxonomy-industry.php:90, ../taxonomy-technology.php:90
 msgid "No projects found."
 msgstr ""
 
-#: ../footer.php:3
-msgid "https://wordpress.org/"
+#: ../archive-project.php:92, ../taxonomy-industry.php:92, ../taxonomy-technology.php:92
+msgid "Try different keywords or check your spelling."
 msgstr ""
 
-#. translators: %s: CMS Name, i.e. WordPress.
-#: ../footer.php:6
-msgid "Proudly powered by %s"
+#: ../archive-project.php:94, ../taxonomy-industry.php:94, ../taxonomy-technology.php:94
+msgid "View All Projects"
 msgstr ""
 
-#. translators: 1: Theme name, 2: Theme author.
-#: ../footer.php:12
-msgid "Theme: %1$s by %2$s."
+#: ../archive-project.php:82, ../archive.php:33, ../index.php:51, ../taxonomy-industry.php:82, ../taxonomy-technology.php:82
+msgid "Previous"
 msgstr ""
 
-#: ../header.php:6
+#: ../archive-project.php:83, ../archive.php:34, ../index.php:52, ../taxonomy-industry.php:83, ../taxonomy-technology.php:83
+msgid "Next"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: ../comments.php:39
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:33
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: ../comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:75
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:76
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:77
+msgid "Cancel Reply"
+msgstr ""
+
+#: ../comments.php:78
+msgid "Post Comment"
+msgstr ""
+
+#: ../comments.php:81
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Your Comment..."
+msgstr ""
+
+#: ../comments.php:83, ../inc/widgets/elementor/class-contact-form.php:80, ../inc/widgets/elementor/class-team-grid.php:46, ../inc/widgets/elementor/class-testimonials.php:56
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:83
+msgid "Name*"
+msgstr ""
+
+#: ../comments.php:84, ../inc/widgets/elementor/class-contact-form.php:84
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:84
+msgid "Email*"
+msgstr ""
+
+#: ../comments.php:85, ../comments.php:85
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:86
+msgid "Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: ../footer.php:63
+msgid "Company"
+msgstr ""
+
+#: ../footer.php:65, ../inc/widgets/elementor/class-about-hero.php:45
+msgid "About Us"
+msgstr ""
+
+#: ../footer.php:66
+msgid "Careers"
+msgstr ""
+
+#: ../footer.php:67
+msgid "Blog"
+msgstr ""
+
+#: ../footer.php:68
+msgid "Contact"
+msgstr ""
+
+#: ../footer.php:77
+msgid "Resources"
+msgstr ""
+
+#: ../footer.php:79
+msgid "Documentation"
+msgstr ""
+
+#: ../footer.php:80
+msgid "API Reference"
+msgstr ""
+
+#: ../footer.php:81
+msgid "Community"
+msgstr ""
+
+#: ../footer.php:82, ../inc/widgets/elementor/class-stats-counter.php:95
+msgid "Support"
+msgstr ""
+
+#: ../footer.php:91
+msgid "Newsletter"
+msgstr ""
+
+#: ../footer.php:92
+msgid "Subscribe to our newsletter for the latest updates."
+msgstr ""
+
+#: ../footer.php:95
+msgid "Email address"
+msgstr ""
+
+#. translators: %s: Theme author.
+#: ../footer.php:110
+msgid "Theme by %s."
+msgstr ""
+
+#: ../front-page.php:42, ../inc/widgets/elementor/class-ai-split-feature.php:46
+msgid "The AI Advantage"
+msgstr ""
+
+#: ../front-page.php:43, ../inc/widgets/elementor/class-ai-split-feature.php:55
+msgid "Why Choose AI-Driven Development?"
+msgstr ""
+
+#: ../front-page.php:46, ../inc/widgets/elementor/class-ai-split-feature.php:64
+msgid "Traditional software development is slow and error-prone. We use autonomous AI agents to write, test, and deploy code at speeds previously impossible."
+msgstr ""
+
+#: ../front-page.php:55, ../inc/widgets/elementor/class-ai-split-feature.php:98
+msgid "10x Faster Delivery"
+msgstr ""
+
+#: ../front-page.php:56
+msgid "Weeks become days. We launch MVPs in record time without compromising quality."
+msgstr ""
+
+#: ../front-page.php:64
+msgid "Zero-Defect Code"
+msgstr ""
+
+#: ../front-page.php:65
+msgid "AI agents run thousands of test cases instantly, catching bugs before they exist."
+msgstr ""
+
+#: ../front-page.php:73
+msgid "Cost Efficiency"
+msgstr ""
+
+#: ../front-page.php:74
+msgid "Reduce development costs by up to 60% by automating repetitive coding tasks."
+msgstr ""
+
+#: ../front-page.php:86, ../inc/widgets/elementor/class-ai-split-feature.php:156
+msgid "AI Performance Metrics"
+msgstr ""
+
+#: ../front-page.php:96, ../inc/widgets/elementor/class-ai-split-feature.php:165
+msgid "Development Speed"
+msgstr ""
+
+#: ../front-page.php:97, ../inc/widgets/elementor/class-ai-split-feature.php:289
+msgid "AI vs Traditional"
+msgstr ""
+
+#: ../front-page.php:110
+msgid "Uptime"
+msgstr ""
+
+#: ../front-page.php:114
+msgid "MVP Launch"
+msgstr ""
+
+#: ../front-page.php:129
+msgid "Core Capabilities"
+msgstr ""
+
+#: ../front-page.php:130, ../inc/widgets/elementor/class-section-title.php:63
+msgid "End-to-end solutions powered by intelligence"
+msgstr ""
+
+#: ../front-page.php:140
+msgid "AI Agent Integration"
+msgstr ""
+
+#: ../front-page.php:141
+msgid "Deploy autonomous agents that handle customer support, data analysis, and process automation 24/7."
+msgstr ""
+
+#: ../front-page.php:142, ../front-page.php:154, ../front-page.php:166
+msgid "Learn More"
+msgstr ""
+
+#: ../front-page.php:152
+msgid "Generative UI/UX"
+msgstr ""
+
+#: ../front-page.php:153
+msgid "Dynamic interfaces that adapt to user behavior in real-time using generative design algorithms."
+msgstr ""
+
+#: ../front-page.php:164
+msgid "AI Security"
+msgstr ""
+
+#: ../front-page.php:165
+msgid "Self-healing infrastructure that detects and neutralizes threats before they impact your business."
+msgstr ""
+
+#: ../front-page.php:178
+msgid "Selected Works"
+msgstr ""
+
+#: ../front-page.php:179
+msgid "See what we have built"
+msgstr ""
+
+#: ../front-page.php:182, ../inc/widgets/elementor/class-project-showcase.php:81, ../inc/widgets/elementor/class-section-title.php:73
+msgid "View All"
+msgstr ""
+
+#: ../header.php:26
 msgid "Toggle Dark Mode"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:27
+#: ../inc/template-tags.php:27
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/template-tags.php:27, ../inc/template-tags.php:60
+msgid "Edit"
+msgstr ""
+
+#: ../inc/template-tags.php:49
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: ../inc/template-tags.php:54
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:34
+msgid "AI SEO Optimization"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:54
+msgid "Auto-Generate with AI"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:57
+msgid "Let our AI agents analyze your content and generate optimized meta tags."
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:64
+msgid "SEO Title"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:69
+msgid "SEO Description"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:74
+msgid "Focus Keywords"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:75
+msgid "e.g. AI, Development, WordPress"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:83
+msgid "Analyzing Content..."
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:105
+msgid "Regenerate"
+msgstr ""
+
+#: ../inc/classes/class-ai-seo.php:106
+msgid "AI SEO Meta Tags Generated!"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:29
+msgid "Project Details"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:52, ../inc/widgets/elementor/class-about-hero.php:52, ../inc/widgets/elementor/class-ai-split-feature.php:44
+msgid "Subtitle"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:56
+msgid "Client Name"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:60
+msgid "Project URL (Demo)"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:64
+msgid "Demo QR Code Image URL"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:66
+msgid "URL to the QR code image for mobile preview."
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:69
+msgid "Demo Username"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:73
+msgid "Demo Password"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:78
+msgid "Delivery Time (e.g. \"2 Weeks\")"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:82
+msgid "AI Code Percentage (0-100)"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:86
+msgid "Team Size (e.g. \"2 Devs + 1 PM\")"
+msgstr ""
+
+#: ../inc/classes/class-cpt-projects.php:144
 msgctxt "Post Type General Name"
 msgid "Projects"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:28
+#: ../inc/classes/class-cpt-projects.php:145
 msgctxt "Post Type Singular Name"
 msgid "Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:29
+#: ../inc/classes/class-cpt-projects.php:146
 msgctxt "Admin Menu text"
 msgid "Projects"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:30
+#: ../inc/classes/class-cpt-projects.php:147
 msgctxt "Add New on Toolbar"
 msgid "Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:31
+#: ../inc/classes/class-cpt-projects.php:148
 msgid "Project Archives"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:32
+#: ../inc/classes/class-cpt-projects.php:149
 msgid "Project Attributes"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:33
+#: ../inc/classes/class-cpt-projects.php:150
 msgid "Parent Project:"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:34
+#: ../inc/classes/class-cpt-projects.php:151
 msgid "All Projects"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:35
+#: ../inc/classes/class-cpt-projects.php:152
 msgid "Add New Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:36
+#: ../inc/classes/class-cpt-projects.php:153
 msgid "Add New"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:37
+#: ../inc/classes/class-cpt-projects.php:154
 msgid "New Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:38
+#: ../inc/classes/class-cpt-projects.php:155
 msgid "Edit Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:39
+#: ../inc/classes/class-cpt-projects.php:156
 msgid "Update Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:40
+#: ../inc/classes/class-cpt-projects.php:157
 msgid "View Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:41
+#: ../inc/classes/class-cpt-projects.php:158
 msgid "View Projects"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:42
+#: ../inc/classes/class-cpt-projects.php:159
 msgid "Search Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:43
+#: ../inc/classes/class-cpt-projects.php:160
 msgid "Not found"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:44
+#: ../inc/classes/class-cpt-projects.php:161
 msgid "Not found in Trash"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:45
+#: ../inc/classes/class-cpt-projects.php:162
 msgid "Featured Image"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:46
+#: ../inc/classes/class-cpt-projects.php:163
 msgid "Set featured image"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:47
+#: ../inc/classes/class-cpt-projects.php:164
 msgid "Remove featured image"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:48
+#: ../inc/classes/class-cpt-projects.php:165
 msgid "Use as featured image"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:49
+#: ../inc/classes/class-cpt-projects.php:166
 msgid "Insert into Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:50
+#: ../inc/classes/class-cpt-projects.php:167
 msgid "Uploaded to this Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:51
+#: ../inc/classes/class-cpt-projects.php:168
 msgid "Projects list"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:52
+#: ../inc/classes/class-cpt-projects.php:169
 msgid "Projects list navigation"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:53
+#: ../inc/classes/class-cpt-projects.php:170
 msgid "Filter Projects list"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:56
+#: ../inc/classes/class-cpt-projects.php:173
 msgid "Project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:57
+#: ../inc/classes/class-cpt-projects.php:174
 msgid "The projects"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:95
+#: ../inc/classes/class-cpt-projects.php:212
 msgctxt "taxonomy general name"
 msgid "Technologies"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:96
+#: ../inc/classes/class-cpt-projects.php:213
 msgctxt "taxonomy singular name"
 msgid "Technology"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:97
+#: ../inc/classes/class-cpt-projects.php:214
 msgid "Search Technologies"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:98
+#: ../inc/classes/class-cpt-projects.php:215
 msgid "All Technologies"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:99
+#: ../inc/classes/class-cpt-projects.php:216
 msgid "Parent Technology"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:100
+#: ../inc/classes/class-cpt-projects.php:217
 msgid "Parent Technology:"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:101
+#: ../inc/classes/class-cpt-projects.php:218
 msgid "Edit Technology"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:102
+#: ../inc/classes/class-cpt-projects.php:219
 msgid "Update Technology"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:103
+#: ../inc/classes/class-cpt-projects.php:220
 msgid "Add New Technology"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:104
+#: ../inc/classes/class-cpt-projects.php:221
 msgid "New Technology Name"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:105, ../single-project.php:71
+#: ../inc/classes/class-cpt-projects.php:222, ../inc/widgets/elementor/class-tech-stack.php:36
 msgid "Technologies"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:109
+#: ../inc/classes/class-cpt-projects.php:226
 msgid "Technologies used in the project"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:124
+#: ../inc/classes/class-cpt-projects.php:241
 msgctxt "taxonomy general name"
 msgid "Industries"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:125
+#: ../inc/classes/class-cpt-projects.php:242
 msgctxt "taxonomy singular name"
 msgid "Industry"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:126
+#: ../inc/classes/class-cpt-projects.php:243
 msgid "Search Industries"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:127
+#: ../inc/classes/class-cpt-projects.php:244
 msgid "All Industries"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:128
+#: ../inc/classes/class-cpt-projects.php:245
 msgid "Parent Industry"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:129
+#: ../inc/classes/class-cpt-projects.php:246
 msgid "Parent Industry:"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:130
+#: ../inc/classes/class-cpt-projects.php:247
 msgid "Edit Industry"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:131
+#: ../inc/classes/class-cpt-projects.php:248
 msgid "Update Industry"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:132
+#: ../inc/classes/class-cpt-projects.php:249
 msgid "Add New Industry"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:133
+#: ../inc/classes/class-cpt-projects.php:250
 msgid "New Industry Name"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:134
+#: ../inc/classes/class-cpt-projects.php:251
 msgid "Industries"
 msgstr ""
 
-#: ../inc/classes/class-cpt-projects.php:138
+#: ../inc/classes/class-cpt-projects.php:255
 msgid "Industry of the project"
 msgstr ""
 
-#: ../inc/classes/class-elementor.php:43
+#: ../inc/classes/class-customizer.php:29
+msgid "Footer Settings"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:37, ../inc/widgets/elementor/class-team-grid.php:96
+msgid "Twitter URL"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:38, ../inc/widgets/elementor/class-team-grid.php:105
+msgid "GitHub URL"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:39, ../inc/widgets/elementor/class-team-grid.php:87
+msgid "LinkedIn URL"
+msgstr ""
+
+#: ../inc/classes/class-elementor.php:78
 msgid "AI Dev Theme"
+msgstr ""
+
+#: ../inc/classes/class-seo.php:151
+msgid "Home"
 msgstr ""
 
 #: ../inc/classes/class-setup.php:30
@@ -268,12 +649,696 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: ../inc/classes/class-setup.php:55, ../template-parts/header/navigation.php:10
+#: ../inc/classes/class-setup.php:40
+msgid "Footer Column 1"
+msgstr ""
+
+#: ../inc/classes/class-setup.php:41
+msgid "Footer Column 2"
+msgstr ""
+
+#: ../inc/classes/class-setup.php:42
+msgid "Footer Column 3"
+msgstr ""
+
+#: ../inc/classes/class-setup.php:43
+msgid "Footer Column 4"
+msgstr ""
+
+#: ../inc/classes/class-setup.php:50
+msgid "Add widgets here for the footer."
+msgstr ""
+
+#: ../inc/classes/class-setup.php:74, ../template-parts/header/navigation.php:10
 msgid "Primary Menu"
 msgstr ""
 
-#: ../inc/classes/class-setup.php:56
+#: ../inc/classes/class-setup.php:75
 msgid "Footer Menu"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-about-hero.php:20
+msgid "AI About Hero"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-about-hero.php:35, ../inc/widgets/elementor/class-ai-advantages.php:36, ../inc/widgets/elementor/class-ai-split-feature.php:37, ../inc/widgets/elementor/class-contact-form.php:35, ../inc/widgets/elementor/class-section-title.php:35, ../inc/widgets/elementor/class-testimonials.php:46
+msgid "Content"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-about-hero.php:43, ../inc/widgets/elementor/class-ai-advantages.php:45, ../inc/widgets/elementor/class-ai-split-feature.php:53, ../inc/widgets/elementor/class-blog-posts.php:68, ../inc/widgets/elementor/class-project-showcase.php:57, ../inc/widgets/elementor/class-timeline.php:55
+msgid "Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-about-hero.php:54
+msgid "We are a team of AI enthusiasts building the future."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-about-hero.php:61
+msgid "Hero Image"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:21
+msgid "AI Advantages"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:47
+msgid "Advantage Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:55, ../inc/widgets/elementor/class-ai-split-feature.php:62, ../inc/widgets/elementor/class-timeline.php:65
+msgid "Description"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:57
+msgid "Description of the advantage."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:65, ../inc/widgets/elementor/class-tech-stack.php:55
+msgid "Icon"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:77
+msgid "Advantages List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:82
+msgid "Speed"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:83
+msgid "Lightning fast execution."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:87
+msgid "Precision"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:88
+msgid "High accuracy results."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-advantages.php:99, ../inc/widgets/elementor/class-blog-posts.php:100
+msgid "Columns"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:21
+msgid "AI Split Feature"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:73
+msgid "Icon Class"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:82
+msgid "Icon Color Class"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:96
+msgid "Feature Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:105
+msgid "Feature Description"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:107
+msgid "Weeks become days. We launch MVPs in record time."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:114
+msgid "Features List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:147
+msgid "Metrics Card"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:154
+msgid "Card Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:163
+msgid "Metric 1 Label"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:172
+msgid "Metric 1 Value (AI)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:189
+msgid "Metric 1 Value (Traditional)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:206
+msgid "Box 1 Value"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:215
+msgid "Box 1 Label"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:224
+msgid "Box 2 Value"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-split-feature.php:233
+msgid "Box 2 Label"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:21
+msgid "Blog Posts"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:36, ../inc/widgets/elementor/class-project-showcase.php:36
+msgid "Query"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:43, ../inc/widgets/elementor/class-project-showcase.php:43
+msgid "Posts Per Page"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:52
+msgid "Category"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:63, ../inc/widgets/elementor/class-project-showcase.php:52
+msgid "Order By"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:67, ../inc/widgets/elementor/class-project-showcase.php:56, ../single-project.php:175
+msgid "Date"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:69, ../inc/widgets/elementor/class-project-showcase.php:58
+msgid "Random"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:77, ../inc/widgets/elementor/class-project-showcase.php:66
+msgid "Order"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:81, ../inc/widgets/elementor/class-project-showcase.php:70
+msgid "DESC"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:82, ../inc/widgets/elementor/class-project-showcase.php:71
+msgid "ASC"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:92
+msgid "Style"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-blog-posts.php:165
+msgid "No posts found."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:20
+msgid "AI Contact Form"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:43
+msgid "Form Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:45
+msgid "Send us a message"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:46
+msgid "Type your title here"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:53
+msgid "Form Shortcode"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:56
+msgid "[contact-form-7 id=\"123\"...]"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:57
+msgid "Paste your Contact Form 7 or other form shortcode here. If empty, a default HTML form will be displayed."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:81
+msgid "Your Name"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:85
+msgid "your@email.com"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:88
+msgid "Message"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:89
+msgid "How can we help you?"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-contact-form.php:92
+msgid "Send Message"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:21
+msgid "AI Home Hero"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:37
+msgid "Hero Content"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:44
+msgid "Badge Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:46, ../template-parts/hero/home.php:22
+msgid "AI-First Development Agency"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:53
+msgid "Title Line 1"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:55, ../template-parts/hero/home.php:25, ../template-parts/hero/home.php:26
+msgid "Code the Future"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:62
+msgid "Title Line 2 (Highlighted)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:64, ../template-parts/hero/home.php:27
+msgid "With Intelligence"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:71
+msgid "Description (Typewriter)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:73, ../template-parts/hero/home.php:30
+msgid "We build enterprise-grade software 10x faster using advanced AI agents. 98% of our code is AI-generated, 100% human-verified."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:83
+msgid "Buttons"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:90
+msgid "Primary Button Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:92, ../template-parts/hero/home.php:35
+msgid "Start Your Project"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:99
+msgid "Primary Button Link"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:101, ../inc/widgets/elementor/class-home-hero.php:122, ../inc/widgets/elementor/class-project-showcase.php:90, ../inc/widgets/elementor/class-section-title.php:83, ../inc/widgets/elementor/class-tech-stack.php:69
+msgid "https://your-link.com"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:111
+msgid "Secondary Button Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:113, ../template-parts/hero/home.php:38
+msgid "View Case Studies"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:120
+msgid "Secondary Button Link"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:135
+msgid "Terminal Content"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:142
+msgid "Command"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:153
+msgid "Line Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:155
+msgid "Processing..."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:162
+msgid "Line Type"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:166
+msgid "Muted (Info)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:167
+msgid "Success (Green Check)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:168
+msgid "White (Standard)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:176
+msgid "Terminal Output Lines"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:181
+msgid "Analyzing requirements..."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:185
+msgid "Generating architecture..."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:189
+msgid "Backend structure created"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:193
+msgid "Database schema optimized"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:197
+msgid "Frontend components generated"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:211
+msgid "Trust Indicators"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:218
+msgid "Trust Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:220, ../template-parts/hero/home.php:44
+msgid "Trusted by innovators"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:229
+msgid "Icon Class (FontAwesome)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-home-hero.php:239
+msgid "Icons List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-project-showcase.php:21
+msgid "Project Showcase"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-project-showcase.php:79
+msgid "View All Button Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-project-showcase.php:88
+msgid "View All Button Link"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:20
+msgid "AI Section Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:43
+msgid "Subtitle (Small)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:45
+msgid "Our Features"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:52
+msgid "Title (Large)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:54
+msgid "Why Choose Us"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:61
+msgid "Description (Grey)"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:71
+msgid "Button Text"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:81
+msgid "Button Link"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:93
+msgid "Alignment"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:97
+msgid "Left"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:101
+msgid "Center"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-section-title.php:105
+msgid "Right"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:21
+msgid "Stats Counter"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:36
+msgid "Statistics"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:45
+msgid "Number"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:54
+msgid "Suffix"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:64
+msgid "Label"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:66
+msgid "Projects Completed"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:73
+msgid "Stats List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:80
+msgid "Happy Clients"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:85
+msgid "Projects Delivered"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-stats-counter.php:90
+msgid "Years Experience"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:22
+msgid "Team Grid"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:37
+msgid "Team Members"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:48
+msgid "John Doe"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:56, ../inc/widgets/elementor/class-testimonials.php:65
+msgid "Position"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:58
+msgid "AI Engineer"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:65, ../inc/widgets/elementor/class-testimonials.php:74
+msgid "Photo"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:76
+msgid "Bio"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:79
+msgid "Expert in machine learning and neural networks."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:89
+msgid "https://linkedin.com/in/..."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:98
+msgid "https://twitter.com/..."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:107
+msgid "https://github.com/..."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:114
+msgid "Members List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:119
+msgid "Jane Smith"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:120
+msgid "Lead Data Scientist"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:123
+msgid "Mike Ross"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-team-grid.php:124
+msgid "Full Stack Developer"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:21, ../single-project.php:183
+msgid "Tech Stack"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:45
+msgid "Technology Name"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:47, ../inc/widgets/elementor/class-tech-stack.php:87
+msgid "React"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:67
+msgid "Link"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:82
+msgid "Technologies List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:91
+msgid "Python"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-tech-stack.php:95
+msgid "AWS"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:22, ../inc/widgets/elementor/class-testimonials.php:37
+msgid "Testimonials"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:49
+msgid "AI Dev Theme transformed our business workflow entirely. The AI integration is seamless and powerful."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:58
+msgid "Sarah Connor"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:67
+msgid "CTO, TechCorp"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:85
+msgid "Testimonials List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:90
+msgid "John Smith"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:91
+msgid "The best AI theme I have ever used. Highly recommended!"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:94
+msgid "Alice Doe"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-testimonials.php:95
+msgid "Incredible design and functionality. It saved us months of development time."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:21
+msgid "Timeline"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:36
+msgid "Timeline Items"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:45
+msgid "Year/Date"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:47, ../inc/widgets/elementor/class-timeline.php:90
+msgid "2025"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:57
+msgid "Milestone Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:68
+msgid "Description of the milestone."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:75
+msgid "Timeline List"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:80
+msgid "2023"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:81
+msgid "Founded"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:82
+msgid "AI Dev Company was established with a vision to revolutionize software development."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:85
+msgid "2024"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:86
+msgid "First Major Release"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:87
+msgid "Launched our flagship AI coding assistant platform."
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:91
+msgid "Global Expansion"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-timeline.php:92
+msgid "Opened offices in London and Tokyo."
+msgstr ""
+
+#: ../index.php:16
+msgid "Latest insights, tutorials, and news from the AI world."
 msgstr ""
 
 #: ../page-templates/blank.php:3
@@ -296,28 +1361,72 @@ msgstr ""
 msgid "Right Sidebar Page"
 msgstr ""
 
-#: ../single-project.php:33
-msgid "Industry:"
+#: ../page.php:42, ../template-parts/content/content-single.php:55, ../template-parts/content/content.php:66
+msgid "Pages:"
 msgstr ""
 
-#: ../single-project.php:43
-msgid "Client:"
+#: ../single-project.php:75
+msgid "Delivery Time"
 msgstr ""
 
-#: ../single-project.php:67
-msgid "Project Details"
+#: ../single-project.php:76
+msgid "6x Faster"
 msgstr ""
 
-#: ../single-project.php:83
+#: ../single-project.php:87
+msgid "AI Code"
+msgstr ""
+
+#: ../single-project.php:102
+msgid "Team Size"
+msgstr ""
+
+#: ../single-project.php:116
+msgid "Project Overview"
+msgstr ""
+
+#: ../single-project.php:130
+msgid "Experience It"
+msgstr ""
+
+#: ../single-project.php:133, ../single-project.php:200
 msgid "Visit Live Site"
 msgstr ""
 
-#: ../single-project.php:96
-msgid "Previous:"
+#: ../single-project.php:138
+msgid "Demo Credentials"
 msgstr ""
 
-#: ../single-project.php:97
-msgid "Next:"
+#: ../single-project.php:141
+msgid "User:"
+msgstr ""
+
+#: ../single-project.php:147
+msgid "Pass:"
+msgstr ""
+
+#: ../single-project.php:156
+msgid "Scan for Mobile Preview"
+msgstr ""
+
+#: ../single-project.php:165
+msgid "Project Data"
+msgstr ""
+
+#: ../single-project.php:169
+msgid "Client"
+msgstr ""
+
+#: ../single-project.php:236
+msgid "Related Projects"
+msgstr ""
+
+#: ../single-project.php:252
+msgid "Previous Project"
+msgstr ""
+
+#: ../single-project.php:253
+msgid "Next Project"
 msgstr ""
 
 #: ../template-parts/content/content-none.php:10
@@ -336,15 +1445,38 @@ msgstr ""
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: ../template-parts/content/content.php:33
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: ../template-parts/content/content-single.php:37
+msgid "No Comments"
 msgstr ""
 
-#: ../template-parts/content/content.php:46
-msgid "Pages:"
+#: ../template-parts/content/content-single.php:37
+msgid "1 Comment"
 msgstr ""
 
-#: ../template-parts/projects/card.php:39
+#: ../template-parts/content/content-single.php:37
+msgid "% Comments"
+msgstr ""
+
+#: ../template-parts/content/content-single.php:66
+msgid "Tags:"
+msgstr ""
+
+#: ../template-parts/content/content-single.php:76
+msgid "Previous Post"
+msgstr ""
+
+#: ../template-parts/content/content-single.php:79
+msgid "Next Post"
+msgstr ""
+
+#: ../template-parts/content/content-single.php:93
+msgid "About"
+msgstr ""
+
+#: ../template-parts/content/content.php:59
+msgid "Read More"
+msgstr ""
+
+#: ../template-parts/projects/card.php:62
 msgid "View Case Study"
 msgstr ""

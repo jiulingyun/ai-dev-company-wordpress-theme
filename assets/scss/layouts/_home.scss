@@ -3,6 +3,38 @@
   min-height: 90vh;
   background-color: var(--color-background);
   
+  &__grid-bg {
+    /* Light Mode - High Tech Look */
+    background-color: #ffffff; /* Pure white for maximum brightness */
+    background-image: 
+        linear-gradient(rgba(11, 16, 38, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 16, 38, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(20deg) scale(1.5);
+    transition: background 0.3s ease;
+    
+    /* Add a subtle top spotlight effect */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.03) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    /* Dark Mode */
+    [data-theme="dark"] & {
+        background-color: transparent;
+        background-image: 
+            linear-gradient(rgba(11, 16, 38, 0.9), rgba(11, 16, 38, 0.9)),
+            linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+        background-size: 100% 100%, 40px 40px, 40px 40px;
+        
+        &::after { display: none; }
+    }
+  }
+  
   &__bg {
     position: absolute;
     top: 0;
@@ -18,7 +50,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 50% 50%, rgba(58, 134, 255, 0.1) 0%, rgba(11, 16, 38, 0.8) 80%);
+      /* Light Mode Gradient - Subtle depth */
+      background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
+      
+      [data-theme="dark"] & {
+          background: radial-gradient(circle at 50% 50%, rgba(58, 134, 255, 0.1) 0%, rgba(11, 16, 38, 0.8) 80%);
+      }
     }
   }
   
@@ -33,9 +70,45 @@
   &__subtitle {
     font-family: var(--font-secondary);
     font-size: clamp(1rem, 2vw, 1.5rem);
-    color: var(--color-primary);
+    color: var(--color-primary); 
     min-height: 1.5em; /* Prevent layout shift */
+    font-weight: 500;
+    
+    /* Ensure contrast in light mode */
+    [data-theme="light"] & {
+        color: #008a96; /* Darker, more readable cyan */
+    }
   }
+}
+
+/* Terminal Styles */
+.bg-terminal-body {
+    /* Always Dark Terminal for "Hacker" feel */
+    background-color: #1a1f2c; 
+    color: #f0f6fc;
+    
+    [data-theme="dark"] & {
+        background-color: #0b1026; 
+        color: #f0f6fc;
+    }
+}
+
+/* Force terminal header to be dark in light mode too for consistency */
+.terminal-window .terminal-header {
+    [data-theme="light"] & {
+        background-color: #252b3d !important;
+        border-bottom-color: #363c50 !important;
+        color: #8b949e !important;
+    }
+}
+
+.text-text-main {
+    color: var(--color-text-main);
+    
+    /* In terminal, always keep text light if bg is dark */
+    .bg-terminal-body & {
+        color: #f0f6fc;
+    }
 }
 
 /* Section Utilities */
