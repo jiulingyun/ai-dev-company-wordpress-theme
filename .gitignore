@@ -22,6 +22,7 @@ assets/js/build/
 *.swp
 .DS_Store
 .trae/
+.cursor/
 
 # Docker
 db_data/
