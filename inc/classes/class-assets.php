@@ -38,6 +38,10 @@ class Assets {
 		// Enqueue Main CSS
 		wp_enqueue_style( 'ai-dev-theme-main' );
 
+		// FAQ override (ensure theme without rebuild immediately shows FAQ styles)
+		wp_register_style( 'ai-dev-theme-faq-override', get_template_directory_uri() . '/assets/css/ai-faq-override.css', array( 'ai-dev-theme-main' ), AI_DEV_THEME_VERSION );
+		wp_enqueue_style( 'ai-dev-theme-faq-override' );
+
 		// Enqueue style.css
 		wp_enqueue_style( 'ai-dev-theme-style', get_stylesheet_uri(), [], AI_DEV_THEME_VERSION );
 

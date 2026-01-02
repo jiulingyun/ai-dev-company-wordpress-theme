@@ -46,6 +46,7 @@ class Elementor {
         require_once get_template_directory() . '/inc/widgets/elementor/class-home-hero.php';
         require_once get_template_directory() . '/inc/widgets/elementor/class-ai-split-feature.php';
         require_once get_template_directory() . '/inc/widgets/elementor/class-ai-workflow-showcase.php';
+        require_once get_template_directory() . '/inc/widgets/elementor/class-faq.php';
 
         // Register the widget
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\AI_Advantages() );
@@ -62,6 +63,7 @@ class Elementor {
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Home_Hero() );
         $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\AI_Split_Feature() );
         $widgets_manager->register( new \AI_Dev_Theme\Widgets\Elementor\AI_Workflow_Showcase() );
+        $widgets_manager->register( new \AI_Dev_Theme\Inc\Widgets\Elementor\Support_FAQ() );
     }
 
 	public function add_elementor_support() {

@@ -1,0 +1,28 @@
+/* FAQ widget styles */
+.ai-faq {
+  .accordion-button {
+    color: var(--color-text-main) !important;
+    background: transparent;
+    border: none;
+    padding: .75rem 1rem;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  /* Ensure text remains readable in dark mode */
+  [data-theme="dark"] & {
+    .accordion-button {
+      color: var(--color-text-main) !important;
+    }
+  }
+
+  .accordion-collapse {
+    display: none;
+  }
+  .accordion-collapse.show {
+    display: block;
+  }
+}
+
+
