@@ -1,8 +1,8 @@
 :root {
   /* Sci-Fi Color Palette (Light/Default Mode) */
-  --color-primary: #00f0ff; /* Neon Cyan */
-  --color-secondary: #7000ff; /* Electric Violet */
-  --color-accent: #ff003c; /* Cyber Red */
+  --color-primary: #00707a; /* Darker Cyan for readability on white */
+  --color-secondary: #5a00cc; /* Darker Violet */
+  --color-accent: #cc0030; /* Darker Red */
   
   --color-background: #ffffff;
   --color-surface: #f4f6f8;
@@ -13,8 +13,8 @@
   --color-border: #dae1e7;
 
   /* Glow Effects (Subtle in Light Mode) */
-  --glow-primary: 0 0 10px rgba(0, 240, 255, 0.3);
-  --glow-secondary: 0 0 10px rgba(112, 0, 255, 0.3);
+  --glow-primary: 0 0 10px rgba(0, 112, 122, 0.15);
+  --glow-secondary: 0 0 10px rgba(90, 0, 204, 0.15);
   
   /* Font System */
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
