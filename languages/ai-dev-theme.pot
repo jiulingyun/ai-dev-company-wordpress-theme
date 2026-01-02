@@ -237,7 +237,7 @@ msgid "AI vs Traditional"
 msgstr ""
 
 #: ../front-page.php:110
-msgid "Uptime"
+msgid "Accuracy"
 msgstr ""
 
 #: ../front-page.php:114

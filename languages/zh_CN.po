@@ -977,6 +977,10 @@ msgstr "AI 对比传统开发"
 msgid "Uptime"
 msgstr "运行时间"
 
+#: inc/widgets/elementor/class-ai-split-feature.php:217
+msgid "Accuracy"
+msgstr "准确率"
+
 #: inc/widgets/elementor/class-ai-split-feature.php:236
 msgid "MVP Launch"
 msgstr "MVP 发布"

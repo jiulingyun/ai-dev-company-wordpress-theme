@@ -107,7 +107,7 @@ get_header();
                                 <div class="grid grid--2 gap-md">
                                     <div class="stat-box p-md bg-stat-box rounded border border-secondary border-opacity-25 text-center">
                                         <span class="d-block h2 text-accent mb-1">99.9%</span>
-                                        <span class="small text-muted text-uppercase"><?php esc_html_e( 'Uptime', 'ai-dev-theme' ); ?></span>
+                                        <span class="small text-muted text-uppercase"><?php esc_html_e( 'Accuracy', 'ai-dev-theme' ); ?></span>
                                     </div>
                                     <div class="stat-box p-md bg-stat-box rounded border border-secondary border-opacity-25 text-center">
                                         <span class="d-block h2 text-primary mb-1">&lt;24h</span>
