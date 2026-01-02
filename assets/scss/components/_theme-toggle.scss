@@ -18,13 +18,12 @@
     color: var(--color-primary);
   }
 
-  .theme-toggle-icon::before {
-    font-family: "Dashicons";
-    content: "\f177"; // Sun
+  .theme-toggle-icon {
     font-size: 1.25rem;
+    line-height: 1;
+    display: inline-block;
+    color: inherit;
   }
 }
 
-[data-theme="dark"] .theme-toggle .theme-toggle-icon::before {
-  content: "\f568"; // Moon
-}
+/* When in dark mode, prefer the moon icon (Font Awesome classes are toggled via JS) */
