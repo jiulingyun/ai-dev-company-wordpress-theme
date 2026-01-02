@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<div class="hero-page py-2xl position-relative overflow-hidden mb-xl">
+<div class="hero-page py-xl position-relative overflow-hidden mb-lg">
     <div class="hero-home__grid-bg position-absolute top-0 start-0 w-100 h-100 z-0"></div>
     <div class="scanline"></div>
     <div class="crt-overlay pointer-events-none"></div>
@@ -25,12 +25,12 @@ get_header();
         ?>
         
         <h1 class="page-title display-3 mb-md glitch" data-text="<?php echo esc_attr( $title ); ?>"><?php echo esc_html( $title ); ?></h1>
-        <div class="archive-description lead text-muted mb-xl" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        <div class="archive-description lead text-muted mb-lg" style="max-width: 700px; margin-left: auto; margin-right: auto;">
             <?php echo wp_kses_post( $description ); ?>
         </div>
 
         <!-- Search Form -->
-        <div class="project-search mb-xl fade-in-up" style="max-width: 500px; margin: 0 auto; animation-delay: 0.1s;">
+        <div class="project-search mb-lg fade-in-up" style="max-width: 500px; margin: 0 auto; animation-delay: 0.1s;">
             <form role="search" method="get" class="search-form position-relative" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <input type="hidden" name="post_type" value="project" />
                 <div class="input-group">
