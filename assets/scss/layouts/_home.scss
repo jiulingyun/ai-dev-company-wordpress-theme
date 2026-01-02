@@ -1,6 +1,12 @@
 /* Hero Home */
-.hero-home, .project-hero, .hero-page {
+.hero-home, .project-hero {
   min-height: 90vh;
+  background-color: var(--color-background);
+}
+
+/* Archive / project-list hero should be more compact to avoid pushing content below the fold */
+.hero-page {
+  min-height: 45vh;
   background-color: var(--color-background);
 }
 
