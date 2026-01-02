@@ -227,3 +227,141 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
 }
+
+/* AI Workflow Section Styles */
+#ai-workflow {
+    .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--color-text-muted);
+    }
+}
+
+.workflow-step-item {
+    position: relative;
+    z-index: 1;
+    
+    .step-icon {
+        background-color: var(--color-surface);
+        transition: all 0.3s ease;
+        
+        [data-theme="light"] & {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+    }
+    
+    &:hover .step-icon {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.agent-card {
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateX(10px);
+        background-color: var(--color-surface-alt);
+        border-color: var(--color-primary);
+        
+        [data-theme="light"] & {
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+    }
+    
+    .agent-avatar {
+        flex-shrink: 0;
+    }
+    
+    /* Light Mode */
+    [data-theme="light"] & {
+        background-color: #ffffff;
+        border-color: #e2e8f0;
+        
+        &:hover {
+            border-color: var(--color-primary);
+        }
+    }
+}
+
+/* Explicit Visibility Control for Workflow */
+.workflow-desktop-view {
+    display: none !important;
+    width: 100%;
+    
+    @media (min-width: 992px) {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+}
+
+.workflow-mobile-view {
+    display: block !important;
+    
+    @media (min-width: 992px) {
+        display: none !important;
+    }
+}
+
+.workbench-preview {
+    perspective: 1000px;
+    
+    .window-frame {
+        background-color: var(--color-surface);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        
+        /* Light Mode */
+        [data-theme="light"] & {
+            background-color: #ffffff;
+            border-color: #dae1e7;
+            box-shadow: 0 25px 50px -12px rgba(11, 16, 38, 0.1);
+        }
+    }
+    
+    .sidebar {
+        background-color: #1a1f2c;
+        border-color: #2d3748;
+        
+        /* Light Mode */
+        [data-theme="light"] & {
+            background-color: #f8fafc;
+            border-color: #e2e8f0;
+            
+            .nav-item.text-muted {
+                color: #64748b !important;
+                
+                &:hover {
+                    background-color: #f1f5f9;
+                    color: #0f172a !important;
+                }
+            }
+        }
+    }
+    
+    .main-area {
+        background-color: #0b1026;
+        
+        /* Light Mode */
+        [data-theme="light"] & {
+            background-color: #ffffff;
+            
+            .bg-surface {
+                background-color: #f8fafc !important;
+                border-color: #e2e8f0 !important;
+            }
+            
+            .text-muted {
+                color: #64748b !important;
+            }
+        }
+    }
+}

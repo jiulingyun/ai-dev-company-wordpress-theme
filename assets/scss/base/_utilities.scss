@@ -37,52 +37,113 @@ img[loading="lazy"] {
 .z-1 { z-index: 1 !important; }
 .z-2 { z-index: 2 !important; }
 
-/* Colors */
+/* Padding Utilities */
+.p-0 { padding: 0 !important; }
+.p-1 { padding: 0.25rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-3 { padding: 1rem !important; }
+.p-4 { padding: 1.5rem !important; }
+.p-5 { padding: 3rem !important; }
+
+.px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+.px-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+.py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+.py-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+
+/* Text Color Utilities */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-accent { color: var(--color-accent) !important; }
+.text-success { color: #28a745 !important; } /* Standard success green */
+.text-info { color: #17a2b8 !important; } /* Standard info cyan */
+.text-warning { color: #ffc107 !important; } /* Standard warning yellow */
+.text-muted { color: var(--color-text-muted) !important; }
+
+/* Badge Utilities */
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    
+    &.rounded-pill {
+        border-radius: 50rem;
+    }
+}
+
 .bg-primary { background-color: var(--color-primary) !important; }
 .bg-secondary { background-color: var(--color-secondary) !important; }
-.bg-dark { background-color: #0b1026 !important; } /* Fallback or specific dark color */
-.text-white { color: #ffffff !important; }
-.text-primary { color: var(--color-primary) !important; }
+.bg-accent { background-color: var(--color-accent) !important; }
+.bg-success { background-color: #28a745 !important; }
+.bg-info { background-color: #17a2b8 !important; }
+.bg-warning { background-color: #ffc107 !important; }
 
-/* Opacity */
-.opacity-10 { opacity: 0.1 !important; }
-.opacity-25 { opacity: 0.25 !important; }
-.opacity-50 { opacity: 0.5 !important; }
+/* Use a simple opacity approach if variable manipulation fails */
+.bg-opacity-10 { opacity: 0.1 !important; } 
+/* BUT opacity affects children (text), so better to use rgba fallback */
+/* Reverting to a safer background color approach */
+.bg-primary.bg-opacity-10 { background-color: rgba(0, 112, 122, 0.1) !important; color: var(--color-primary) !important; opacity: 1 !important; }
+[data-theme="dark"] .bg-primary.bg-opacity-10 { background-color: rgba(0, 240, 255, 0.1) !important; color: var(--color-primary) !important; }
 
-/* Borders */
-.border-top { border-top: 1px solid var(--color-border) !important; }
-.border-secondary { border-color: var(--color-secondary) !important; }
-.border-opacity-25 { border-color: rgba(112, 0, 255, 0.25) !important; } /* Adjust as needed */
-.rounded-circle { border-radius: 50% !important; }
+.bg-secondary.bg-opacity-10 { background-color: rgba(90, 0, 204, 0.1) !important; color: var(--color-secondary) !important; opacity: 1 !important; }
+[data-theme="dark"] .bg-secondary.bg-opacity-10 { background-color: rgba(188, 19, 254, 0.1) !important; color: var(--color-secondary) !important; }
 
-/* Letter Spacing */
-.letter-spacing-sm { letter-spacing: 0.05em !important; }
+.bg-accent.bg-opacity-10 { background-color: rgba(204, 0, 48, 0.1) !important; color: var(--color-accent) !important; opacity: 1 !important; }
+[data-theme="dark"] .bg-accent.bg-opacity-10 { background-color: rgba(255, 0, 60, 0.1) !important; color: var(--color-accent) !important; }
 
-/* Spacing */
-.me-1 { margin-right: 0.25rem !important; }
-.me-2 { margin-right: 0.5rem !important; }
-.me-3 { margin-right: 1rem !important; }
-.me-4 { margin-right: 1.5rem !important; }
-.me-5 { margin-right: 3rem !important; }
-.ms-1 { margin-left: 0.25rem !important; }
-.ms-2 { margin-left: 0.5rem !important; }
-.ms-3 { margin-left: 1rem !important; }
-.ms-4 { margin-left: 1.5rem !important; }
-.ms-5 { margin-left: 3rem !important; }
+.bg-success.bg-opacity-10 { background-color: rgba(40, 167, 69, 0.1) !important; color: #28a745 !important; opacity: 1 !important; }
+.bg-info.bg-opacity-10 { background-color: rgba(23, 162, 184, 0.1) !important; color: #17a2b8 !important; opacity: 1 !important; }
+.bg-warning.bg-opacity-10 { background-color: rgba(255, 193, 7, 0.1) !important; color: #ffc107 !important; opacity: 1 !important; }
 
-/* Gap Utilities */
-.gap-xs { gap: 0.5rem !important; }
-.gap-sm { gap: 1rem !important; }
-.gap-md { gap: 1.5rem !important; }
-.gap-lg { gap: 2rem !important; }
-.gap-xl { gap: 3rem !important; }
-.gap-2xl { gap: 4rem !important; }
+/* Flex Utilities */
+.d-flex { display: flex !important; }
+.d-inline-flex { display: inline-flex !important; }
+.flex-column { flex-direction: column !important; }
+.flex-row { flex-direction: row !important; }
+.justify-center { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+.align-center { align-items: center !important; }
+.align-start { align-items: flex-start !important; }
+.align-end { align-items: flex-end !important; }
+.flex-grow-1 { flex-grow: 1 !important; }
+.flex-shrink-0 { flex-shrink: 0 !important; }
 
-/* Translate Middle */
-.translate-middle-y { transform: translateY(-50%) !important; }
+/* Responsive Display Utilities */
+@media (min-width: 992px) {
+    .d-lg-none { display: none !important; }
+    .d-lg-block { display: block !important; }
+    .d-lg-flex { display: flex !important; }
+    .grid--lg-6 { grid-template-columns: repeat(6, 1fr) !important; }
+}
 
-/* Blur Effects */
-.blur-3xl { filter: blur(64px) !important; }
+@media (max-width: 991.98px) {
+    .d-none { display: none !important; }
+}
+
+/* Fix for unwanted green blocks (resetting empty spans) */
+span:empty, div:empty {
+    /* Only hide if they have no classes or styling, to be safe */
+    &:not([class]) {
+        display: none;
+    }
+}
+
+/* Specific fix for the status dots that might be inheriting unwanted bg-success styles */
+.status-dot {
+    z-index: 2;
+    /* Ensure it has explicit dimensions */
+    width: 10px !important;
+    height: 10px !important;
+}
 
 /* Print Styles Optimization */
 @media print {
