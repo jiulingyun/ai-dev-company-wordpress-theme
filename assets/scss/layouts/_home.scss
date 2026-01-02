@@ -1,9 +1,10 @@
 /* Hero Home */
-.hero-home {
+.hero-home, .project-hero, .hero-page {
   min-height: 90vh;
   background-color: var(--color-background);
-  
-  &__grid-bg {
+}
+
+.hero-home__grid-bg {
     /* Light Mode - High Tech Look */
     background-color: #ffffff; /* Pure white for maximum brightness */
     background-image: 
@@ -33,9 +34,9 @@
         
         &::after { display: none; }
     }
-  }
+}
   
-  &__bg {
+.hero-home__bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -57,17 +58,17 @@
           background: radial-gradient(circle at 50% 50%, rgba(58, 134, 255, 0.1) 0%, rgba(11, 16, 38, 0.8) 80%);
       }
     }
-  }
+}
   
-  &__title {
+.hero-home__title {
     font-size: clamp(2.5rem, 5vw, 5rem);
     line-height: 1.1;
     margin-bottom: var(--spacing-md);
     text-transform: uppercase;
     color: var(--color-text-main);
-  }
+}
   
-  &__subtitle {
+.hero-home__subtitle {
     font-family: var(--font-secondary);
     font-size: clamp(1rem, 2vw, 1.5rem);
     color: var(--color-primary); 
@@ -78,7 +79,6 @@
     [data-theme="light"] & {
         color: #008a96; /* Darker, more readable cyan */
     }
-  }
 }
 
 /* Terminal Styles */

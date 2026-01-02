@@ -8,8 +8,10 @@
 get_header();
 ?>
 
-<div class="hero-page py-2xl bg-dark position-relative overflow-hidden mb-xl">
+<div class="hero-page py-2xl position-relative overflow-hidden mb-xl">
+    <div class="hero-home__grid-bg position-absolute top-0 start-0 w-100 h-100 z-0"></div>
     <div class="scanline"></div>
+    <div class="crt-overlay pointer-events-none"></div>
     <div class="container position-relative z-1 text-center">
         <?php
         // Dynamic Title based on context

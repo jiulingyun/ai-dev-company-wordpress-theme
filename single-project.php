@@ -29,8 +29,10 @@ while ( have_posts() ) :
 	<main id="primary" class="site-main">
 
         <!-- Hero Section -->
-        <section class="project-hero alignfull position-relative py-2xl bg-dark overflow-hidden">
+        <section class="project-hero alignfull position-relative py-2xl overflow-hidden">
+            <div class="hero-home__grid-bg position-absolute top-0 start-0 w-100 h-100 z-0"></div>
             <div class="scanline"></div>
+            <div class="crt-overlay pointer-events-none"></div>
             <div class="container position-relative z-1 text-center">
                 
                 <div class="project-header mb-xl">
@@ -134,7 +136,7 @@ while ( have_posts() ) :
                                 </a>
 
                                 <?php if ( $demo_user || $demo_pass ) : ?>
-                                    <div class="demo-credentials bg-dark p-sm rounded mb-md border border-secondary border-opacity-25">
+                                    <div class="demo-credentials bg-stat-box p-sm rounded mb-md border border-secondary border-opacity-25">
                                         <p class="text-muted small mb-2 text-uppercase letter-spacing-sm text-center"><?php esc_html_e( 'Demo Credentials', 'ai-dev-theme' ); ?></p>
                                         <?php if ( $demo_user ) : ?>
                                             <div class="d-flex justify-between align-center mb-1">
@@ -162,7 +164,7 @@ while ( have_posts() ) :
                         
                         <!-- Key Stats Card -->
                         <div class="card p-lg mb-lg">
-                            <h3 class="h5 mb-lg text-white"><?php esc_html_e( 'Project Data', 'ai-dev-theme' ); ?></h3>
+                            <h3 class="h5 mb-lg text-text-main"><?php esc_html_e( 'Project Data', 'ai-dev-theme' ); ?></h3>
                             
                             <?php if ( $client_name ) : ?>
                                 <div class="stat-item mb-md">
@@ -183,7 +185,7 @@ while ( have_posts() ) :
                                 <h4 class="h6 mb-md text-uppercase letter-spacing-sm"><?php esc_html_e( 'Tech Stack', 'ai-dev-theme' ); ?></h4>
                                 <div class="tags-list d-flex flex-wrap gap-sm">
                                     <?php foreach ( $technologies as $tech ) : ?>
-                                        <span class="badge badge--tech bg-surface text-muted border border-secondary" style="font-size: 0.85rem;">
+                                        <span class="badge badge--tech bg-card-body text-muted border border-secondary" style="font-size: 0.85rem;">
                                             <i class="fas fa-code me-1 text-secondary"></i>
                                             <?php echo esc_html( $tech->name ); ?>
                                         </span>
