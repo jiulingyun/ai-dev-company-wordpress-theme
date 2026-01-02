@@ -244,8 +244,228 @@ msgstr ""
 msgid "MVP Launch"
 msgstr ""
 
-#: ../front-page.php:129
-msgid "Core Capabilities"
+#: ../front-page.php:147, ../inc/widgets/elementor/class-ai-workflow-showcase.php:64
+msgid "Intelligent Workflow"
+msgstr ""
+
+#: ../front-page.php:148, ../inc/widgets/elementor/class-ai-workflow-showcase.php:63
+msgid "AI-Driven Development Process"
+msgstr ""
+
+#: ../front-page.php:151, ../inc/widgets/elementor/class-ai-workflow-showcase.php:84
+msgid "From requirement gathering to code review, our AI digital employees participate in the entire process, orchestrating a seamless flow."
+msgstr ""
+
+#: ../front-page.php:164, ../inc/widgets/elementor/class-ai-workflow-showcase.php:151, ../inc/widgets/elementor/class-ai-workflow-showcase.php:336
+msgid "Requirement"
+msgstr ""
+
+#: ../front-page.php:165, ../inc/widgets/elementor/class-ai-workflow-showcase.php:152, ../inc/widgets/elementor/class-ai-workflow-showcase.php:337
+msgid "Collecting"
+msgstr ""
+
+#: ../front-page.php:173, ../inc/widgets/elementor/class-ai-workflow-showcase.php:157, ../inc/widgets/elementor/class-ai-workflow-showcase.php:343
+msgid "Analysis"
+msgstr ""
+
+#: ../front-page.php:174, ../inc/widgets/elementor/class-ai-workflow-showcase.php:158, ../inc/widgets/elementor/class-ai-workflow-showcase.php:344
+msgid "Processing"
+msgstr ""
+
+#: ../front-page.php:182, ../inc/widgets/elementor/class-ai-workflow-showcase.php:163, ../inc/widgets/elementor/class-ai-workflow-showcase.php:350
+msgid "Quotation"
+msgstr ""
+
+#: ../front-page.php:183, ../inc/widgets/elementor/class-ai-workflow-showcase.php:164, ../inc/widgets/elementor/class-ai-workflow-showcase.php:351
+msgid "Automated"
+msgstr ""
+
+#: ../front-page.php:191, ../inc/widgets/elementor/class-ai-workflow-showcase.php:169, ../inc/widgets/elementor/class-ai-workflow-showcase.php:357
+msgid "Planning"
+msgstr ""
+
+#: ../front-page.php:192, ../inc/widgets/elementor/class-ai-workflow-showcase.php:170, ../inc/widgets/elementor/class-ai-workflow-showcase.php:358
+msgid "Scheduling"
+msgstr ""
+
+#: ../front-page.php:200, ../inc/widgets/elementor/class-ai-workflow-showcase.php:175, ../inc/widgets/elementor/class-ai-workflow-showcase.php:364
+msgid "Doc Gen"
+msgstr ""
+
+#: ../front-page.php:201, ../inc/widgets/elementor/class-ai-workflow-showcase.php:176, ../inc/widgets/elementor/class-ai-workflow-showcase.php:365
+msgid "Specification"
+msgstr ""
+
+#: ../front-page.php:209, ../inc/widgets/elementor/class-ai-workflow-showcase.php:181, ../inc/widgets/elementor/class-ai-workflow-showcase.php:371
+msgid "AI Coding"
+msgstr ""
+
+#: ../front-page.php:210, ../inc/widgets/elementor/class-ai-workflow-showcase.php:182, ../inc/widgets/elementor/class-ai-workflow-showcase.php:372
+msgid "MCP Execution"
+msgstr ""
+
+#: ../front-page.php:224, ../inc/widgets/elementor/class-ai-workflow-showcase.php:204
+msgid "AI Digital Workforce"
+msgstr ""
+
+#: ../front-page.php:233, ../inc/widgets/elementor/class-ai-workflow-showcase.php:248
+msgid "Code Reviewer"
+msgstr ""
+
+#: ../front-page.php:234, ../inc/widgets/elementor/class-ai-workflow-showcase.php:249
+msgid "Audits code quality & security"
+msgstr ""
+
+#: ../front-page.php:245, ../inc/widgets/elementor/class-ai-workflow-showcase.php:255
+msgid "Tech Stack Advisor"
+msgstr ""
+
+#: ../front-page.php:246, ../inc/widgets/elementor/class-ai-workflow-showcase.php:256
+msgid "Recommends architecture"
+msgstr ""
+
+#: ../front-page.php:257, ../inc/widgets/elementor/class-ai-workflow-showcase.php:262
+msgid "Quotation Analyst"
+msgstr ""
+
+#: ../front-page.php:258, ../inc/widgets/elementor/class-ai-workflow-showcase.php:263
+msgid "Estimates cost & timeline"
+msgstr ""
+
+#: ../front-page.php:269, ../inc/widgets/elementor/class-ai-workflow-showcase.php:269
+msgid "Requirement Collector"
+msgstr ""
+
+#: ../front-page.php:270, ../inc/widgets/elementor/class-ai-workflow-showcase.php:270
+msgid "Structures user needs"
+msgstr ""
+
+#: ../front-page.php:287, ../inc/widgets/elementor/class-ai-workflow-showcase.php:287
+msgid "AI Workbench - Project Dashboard"
+msgstr ""
+
+#: ../front-page.php:300, ../inc/widgets/elementor/class-ai-workflow-showcase.php:306
+msgid "Dashboard"
+msgstr ""
+
+#: ../front-page.php:301, ../inc/widgets/elementor/class-ai-workflow-showcase.php:307
+msgid "Workflow"
+msgstr ""
+
+#: ../front-page.php:302, ../inc/widgets/elementor/class-ai-workflow-showcase.php:308
+msgid "Digital Employees"
+msgstr ""
+
+#: ../front-page.php:303, ../inc/widgets/elementor/class-ai-workflow-showcase.php:309
+msgid "Documents"
+msgstr ""
+
+#: ../front-page.php:310, ../inc/widgets/elementor/class-ai-workflow-showcase.php:316
+msgid "Active Projects"
+msgstr ""
+
+#: ../front-page.php:311, ../inc/widgets/elementor/class-ai-workflow-showcase.php:317
+msgid "New Task"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:30
+msgid "AI Workflow Showcase"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:57
+msgid "Section Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:67
+msgid "Section Subtitle"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:89
+msgid "Workflow Steps"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:97
+msgid "Step Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:99
+msgid "Step Name"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:106
+msgid "Step Subtitle"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:108
+msgid "Action"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:123, ../inc/widgets/elementor/class-ai-workflow-showcase.php:237
+msgid "Color Style"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:126, ../inc/widgets/elementor/class-ai-workflow-showcase.php:240
+msgid "Primary"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:127, ../inc/widgets/elementor/class-ai-workflow-showcase.php:241
+msgid "Secondary"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:128, ../inc/widgets/elementor/class-ai-workflow-showcase.php:242
+msgid "Accent"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:129, ../inc/widgets/elementor/class-ai-workflow-showcase.php:243
+msgid "Info"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:130, ../inc/widgets/elementor/class-ai-workflow-showcase.php:244
+msgid "Success"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:131, ../inc/widgets/elementor/class-ai-workflow-showcase.php:245
+msgid "Warning"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:136
+msgid "Steps"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:212
+msgid "Agent Name"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:218
+msgid "Role Description"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:220
+msgid "Role Description"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:226
+msgid "AI Model"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:228
+msgid "GPT-4"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:249
+msgid "Employees"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:279
+msgid "Workbench Preview"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:285
+msgid "Workbench Title"
+msgstr ""
+
+#: ../inc/widgets/elementor/class-ai-workflow-showcase.php:293
+msgid "Active Projects Title"
 msgstr ""
 
 #: ../front-page.php:130, ../inc/widgets/elementor/class-section-title.php:63

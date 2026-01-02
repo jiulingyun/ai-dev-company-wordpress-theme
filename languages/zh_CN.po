@@ -1158,6 +1158,226 @@ msgstr "1 条评论"
 msgid "% Comments"
 msgstr "% 条评论"
 
+#: front-page.php:147, inc/widgets/elementor/class-ai-workflow-showcase.php:64
+msgid "Intelligent Workflow"
+msgstr "智能工作流"
+
+#: front-page.php:148, inc/widgets/elementor/class-ai-workflow-showcase.php:63
+msgid "AI-Driven Development Process"
+msgstr "AI 驱动的开发流程"
+
+#: front-page.php:151, inc/widgets/elementor/class-ai-workflow-showcase.php:84
+msgid "From requirement gathering to code review, our AI digital employees participate in the entire process, orchestrating a seamless flow."
+msgstr "从需求收集到代码审查，我们的 AI 数字员工参与全流程，协调无缝的工作流。"
+
+#: front-page.php:164, inc/widgets/elementor/class-ai-workflow-showcase.php:151, inc/widgets/elementor/class-ai-workflow-showcase.php:336
+msgid "Requirement"
+msgstr "需求收集"
+
+#: front-page.php:165, inc/widgets/elementor/class-ai-workflow-showcase.php:152, inc/widgets/elementor/class-ai-workflow-showcase.php:337
+msgid "Collecting"
+msgstr "收集阶段"
+
+#: front-page.php:173, inc/widgets/elementor/class-ai-workflow-showcase.php:157, inc/widgets/elementor/class-ai-workflow-showcase.php:343
+msgid "Analysis"
+msgstr "需求分析"
+
+#: front-page.php:174, inc/widgets/elementor/class-ai-workflow-showcase.php:158, inc/widgets/elementor/class-ai-workflow-showcase.php:344
+msgid "Processing"
+msgstr "处理分析"
+
+#: front-page.php:182, inc/widgets/elementor/class-ai-workflow-showcase.php:163, inc/widgets/elementor/class-ai-workflow-showcase.php:350
+msgid "Quotation"
+msgstr "智能报价"
+
+#: front-page.php:183, inc/widgets/elementor/class-ai-workflow-showcase.php:164, inc/widgets/elementor/class-ai-workflow-showcase.php:351
+msgid "Automated"
+msgstr "自动化"
+
+#: front-page.php:191, inc/widgets/elementor/class-ai-workflow-showcase.php:169, inc/widgets/elementor/class-ai-workflow-showcase.php:357
+msgid "Planning"
+msgstr "项目规划"
+
+#: front-page.php:192, inc/widgets/elementor/class-ai-workflow-showcase.php:170, inc/widgets/elementor/class-ai-workflow-showcase.php:358
+msgid "Scheduling"
+msgstr "排期调度"
+
+#: front-page.php:200, inc/widgets/elementor/class-ai-workflow-showcase.php:175, inc/widgets/elementor/class-ai-workflow-showcase.php:364
+msgid "Doc Gen"
+msgstr "文档生成"
+
+#: front-page.php:201, inc/widgets/elementor/class-ai-workflow-showcase.php:176, inc/widgets/elementor/class-ai-workflow-showcase.php:365
+msgid "Specification"
+msgstr "规范说明书"
+
+#: front-page.php:209, inc/widgets/elementor/class-ai-workflow-showcase.php:181, inc/widgets/elementor/class-ai-workflow-showcase.php:371
+msgid "AI Coding"
+msgstr "AI 编码"
+
+#: front-page.php:210, inc/widgets/elementor/class-ai-workflow-showcase.php:182, inc/widgets/elementor/class-ai-workflow-showcase.php:372
+msgid "MCP Execution"
+msgstr "MCP 执行"
+
+#: front-page.php:224, inc/widgets/elementor/class-ai-workflow-showcase.php:204
+msgid "AI Digital Workforce"
+msgstr "AI 数字员工"
+
+#: front-page.php:233, inc/widgets/elementor/class-ai-workflow-showcase.php:248
+msgid "Code Reviewer"
+msgstr "代码审查助手"
+
+#: front-page.php:234, inc/widgets/elementor/class-ai-workflow-showcase.php:249
+msgid "Audits code quality & security"
+msgstr "审计代码质量与安全"
+
+#: front-page.php:245, inc/widgets/elementor/class-ai-workflow-showcase.php:255
+msgid "Tech Stack Advisor"
+msgstr "技术栈顾问"
+
+#: front-page.php:246, inc/widgets/elementor/class-ai-workflow-showcase.php:256
+msgid "Recommends architecture"
+msgstr "推荐系统架构"
+
+#: front-page.php:257, inc/widgets/elementor/class-ai-workflow-showcase.php:262
+msgid "Quotation Analyst"
+msgstr "报价分析师"
+
+#: front-page.php:258, inc/widgets/elementor/class-ai-workflow-showcase.php:263
+msgid "Estimates cost & timeline"
+msgstr "评估成本与工期"
+
+#: front-page.php:269, inc/widgets/elementor/class-ai-workflow-showcase.php:269
+msgid "Requirement Collector"
+msgstr "需求收集助手"
+
+#: front-page.php:270, inc/widgets/elementor/class-ai-workflow-showcase.php:270
+msgid "Structures user needs"
+msgstr "结构化用户需求"
+
+#: front-page.php:287, inc/widgets/elementor/class-ai-workflow-showcase.php:287
+msgid "AI Workbench - Project Dashboard"
+msgstr "AI 工作台 - 项目仪表盘"
+
+#: front-page.php:300, inc/widgets/elementor/class-ai-workflow-showcase.php:306
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#: front-page.php:301, inc/widgets/elementor/class-ai-workflow-showcase.php:307
+msgid "Workflow"
+msgstr "工作流"
+
+#: front-page.php:302, inc/widgets/elementor/class-ai-workflow-showcase.php:308
+msgid "Digital Employees"
+msgstr "数字员工"
+
+#: front-page.php:303, inc/widgets/elementor/class-ai-workflow-showcase.php:309
+msgid "Documents"
+msgstr "文档中心"
+
+#: front-page.php:310, inc/widgets/elementor/class-ai-workflow-showcase.php:316
+msgid "Active Projects"
+msgstr "进行中的项目"
+
+#: front-page.php:311, inc/widgets/elementor/class-ai-workflow-showcase.php:317
+msgid "New Task"
+msgstr "新建任务"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:30
+msgid "AI Workflow Showcase"
+msgstr "AI 工作流展示"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:57
+msgid "Section Title"
+msgstr "区域标题"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:67
+msgid "Section Subtitle"
+msgstr "区域副标题"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:89
+msgid "Workflow Steps"
+msgstr "工作流步骤"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:97
+msgid "Step Title"
+msgstr "步骤标题"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:99
+msgid "Step Name"
+msgstr "步骤名称"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:106
+msgid "Step Subtitle"
+msgstr "步骤副标题"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:108
+msgid "Action"
+msgstr "动作"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:123, inc/widgets/elementor/class-ai-workflow-showcase.php:237
+msgid "Color Style"
+msgstr "颜色风格"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:126, inc/widgets/elementor/class-ai-workflow-showcase.php:240
+msgid "Primary"
+msgstr "主色"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:127, inc/widgets/elementor/class-ai-workflow-showcase.php:241
+msgid "Secondary"
+msgstr "次要色"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:128, inc/widgets/elementor/class-ai-workflow-showcase.php:242
+msgid "Accent"
+msgstr "强调色"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:129, inc/widgets/elementor/class-ai-workflow-showcase.php:243
+msgid "Info"
+msgstr "信息色"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:130, inc/widgets/elementor/class-ai-workflow-showcase.php:244
+msgid "Success"
+msgstr "成功色"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:131, inc/widgets/elementor/class-ai-workflow-showcase.php:245
+msgid "Warning"
+msgstr "警告色"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:136
+msgid "Steps"
+msgstr "步骤列表"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:212
+msgid "Agent Name"
+msgstr "智能体名称"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:218, inc/widgets/elementor/class-ai-workflow-showcase.php:220
+msgid "Role Description"
+msgstr "角色描述"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:226
+msgid "AI Model"
+msgstr "AI 模型"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:228
+msgid "GPT-4"
+msgstr "GPT-4"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:249
+msgid "Employees"
+msgstr "数字员工列表"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:279
+msgid "Workbench Preview"
+msgstr "工作台预览"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:285
+msgid "Workbench Title"
+msgstr "工作台标题"
+
+#: inc/widgets/elementor/class-ai-workflow-showcase.php:293
+msgid "Active Projects Title"
+msgstr "活跃项目标题"
+
 #: front-page.php:142, front-page.php:154, front-page.php:166
 msgid "Learn More"
 msgstr "了解更多"
