@@ -267,7 +267,7 @@ class Home_Hero extends Widget_Base {
             <!-- Content Layer (Top Layer) -->
             <div class="container position-relative z-2">
                 <div class="grid grid--12 align-center">
-                    <div class="hero-home__content grid-column-span-12 grid-column-span-lg-9">
+                    <div class="hero-home__content grid-column-span-12 grid-column-span-lg-7">
                         <?php if ( $settings['badge_text'] ) : ?>
                             <div class="badge badge--tech mb-md fade-in-up" style="animation-delay: 0.1s;">
                                 <i class="fas fa-robot me-2"></i><?php echo esc_html( $settings['badge_text'] ); ?>
@@ -312,31 +312,118 @@ class Home_Hero extends Widget_Base {
                         </div>
                     </div>
 
-                    <!-- Hero Visual/Terminal -->
-                    <div class="hero-home__visual grid-column-span-12 grid-column-span-lg-3 d-none d-lg-block fade-in-up" style="animation-delay: 0.4s;">
-                        <div class="terminal-window bg-surface border border-secondary rounded shadow-lg overflow-hidden" style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
-                            <div class="terminal-header bg-surface-alt border-bottom border-secondary p-sm d-flex align-center">
-                                <div class="d-flex gap-xs me-md">
+                    <!-- Hero Visual/AI Interface -->
+                    <div class="hero-home__visual grid-column-span-12 grid-column-span-lg-5 position-relative" style="z-index: 10;">
+                        <!-- Glowing Background Orb -->
+                        <div class="ai-glow-orb position-absolute top-50 start-50 translate-middle"></div>
+                        
+                        <!-- Main Interface Window -->
+                        <div class="ai-interface-window bg-surface border border-secondary rounded-lg shadow-2xl overflow-hidden position-relative z-1 transform-perspective">
+                            <!-- Window Header -->
+                            <div class="window-header bg-surface-alt border-bottom border-secondary p-sm d-flex align-center justify-between">
+                                <div class="d-flex gap-xs">
                                     <span class="rounded-circle bg-danger" style="width: 10px; height: 10px;"></span>
                                     <span class="rounded-circle bg-warning" style="width: 10px; height: 10px;"></span>
                                     <span class="rounded-circle bg-success" style="width: 10px; height: 10px;"></span>
                                 </div>
-                                <div class="text-muted small">ai-agent — zsh — 80x24</div>
+                                <div class="window-tabs d-flex gap-sm">
+                                    <div class="tab active px-sm py-xs bg-surface border-top border-start border-end border-secondary rounded-top small text-primary">
+                                        <i class="fab fa-python me-1"></i> agent_core.py
+                                    </div>
+                                    <div class="tab px-sm py-xs text-muted small opacity-50">
+                                        <i class="fab fa-react me-1"></i> App.tsx
+                                    </div>
+                                </div>
+                                <div class="window-actions text-muted small">
+                                    <i class="fas fa-code-branch"></i> main
+                                </div>
                             </div>
-                            <div class="terminal-body p-md text-success bg-terminal-body">
-                                <div class="typing-animation">
-                                    <p class="mb-2"><span class="text-primary">➜</span> <span class="text-text-main"><?php echo esc_html( $settings['terminal_command'] ); ?></span></p>
-                                    
-                                    <?php foreach ( $settings['terminal_lines'] as $line ) : ?>
-                                        <p class="mb-2 <?php echo esc_attr( $line['line_type'] ); ?>">
-                                            <?php if ( 'text-success' === $line['line_type'] ) : ?>
-                                                <span class="text-success">✔</span>
-                                            <?php endif; ?>
-                                            <?php echo esc_html( $line['line_text'] ); ?>
-                                        </p>
-                                    <?php endforeach; ?>
-                                    
-                                    <p class="mb-0"><span class="text-primary">➜</span> <span class="blink">_</span></p>
+                            
+                            <!-- Window Body -->
+                            <div class="window-body p-md bg-terminal-body font-secondary" style="font-size: 0.85rem; height: 320px; overflow: hidden; line-height: 1.6;">
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">1</span>
+                                    <div><span class="text-secondary">class</span> <span class="text-warning">AutoDevAgent</span>:</div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">2</span>
+                                    <div style="padding-left: 1.5rem;"><span class="text-secondary">def</span> <span class="text-primary">__init__</span>(<span class="text-text-main">self</span>, <span class="text-text-main">model</span>):</div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">3</span>
+                                    <div style="padding-left: 3rem;"><span class="text-text-main">self.model</span> = <span class="text-success">"GPT-4-Turbo"</span></div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">4</span>
+                                    <div style="padding-left: 3rem;"><span class="text-text-main">self.context_window</span> = <span class="text-accent">128000</span></div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">5</span>
+                                    <div style="padding-left: 3rem;"><span class="text-text-main">self.capabilities</span> = [<span class="text-success">"code"</span>, <span class="text-success">"debug"</span>, <span class="text-success">"deploy"</span>]</div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">6</span>
+                                    <div></div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">7</span>
+                                    <div style="padding-left: 1.5rem;"><span class="text-secondary">async def</span> <span class="text-primary">generate_solution</span>(<span class="text-text-main">self</span>, <span class="text-text-main">prompt</span>):</div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">8</span>
+                                    <div style="padding-left: 3rem;"><span class="text-muted">// AI Analyzing requirements...</span></div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">9</span>
+                                    <div style="padding-left: 3rem;"><span class="text-text-main">architecture</span> = <span class="text-secondary">await</span> <span class="text-text-main">self.analyze(prompt)</span></div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">10</span>
+                                    <div style="padding-left: 3rem;"><span class="text-text-main">codebase</span> = <span class="text-text-main">self.scaffold(architecture)</span></div>
+                                </div>
+                                <div class="code-line d-flex">
+                                    <span class="text-muted me-3 select-none opacity-50 text-end" style="min-width: 1.5rem;">11</span>
+                                    <div style="padding-left: 3rem;"><span class="text-secondary">return</span> <span class="text-text-main">codebase.optimize()</span></div>
+                                </div>
+                                
+                                <div class="typing-cursor mt-2 text-primary d-flex">
+                                    <span class="d-inline-block me-3" style="min-width: 1.5rem;"></span>
+                                    <div style="padding-left: 3rem;">
+                                        <span class="blink">|</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating Status Overlay -->
+                            <div class="status-overlay position-absolute bottom-0 end-0 p-md">
+                                <div class="d-flex gap-2 align-center bg-surface border border-primary rounded-pill px-3 py-1 shadow-sm">
+                                    <div class="spinner-grow text-primary" role="status" style="width: 8px; height: 8px;"></div>
+                                    <span class="small text-primary fw-bold">AI Generating...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div class="float-card card-stats position-absolute top-0 end-0 bg-surface border border-secondary p-3 rounded shadow-lg z-2 floating-y" style="transform: translate(0, -20%); right: 0;">
+                            <div class="d-flex align-center gap-3">
+                                <div class="icon-box bg-success bg-opacity-10 text-success rounded p-2">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <div class="h4 mb-0 text-success">100%</div>
+                                    <div class="small text-muted text-uppercase" style="font-size: 0.65rem;">Test Coverage</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="float-card card-speed position-absolute bottom-0 start-0 mb-xl bg-surface border border-secondary p-3 rounded shadow-lg z-2 floating-y" style="animation-delay: 1s; transform: translate(0, 0); left: 0;">
+                            <div class="d-flex align-center gap-3">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded p-2">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div>
+                                    <div class="h4 mb-0 text-primary">10x</div>
+                                    <div class="small text-muted text-uppercase" style="font-size: 0.65rem;">Dev Speed</div>
                                 </div>
                             </div>
                         </div>
