@@ -137,3 +137,32 @@
   transition: transform var(--transition-base);
   text-shadow: var(--glow-primary);
 }
+
+/* AI Performance Metrics Card - Theme Aware Styles */
+.bg-card-header {
+    background-color: #f4f6f8; /* Light mode header */
+    [data-theme="dark"] & {
+        background-color: var(--color-background);
+    }
+}
+
+.bg-card-body {
+    background-color: #ffffff; /* Light mode body */
+    [data-theme="dark"] & {
+        background-color: var(--color-surface);
+    }
+}
+
+.bg-progress-track {
+    background-color: #e2e8f0; /* Light mode track */
+    [data-theme="dark"] & {
+        background-color: var(--color-background);
+    }
+}
+
+.bg-stat-box {
+    background-color: #f8fafc; /* Light mode box */
+    [data-theme="dark"] & {
+        background-color: var(--color-background);
+    }
+}

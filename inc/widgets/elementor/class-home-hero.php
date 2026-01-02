@@ -255,14 +255,9 @@ class Home_Hero extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		?>
-		<section class="hero-home alignfull position-relative overflow-hidden d-flex align-center min-vh-100 bg-dark">
+		<section class="hero-home alignfull position-relative overflow-hidden d-flex align-center min-vh-100">
             <!-- Animated Grid Background (Base Layer) -->
-            <div class="position-absolute top-0 start-0 w-100 h-100 z-0" style="background: 
-                linear-gradient(rgba(11, 16, 38, 0.9), rgba(11, 16, 38, 0.9)),
-                linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-                background-size: 100% 100%, 40px 40px, 40px 40px;
-                transform: perspective(500px) rotateX(20deg) scale(1.5);">
+            <div class="hero-home__grid-bg position-absolute top-0 start-0 w-100 h-100 z-0">
             </div>
 
             <!-- Effects Layer (Middle Layer) -->
@@ -319,8 +314,8 @@ class Home_Hero extends Widget_Base {
 
                     <!-- Hero Visual/Terminal -->
                     <div class="hero-home__visual grid-column-span-12 grid-column-span-lg-3 d-none d-lg-block fade-in-up" style="animation-delay: 0.4s;">
-                        <div class="terminal-window bg-dark border border-secondary rounded shadow-lg overflow-hidden" style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
-                            <div class="terminal-header bg-surface border-bottom border-secondary p-sm d-flex align-center">
+                        <div class="terminal-window bg-surface border border-secondary rounded shadow-lg overflow-hidden" style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+                            <div class="terminal-header bg-surface-alt border-bottom border-secondary p-sm d-flex align-center">
                                 <div class="d-flex gap-xs me-md">
                                     <span class="rounded-circle bg-danger" style="width: 10px; height: 10px;"></span>
                                     <span class="rounded-circle bg-warning" style="width: 10px; height: 10px;"></span>
@@ -328,9 +323,9 @@ class Home_Hero extends Widget_Base {
                                 </div>
                                 <div class="text-muted small">ai-agent — zsh — 80x24</div>
                             </div>
-                            <div class="terminal-body p-md text-success">
+                            <div class="terminal-body p-md text-success bg-terminal-body">
                                 <div class="typing-animation">
-                                    <p class="mb-2"><span class="text-primary">➜</span> <span class="text-white"><?php echo esc_html( $settings['terminal_command'] ); ?></span></p>
+                                    <p class="mb-2"><span class="text-primary">➜</span> <span class="text-text-main"><?php echo esc_html( $settings['terminal_command'] ); ?></span></p>
                                     
                                     <?php foreach ( $settings['terminal_lines'] as $line ) : ?>
                                         <p class="mb-2 <?php echo esc_attr( $line['line_type'] ); ?>">

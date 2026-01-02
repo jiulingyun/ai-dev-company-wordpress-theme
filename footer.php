@@ -92,7 +92,7 @@
                         <p class="text-muted mb-md"><?php esc_html_e( 'Subscribe to our newsletter for the latest updates.', 'ai-dev-theme' ); ?></p>
                         <form class="footer-newsletter">
                             <div class="input-group">
-                                <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="<?php esc_attr_e( 'Email address', 'ai-dev-theme' ); ?>">
+                                <input type="email" class="form-control" placeholder="<?php esc_attr_e( 'Email address', 'ai-dev-theme' ); ?>">
                                 <button class="button button--primary" type="button"><i class="fas fa-paper-plane"></i></button>
                             </div>
                         </form>

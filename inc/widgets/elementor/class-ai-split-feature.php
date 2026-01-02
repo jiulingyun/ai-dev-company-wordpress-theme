@@ -274,34 +274,34 @@ class AI_Split_Feature extends Widget_Base {
                         <div class="position-absolute top-0 end-0 translate-middle-y bg-primary opacity-25 blur-3xl rounded-circle" style="width: 300px; height: 300px; z-index: 0;"></div>
                         
                         <div class="card p-0 border-secondary overflow-hidden position-relative z-1">
-                            <div class="card-header bg-dark border-bottom border-secondary p-sm d-flex justify-between align-center">
+                            <div class="card-header bg-card-header border-bottom border-secondary p-sm d-flex justify-between align-center">
                                 <span class="text-muted small"><?php echo esc_html( $settings['card_title'] ); ?></span>
                                 <div class="d-flex gap-xs">
                                     <span class="rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span>
                                     <span class="rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span>
                                 </div>
                             </div>
-                            <div class="card-body p-lg bg-surface">
+                            <div class="card-body p-lg bg-card-body">
                                 <!-- Simulated Chart/Graph -->
                                 <div class="mb-lg">
                                     <div class="d-flex justify-between mb-2">
-                                        <span class="small fw-bold"><?php echo esc_html( $settings['metric_1_label'] ); ?></span>
+                                        <span class="small fw-bold text-text-main"><?php echo esc_html( $settings['metric_1_label'] ); ?></span>
                                         <span class="small text-primary"><?php esc_html_e( 'AI vs Traditional', 'ai-dev-theme' ); ?></span>
                                     </div>
-                                    <div class="progress-bar bg-dark rounded-pill mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-progress-track rounded-pill mb-2" style="height: 8px;">
                                         <div class="progress-bar__fill bg-primary h-100" style="width: <?php echo esc_attr( $settings['metric_1_value']['size'] ); ?>%;"></div>
                                     </div>
-                                    <div class="progress-bar bg-dark rounded-pill" style="height: 8px; opacity: 0.3;">
+                                    <div class="progress-bar bg-progress-track rounded-pill" style="height: 8px; opacity: 0.3;">
                                         <div class="progress-bar__fill bg-white h-100" style="width: <?php echo esc_attr( $settings['metric_1_value_trad']['size'] ); ?>%;"></div>
                                     </div>
                                 </div>
                                 
                                 <div class="grid grid--2 gap-md">
-                                    <div class="stat-box p-md bg-dark rounded border border-secondary border-opacity-25 text-center">
+                                    <div class="stat-box p-md bg-stat-box rounded border border-secondary border-opacity-25 text-center">
                                         <span class="d-block h2 text-accent mb-1"><?php echo esc_html( $settings['box_1_value'] ); ?></span>
                                         <span class="small text-muted text-uppercase"><?php echo esc_html( $settings['box_1_label'] ); ?></span>
                                     </div>
-                                    <div class="stat-box p-md bg-dark rounded border border-secondary border-opacity-25 text-center">
+                                    <div class="stat-box p-md bg-stat-box rounded border border-secondary border-opacity-25 text-center">
                                         <span class="d-block h2 text-primary mb-1"><?php echo esc_html( $settings['box_2_value'] ); ?></span>
                                         <span class="small text-muted text-uppercase"><?php echo esc_html( $settings['box_2_label'] ); ?></span>
                                     </div>
