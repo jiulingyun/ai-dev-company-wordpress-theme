@@ -23,7 +23,28 @@
                     <?php else : ?>
                         <div class="footer-branding mb-md">
                             <?php
-                            if ( has_custom_logo() ) {
+                            // Prefer customizer-provided light/dark logos if set (support IDs or URLs)
+                            $footer_logo_light = get_theme_mod( 'logo_light' );
+                            $footer_logo_dark  = get_theme_mod( 'logo_dark' );
+
+                            if ( $footer_logo_light || $footer_logo_dark ) {
+                                echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="d-flex align-center text-decoration-none footer-branding-link">';
+                                if ( $footer_logo_light ) {
+                                    if ( is_numeric( $footer_logo_light ) ) {
+                                        echo wp_get_attachment_image( intval( $footer_logo_light ), 'full', false, array( 'class' => 'site-logo site-logo--light', 'alt' => get_bloginfo( 'name' ) ) );
+                                    } else {
+                                        echo '<img class="site-logo site-logo--light" src="' . esc_url( $footer_logo_light ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '"/>';
+                                    }
+                                }
+                                if ( $footer_logo_dark ) {
+                                    if ( is_numeric( $footer_logo_dark ) ) {
+                                        echo wp_get_attachment_image( intval( $footer_logo_dark ), 'full', false, array( 'class' => 'site-logo site-logo--dark', 'alt' => get_bloginfo( 'name' ) ) );
+                                    } else {
+                                        echo '<img class="site-logo site-logo--dark" src="' . esc_url( $footer_logo_dark ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '"/>';
+                                    }
+                                }
+                                echo '</a>';
+                            } elseif ( has_custom_logo() ) {
                                 the_custom_logo();
                             } else {
                                 ?>

@@ -73,3 +73,20 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Site logo light/dark variants */
+.site-logo {
+  max-height: 56px;
+  height: auto;
+  display: inline-block;
+}
+.site-logo--light { display: inline-block; }
+.site-logo--dark { display: none; }
+
+[data-theme="dark"] .site-logo--light { display: none; }
+[data-theme="dark"] .site-logo--dark { display: inline-block; }
+
+/* Ensure logos don't overflow header area on small screens */
+@media (max-width: 768px) {
+  .site-logo { max-height: 44px; }
+}

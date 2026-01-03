@@ -29,6 +29,31 @@ class Customizer {
 			'title'    => __( 'Footer Settings', 'ai-dev-theme' ),
 			'priority' => 120,
 		] );
+		
+		// Add logo settings to the existing Site Identity (title_tagline) section
+		// Light mode logo
+		$wp_customize->add_setting( 'logo_light', array(
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw',
+		) );
+		$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'logo_light', array(
+			'label'    => __( 'Logo (Light)', 'ai-dev-theme' ),
+			'section'  => 'title_tagline',
+			'settings' => 'logo_light',
+		) ) );
+
+		// Dark mode logo
+		$wp_customize->add_setting( 'logo_dark', array(
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw',
+		) );
+		$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'logo_dark', array(
+			'label'    => __( 'Logo (Dark)', 'ai-dev-theme' ),
+			'section'  => 'title_tagline',
+			'settings' => 'logo_dark',
+		) ) );
 
 		/**
 		 * Social Links
