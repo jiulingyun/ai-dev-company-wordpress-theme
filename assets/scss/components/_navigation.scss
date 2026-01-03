@@ -13,9 +13,10 @@
 
   /* Dropdown Menus (Submenus) */
   ul ul {
-    display: none;
+    /* Use opacity/visibility for smoother show/hide and to avoid accidental gap hiding */
+    display: block;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 4px); /* slightly overlap to prevent tiny mouse gaps */
     left: 0;
     flex-direction: column;
     gap: 0;
@@ -26,7 +27,11 @@
     z-index: 1000;
     box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
     backdrop-filter: blur(10px);
-    margin-top: var(--spacing-xs);
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
     
     li {
       width: 100%;
@@ -59,11 +64,12 @@
     }
   }
 
-  /* Show Dropdown on Hover */
+  /* Show Dropdown on Hover / Focus (use opacity so small mouse gaps don't hide immediately) */
   li:hover > ul,
   li:focus-within > ul {
-    display: flex;
-    animation: fadeIn 0.2s ease-out;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   /* Polylang Switcher Specifics - FIXED v7 (Targeting img directly in nav) */
