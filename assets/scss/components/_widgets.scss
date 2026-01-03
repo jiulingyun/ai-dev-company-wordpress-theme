@@ -197,3 +197,8 @@
     background-color: rgba(21,26,54,0.6);
     border-color: rgba(255,255,255,0.04);
 }
+
+/* Increase top spacing for single post card to give breathing room */
+.single .card.p-xl {
+    margin-top: var(--spacing-2xl);
+}
