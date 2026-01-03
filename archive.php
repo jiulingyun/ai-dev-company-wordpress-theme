@@ -17,7 +17,10 @@ get_header();
 
                     <header class="page-header mb-xl">
                         <?php
-                        the_archive_title( '<h1 class="page-title mb-md">', '</h1>' );
+                        // Display breadcrumb only (suppress large archive title)
+                        if ( function_exists( 'ai_dev_theme_breadcrumbs' ) ) {
+                            ai_dev_theme_breadcrumbs();
+                        }
                         the_archive_description( '<div class="archive-description text-muted">', '</div>' );
                         ?>
                     </header><!-- .page-header -->

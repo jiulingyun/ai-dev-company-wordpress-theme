@@ -92,3 +92,45 @@ function ai_dev_theme_autoloader( $resource ) {
 }
 
 spl_autoload_register( 'ai_dev_theme_autoloader' );
+
+if ( ! function_exists( 'ai_dev_theme_breadcrumbs' ) ) {
+	/**
+	 * Simple breadcrumb generator.
+	 */
+	function ai_dev_theme_breadcrumbs() {
+		echo '<nav class="breadcrumbs" aria-label="' . esc_attr__( 'Breadcrumb', 'ai-dev-theme' ) . '">';
+		echo '<ul class="breadcrumbs-list">';
+		// Home
+		echo '<li class="breadcrumb-item"><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'ai-dev-theme' ) . '</a></li>';
+
+		if ( is_home() || is_front_page() ) {
+			// nothing more
+		} elseif ( is_category() ) {
+			$cat = get_queried_object();
+			if ( $cat && ! is_wp_error( $cat ) ) {
+				// include link to blog home if different
+				$blog_page_id = get_option( 'page_for_posts' );
+				if ( $blog_page_id ) {
+					echo '<li class="breadcrumb-item"><a href="' . esc_url( get_permalink( $blog_page_id ) ) . '">' . esc_html__( 'Blog', 'ai-dev-theme' ) . '</a></li>';
+				}
+				echo '<li class="breadcrumb-item current" aria-current="page">' . esc_html( $cat->name ) . '</li>';
+			}
+		} elseif ( is_single() ) {
+			$cats = get_the_category();
+			if ( ! empty( $cats ) ) {
+				$first = $cats[0];
+				echo '<li class="breadcrumb-item"><a href="' . esc_url( get_category_link( $first->term_id ) ) . '">' . esc_html( $first->name ) . '</a></li>';
+			}
+			echo '<li class="breadcrumb-item current" aria-current="page">' . get_the_title() . '</li>';
+		} elseif ( is_post_type_archive() ) {
+			echo '<li class="breadcrumb-item current" aria-current="page">' . post_type_archive_title( '', false ) . '</li>';
+		} elseif ( is_archive() ) {
+			echo '<li class="breadcrumb-item current" aria-current="page">' . get_the_archive_title() . '</li>';
+		} else {
+			echo '<li class="breadcrumb-item current" aria-current="page">' . get_the_title() . '</li>';
+		}
+
+		echo '</ul>';
+		echo '</nav>';
+	}
+}

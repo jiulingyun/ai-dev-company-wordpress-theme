@@ -179,6 +179,28 @@
     }
   }
 
+  /* Breadcrumb styling (uses .breadcrumbs output from helpers) */
+  .breadcrumbs {
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumbs-list {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  .breadcrumbs-list .breadcrumb-item a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+  .breadcrumbs-list .breadcrumb-item.current,
+  .breadcrumbs-list .breadcrumb-item a:hover {
+    color: var(--color-primary);
+  }
+
   /* Mobile Menu Toggle */
   .menu-toggle {
     display: none;

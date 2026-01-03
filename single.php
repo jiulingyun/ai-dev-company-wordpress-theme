@@ -12,6 +12,11 @@ get_header();
     <div class="row">
         <div class="col-lg-8">
             <main id="primary" class="site-main">
+                <?php
+                if ( function_exists( 'ai_dev_theme_breadcrumbs' ) ) {
+                    ai_dev_theme_breadcrumbs();
+                }
+                ?>
 
                 <?php
                 while ( have_posts() ) :
