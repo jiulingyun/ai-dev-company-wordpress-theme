@@ -198,7 +198,17 @@
     border-color: rgba(255,255,255,0.04);
 }
 
+/* Align sidebar top with first main card on list and single pages */
+@media (min-width: 992px) {
+    body.home.blog .widget-area,
+    body.archive .widget-area,
+    body.single .widget-area {
+        /* match the top spacing we added to .single .card.p-xl */
+        padding-top: var(--spacing-2xl);
+    }
+}
+
 /* Increase top spacing for single post card to give breathing room */
 .single .card.p-xl {
-    margin-top: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
 }
