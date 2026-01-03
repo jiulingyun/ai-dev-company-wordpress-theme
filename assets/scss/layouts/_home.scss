@@ -318,6 +318,50 @@
     }
 }
 
+/* Mobile: allow horizontal scrolling of workflow steps with snap */
+@media (max-width: 768px) {
+    .workflow-steps {
+        overflow: hidden;
+    }
+
+    .workflow-steps .workflow-mobile-view {
+        display: flex !important;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md) 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: var(--spacing-md);
+    }
+
+    /* Ensure inner grid becomes a horizontal flex row on small screens */
+    .workflow-steps .workflow-mobile-view .grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: var(--spacing-md);
+        align-items: stretch;
+    }
+
+    .workflow-steps .workflow-mobile-view .workflow-step-card,
+    .workflow-steps .workflow-mobile-view .workflow-step-card > * {
+        flex: 0 0 auto;
+    }
+
+    .workflow-steps .workflow-mobile-view .workflow-step-card {
+        min-width: 220px;
+        scroll-snap-align: start;
+    }
+
+    /* thin scrollbar styling */
+    .workflow-steps .workflow-mobile-view::-webkit-scrollbar {
+        height: 8px;
+    }
+    .workflow-steps .workflow-mobile-view::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.12);
+        border-radius: 4px;
+    }
+}
+
 .workbench-preview {
     perspective: 1000px;
     
