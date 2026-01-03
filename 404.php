@@ -11,12 +11,6 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found py-3xl bg-dark position-relative overflow-hidden" style="min-height: 80vh; display: flex; align-items: center;">
-            <div class="scanline"></div>
-            
-            <!-- Background Elements -->
-            <div class="position-absolute top-50 start-50 translate-middle pointer-events-none">
-                <div class="bg-primary opacity-10 blur-3xl rounded-circle" style="width: 600px; height: 600px;"></div>
-            </div>
 
             <div class="container position-relative z-1 text-center">
                 <header class="page-header mb-xl">

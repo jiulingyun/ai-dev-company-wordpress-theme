@@ -1,11 +1,9 @@
 // Dark Mode Toggle Button Logic
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.theme-toggle');
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   
-  // Get saved theme or system preference
-  const currentTheme = localStorage.getItem('theme') || 
-                       (prefersDarkScheme.matches ? 'dark' : 'light');
+  // Get saved theme or default to dark (disable system auto-detection)
+  const currentTheme = localStorage.getItem('theme') || 'dark';
   
   // Apply theme on load
   document.documentElement.setAttribute('data-theme', currentTheme);
