@@ -703,7 +703,7 @@ msgstr "标题第一行"
 
 #: inc/widgets/elementor/class-home-hero.php:54, template-parts/hero/home.php:30
 msgid "Code the Future"
-msgstr "编织未来"
+msgstr "重定义软件开发新标准"
 
 #: inc/widgets/elementor/class-home-hero.php:60
 msgid "Title Line 2 (Highlighted)"
@@ -711,7 +711,7 @@ msgstr "标题第二行（高亮）"
 
 #: inc/widgets/elementor/class-home-hero.php:62, template-parts/hero/home.php:31
 msgid "With Intelligence"
-msgstr "以智慧"
+msgstr "可视化交付"
 
 #: inc/widgets/elementor/class-home-hero.php:68
 msgid "Description (Typewriter)"
@@ -743,7 +743,7 @@ msgstr "次要按钮文字"
 
 #: inc/widgets/elementor/class-home-hero.php:105, template-parts/hero/home.php:43
 msgid "View Case Studies"
-msgstr "查看案例研究"
+msgstr "查看项目案例"
 
 #: inc/widgets/elementor/class-home-hero.php:111
 msgid "Secondary Button Link"
@@ -1056,7 +1056,7 @@ msgstr "支持"
 #. translators: %s: Theme author.
 #: footer.php:110
 msgid "Theme by %s."
-msgstr "主题由 %s 制作。"
+msgstr "版权所有"
 
 #: single-project.php:75
 msgid "Delivery Time"

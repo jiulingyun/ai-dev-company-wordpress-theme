@@ -31,7 +31,7 @@
                 </p>
                 
                 <div class="hero-home__actions d-flex gap-md fade-in-up" style="animation-delay: 0.5s;">
-                    <a href="#contact" class="button button--primary button--lg">
+                    <a href="/contact-us" class="button button--primary button--lg">
                         <i class="fas fa-rocket me-2"></i><?php esc_html_e( 'Start Your Project', 'ai-dev-theme' ); ?>
                     </a>
                     <a href="<?php echo esc_url( get_post_type_archive_link( 'project' ) ); ?>" class="button button--outline button--lg">
