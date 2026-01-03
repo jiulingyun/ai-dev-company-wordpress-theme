@@ -53,10 +53,47 @@ while ( have_posts() ) :
                     <?php endif; ?>
                 </div>
 
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <div class="project-hero__image fade-in-up" style="animation-delay: 0.4s;">
-                        <div class="card p-sm border-primary" style="box-shadow: 0 0 30px var(--glow-primary);">
-                            <?php the_post_thumbnail( 'full', [ 'class' => 'w-100 h-auto rounded' ] ); ?>
+                <?php
+                // Build image list: featured image + attachments
+                $post_id = get_the_ID();
+                $images = array();
+                if ( has_post_thumbnail( $post_id ) ) {
+                    $images[] = get_post_thumbnail_id( $post_id );
+                }
+                $attachments = get_posts( array(
+                    'post_type'      => 'attachment',
+                    'post_mime_type' => 'image',
+                    'posts_per_page' => -1,
+                    'post_parent'    => $post_id,
+                    'orderby'        => 'menu_order ID',
+                    'order'          => 'ASC',
+                ) );
+                if ( $attachments ) {
+                    foreach ( $attachments as $att ) {
+                        if ( ! in_array( $att->ID, $images, true ) ) {
+                            $images[] = $att->ID;
+                        }
+                    }
+                }
+
+                if ( ! empty( $images ) ) : ?>
+                    <div class="project-slider fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="project-slider-inner">
+                            <div class="project-slider swiper my-swiper">
+                                <div class="swiper-wrapper">
+                                    <?php foreach ( $images as $img_id ) : ?>
+                                        <div class="swiper-slide">
+                                            <?php echo wp_get_attachment_image( $img_id, 'large', false, array( 'loading' => 'lazy', 'class' => 'w-100 h-100' ) ); ?>
+                                            <?php if ( $caption = wp_get_attachment_caption( $img_id ) ) : ?>
+                                                <div class="slide-caption"><?php echo esc_html( $caption ); ?></div>
+                                            <?php endif; ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
                         </div>
                     </div>
                 <?php endif; ?>
