@@ -154,3 +154,22 @@
 .tech-card:hover .tech-icon {
     transform: scale(1.2) rotate(5deg);
 }
+
+/* Badge: improve contrast for .badge--tech only in light mode */
+[data-theme="light"] .badge--tech {
+    background-color: rgba(0, 112, 122, 0.20); /* stronger teal background for light mode */
+    color: #04141a; /* very dark teal/near-black for max contrast */
+    border: 1px solid rgba(0, 112, 122, 0.18);
+    padding: 0.2rem 0.5rem;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset;
+    font-weight: 800;
+    border-radius: 6px;
+    text-shadow: none;
+    transition: background-color .15s ease, transform .12s ease;
+}
+
+[data-theme="light"] .badge--tech:hover {
+    background-color: rgba(0, 112, 122, 0.28);
+    transform: translateY(-1px);
+}
+
