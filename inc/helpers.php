@@ -153,6 +153,131 @@ if ( ! function_exists( 'ai_dev_theme_admin_default_language_filter' ) ) {
 }
 
 /**
+ * Required plugins admin notice and quick actions (Elementor, Polylang).
+ *
+ * This shows a persistent admin notice prompting installation/activation
+ * and provides direct install/activate links for users with proper capability.
+ */
+if ( ! function_exists( 'ai_dev_theme_required_plugins' ) ) {
+	/**
+	 * Return required plugins list.
+	 *
+	 * @return array
+	 */
+	function ai_dev_theme_required_plugins() {
+		return array(
+			array(
+				'slug'      => 'elementor',
+				'file'      => 'elementor/elementor.php',
+				'name'      => 'Elementor',
+			),
+			array(
+				'slug'      => 'polylang',
+				'file'      => 'polylang/polylang.php',
+				'name'      => 'Polylang',
+			),
+		);
+	}
+}
+
+if ( ! function_exists( 'ai_dev_theme_required_plugins_notice' ) ) {
+	/**
+	 * Render admin notice for missing/disabled required plugins.
+	 */
+	function ai_dev_theme_required_plugins_notice() {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		$required = ai_dev_theme_required_plugins();
+		if ( empty( $required ) ) {
+			return;
+		}
+
+		include_once ABSPATH . 'wp-admin/includes/plugin.php';
+
+		$missing = array();
+		foreach ( $required as $plugin ) {
+			$slug = $plugin['slug'];
+			$file = $plugin['file'];
+			$name = $plugin['name'];
+
+			if ( is_plugin_active( $file ) ) {
+				continue;
+			}
+
+			$installed = file_exists( WP_PLUGIN_DIR . '/' . $slug );
+
+			$missing[] = array(
+				'slug'      => $slug,
+				'file'      => $file,
+				'name'      => $name,
+				'installed' => $installed,
+			);
+		}
+
+		if ( empty( $missing ) ) {
+			// All good.
+			return;
+		}
+
+		// Only show to users who can manage plugins.
+		if ( ! current_user_can( 'activate_plugins' ) ) {
+			?>
+			<div class="notice notice-warning">
+				<p><?php esc_html_e( 'AI Dev Theme requires Elementor and Polylang to be installed and activated. Please contact the site administrator.', 'ai-dev-theme' ); ?></p>
+			</div>
+			<?php
+			return;
+		}
+
+		// Build action links.
+		$actions = array();
+		foreach ( $missing as $m ) {
+			if ( $m['installed'] ) {
+				// Provide activate link.
+				$activate_url = wp_nonce_url(
+					self_admin_url( 'plugins.php?action=activate&plugin=' . rawurlencode( $m['file'] ) ),
+					'activate-plugin_' . $m['file']
+				);
+				$actions[] = sprintf( '<a class="button button-primary" href="%s">%s</a>', esc_url( $activate_url ), esc_html( sprintf( __( 'Activate %s', 'ai-dev-theme' ), $m['name'] ) ) );
+			} else {
+				// Provide install link.
+				$install_url = wp_nonce_url(
+					self_admin_url( 'update.php?action=install-plugin&plugin=' . rawurlencode( $m['slug'] ) ),
+					'install-plugin_' . $m['slug']
+				);
+				$actions[] = sprintf( '<a class="button button-primary" href="%s">%s</a>', esc_url( $install_url ), esc_html( sprintf( __( 'Install %s', 'ai-dev-theme' ), $m['name'] ) ) );
+			}
+		}
+
+		?>
+		<div class="notice notice-error is-dismissible">
+			<p>
+				<strong><?php esc_html_e( 'AI Dev Theme requires additional plugins', 'ai-dev-theme' ); ?></strong><br/>
+				<?php esc_html_e( 'For full functionality please install and activate the following plugins:', 'ai-dev-theme' ); ?>
+			</p>
+			<p>
+				<?php
+				foreach ( $missing as $m ) {
+					echo esc_html( $m['name'] ) . ' ';
+					if ( $m['installed'] ) {
+						echo '<em>(' . esc_html__( 'installed, needs activation', 'ai-dev-theme' ) . ')</em>';
+					} else {
+						echo '<em>(' . esc_html__( 'not installed', 'ai-dev-theme' ) . ')</em>';
+					}
+					echo '<br/>';
+				}
+				?>
+			</p>
+			<p><?php echo implode( ' ', $actions ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
+		</div>
+		<?php
+	}
+	add_action( 'admin_notices', 'ai_dev_theme_required_plugins_notice' );
+}
+
+/**
  * Autoloader function.
  */
 function ai_dev_theme_autoloader( $resource ) {
