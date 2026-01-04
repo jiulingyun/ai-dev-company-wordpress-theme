@@ -45,7 +45,7 @@ if [[ ! -f "$STYLE_CSS" ]]; then
     exit 1
 fi
 
-VERSION=$(grep -oP '^Version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' "$STYLE_CSS" | head -1)
+VERSION=$(sed -nE 's/^Version:[[:space:]]*([0-9]+\.[0-9]+\.[0-9]+).*/\1/p' "$STYLE_CSS" | head -1)
 
 if [[ -z "$VERSION" ]]; then
     print_error "Could not extract version from style.css"
