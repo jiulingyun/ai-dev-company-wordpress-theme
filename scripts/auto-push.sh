@@ -77,12 +77,15 @@ else
     print_status "No uncommitted changes found"
 fi
 
+# Get current branch
+CURRENT_BRANCH=$(git branch --show-current)
+
 # Check if we're ahead of remote
-if [[ -n $(git log --oneline origin/main..HEAD 2>/dev/null || git log --oneline origin/master..HEAD 2>/dev/null) ]]; then
+if [[ -n $(git log --oneline ai-dev-company-wordpress-theme/$CURRENT_BRANCH..HEAD 2>/dev/null) ]]; then
     print_warning "Local commits found that are not pushed to remote. Pushing..."
 
     # Push commits
-    if git push origin HEAD; then
+    if git push ai-dev-company-wordpress-theme HEAD; then
         print_success "Commits pushed successfully"
     else
         print_error "Failed to push commits"
@@ -99,9 +102,9 @@ if git tag -l | grep -q "^$TAG_NAME$"; then
 fi
 
 # Check if tag exists on remote
-if git ls-remote --tags origin | grep -q "refs/tags/$TAG_NAME$"; then
+if git ls-remote --tags ai-dev-company-wordpress-theme | grep -q "refs/tags/$TAG_NAME$"; then
     print_warning "Tag $TAG_NAME exists on remote. Deleting it..."
-    git push --delete origin "$TAG_NAME"
+    git push --delete ai-dev-company-wordpress-theme "$TAG_NAME"
 fi
 
 # Create new tag
@@ -115,7 +118,7 @@ fi
 
 # Push tag
 print_status "Pushing tag $TAG_NAME to remote..."
-if git push origin "$TAG_NAME"; then
+if git push ai-dev-company-wordpress-theme "$TAG_NAME"; then
     print_success "Tag $TAG_NAME pushed successfully"
     print_success "Release process completed!"
     print_status "GitHub Actions will now automatically build and release the theme package."
