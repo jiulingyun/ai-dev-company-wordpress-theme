@@ -74,6 +74,23 @@
   justify-content: center;
 }
 
+/* Site logo link wrapper */
+.site-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
 /* Site logo light/dark variants */
 .site-logo {
   max-height: 56px;

@@ -14,6 +14,9 @@
 	// (Debug output removed)
 
 	if ( $logo_light_id || $logo_dark_id ) {
+		// Wrap logos in a link to homepage for better UX
+		echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" class="site-logo-link">';
+
 		// Output both images; support both attachment IDs or direct URLs
 		if ( $logo_light_id ) {
 			if ( is_numeric( $logo_light_id ) ) {
@@ -29,8 +32,13 @@
 				echo '<img class="site-logo site-logo--dark" src="' . esc_url( $logo_dark_id ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '"/>';
 			}
 		}
+
+		echo '</a>';
 	} elseif ( has_custom_logo() ) {
+        // Wrap custom logo in a link to homepage
+        echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" class="site-logo-link">';
         the_custom_logo();
+        echo '</a>';
     } elseif ( is_front_page() && is_home() ) {
         ?>
         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
