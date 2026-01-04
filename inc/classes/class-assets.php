@@ -72,13 +72,13 @@ class Assets {
 
 		// Enqueue Main JS
 		$script_asset = include( get_template_directory() . '/assets/js/build/main.asset.php' );
-
-		wp_enqueue_script(
-			'ai-dev-theme-script',
-			get_template_directory_uri() . '/assets/js/build/main.js',
-			$script_asset['dependencies'],
-			$script_asset['version'],
-			true
+		
+		wp_enqueue_script( 
+			'ai-dev-theme-script', 
+			get_template_directory_uri() . '/assets/js/build/main.js', 
+			$script_asset['dependencies'], 
+			$script_asset['version'], 
+			true 
 		);
 	}
 }

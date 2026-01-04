@@ -71,6 +71,35 @@ class AI_Advantages extends Widget_Base {
 			]
 		);
 
+		$repeater->add_control(
+			'cta_text',
+			[
+				'label' => __( 'CTA Text', 'ai-dev-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => __( 'Learn More', 'ai-dev-theme' ),
+				'label_block' => false,
+			]
+		);
+
+		$repeater->add_control(
+			'cta_url',
+			[
+				'label' => __( 'CTA Link', 'ai-dev-theme' ),
+				'type' => Controls_Manager::URL,
+				'placeholder' => 'https://',
+				'show_external' => true,
+			]
+		);
+
+		$repeater->add_control(
+			'icon_color',
+			[
+				'label' => __( 'Icon Color (optional)', 'ai-dev-theme' ),
+				'type' => Controls_Manager::COLOR,
+				'description' => __( 'Leave empty to use theme accent color that adapts to dark/light mode.', 'ai-dev-theme' ),
+			]
+		);
+
 		$this->add_control(
 			'advantages',
 			[
@@ -107,6 +136,7 @@ class AI_Advantages extends Widget_Base {
 				],
 			]
 		);
+		
 
 		$this->end_controls_section();
 	}
@@ -114,19 +144,43 @@ class AI_Advantages extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		$columns = $settings['columns'];
+		// No global CTA/icon color — handled per repeater item via $item['cta_text'], $item['cta_url'], $item['icon_color']
 		?>
 		<div class="ai-advantages-grid grid grid--auto-fit gap-lg" style="--grid-min-width: <?php echo 100 / $columns * 0.8; ?>%;">
-			<?php foreach ( $settings['advantages'] as $index => $item ) : 
-				$delay = ($index + 1) * 100; 
+			<?php foreach ( $settings['advantages'] as $index => $item ) :
+				$delay = ($index + 1) * 100;
+				// per-item CTA/icon handling
+				$icon_color_item = ! empty( $item['icon_color'] ) ? $item['icon_color'] : '';
+				$cta_text_item = ! empty( $item['cta_text'] ) ? $item['cta_text'] : __( 'Learn More', 'ai-dev-theme' );
+				$cta_url_item = isset( $item['cta_url']['url'] ) ? $item['cta_url']['url'] : '';
+				$cta_is_external_item = ! empty( $item['cta_url']['is_external'] );
+				$cta_nofollow_item = ! empty( $item['cta_url']['nofollow'] );
 				?>
 				<div class="card service-card fade-in-up elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?> h-100" style="animation-delay: <?php echo $delay; ?>ms;">
 					<div class="card__content p-xl">
-						<div class="service-icon mb-lg d-inline-flex align-center justify-center rounded-circle bg-surface border border-secondary" style="width: 64px; height: 64px;">
-							<?php \Elementor\Icons_Manager::render_icon( $item['icon'], [ 'aria-hidden' => 'true', 'class' => 'fa-lg' ] ); ?>
+						<?php
+						// Determine icon color per item: either user-set or theme variable (adapts to dark/light)
+						$icon_color_style = '';
+						if ( ! empty( $icon_color_item ) ) {
+							$icon_color_style = 'color:' . esc_attr( $icon_color_item ) . ';';
+						} else {
+							$icon_color_style = 'color: var(--color-primary);';
+						}
+						?>
+						<div class="service-icon mb-lg d-inline-flex align-center justify-center rounded-circle bg-surface border border-secondary" style="width: 64px; height: 64px; <?php echo $icon_color_style; ?>">
+							<span class="ai-adv-icon" aria-hidden="true">
+								<?php \Elementor\Icons_Manager::render_icon( $item['icon'], [ 'aria-hidden' => 'true', 'class' => 'fa-lg ai-adv-icon', 'style' => 'width:1em;height:1em;color:currentColor;fill:currentColor;stroke:currentColor;' ] ); ?>
+							</span>
 						</div>
 						<h3 class="card__title h4 mb-md"><?php echo esc_html( $item['title'] ); ?></h3>
 						<p class="card__excerpt text-muted mb-lg"><?php echo esc_html( $item['description'] ); ?></p>
-                        <a href="#" class="text-primary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+						<?php if ( ! empty( $cta_url_item ) ) :
+							$target_attr = $cta_is_external_item ? ' target="_blank" rel="noopener' . ( $cta_nofollow_item ? ' nofollow' : '' ) . '"' : '';
+							?>
+							<a href="<?php echo esc_url( $cta_url_item ); ?>" class="text-primary text-decoration-none fw-bold small text-uppercase letter-spacing-sm hover-white transition-colors"<?php echo $target_attr; ?>>
+								<?php echo esc_html( $cta_text_item ); ?> <i class="fas fa-arrow-right ms-1" aria-hidden="true"></i>
+							</a>
+						<?php endif; ?>
 					</div>
 				</div>
 			<?php endforeach; ?>

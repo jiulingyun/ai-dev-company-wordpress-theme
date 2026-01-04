@@ -212,3 +212,21 @@
 .single .card.p-xl {
     margin-top: var(--spacing-xl);
 }
+
+/* AI Advantages widget icon fixes: ensure icons inherit color and SVGs use currentColor */
+.ai-adv-icon,
+.ai-adv-icon svg,
+.ai-adv-icon i {
+    color: inherit;
+    fill: currentColor;
+    stroke: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.service-icon {
+    /* ensure the icon container text color controls the icon color */
+    color: var(--color-primary);
+}

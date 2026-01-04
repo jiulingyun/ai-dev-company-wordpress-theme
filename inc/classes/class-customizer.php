@@ -29,7 +29,7 @@ class Customizer {
 			'title'    => __( 'Footer Settings', 'ai-dev-theme' ),
 			'priority' => 120,
 		] );
-		
+
 		// Add logo settings to the existing Site Identity (title_tagline) section
 		// Light mode logo
 		$wp_customize->add_setting( 'logo_light', array(
