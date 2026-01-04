@@ -68,7 +68,34 @@ npm run watch
 
 # 生产环境构建 (压缩 CSS)
 npm run build:css
+
+# 完整构建 (CSS + JS)
+npm run build
 ```
+
+### 发布脚本
+
+#### 自动推送和标签创建
+```bash
+# 自动提交变更、创建标签并推送
+./scripts/auto-push.sh ["提交消息"]
+
+# 示例
+./scripts/auto-push.sh "Release version 1.0.1"
+```
+
+此脚本将：
+- 检测并提交所有未提交的本地变更
+- 根据 `style.css` 中的版本号自动创建 `v` 标签
+- 推送提交和标签到远程仓库
+- 如果标签已存在，会先删除再重新创建
+
+#### CI/CD 自动化
+推送带 `v` 前缀的标签后，GitHub Actions 将自动：
+- 构建主题资源
+- 生成主题压缩包
+- 创建 GitHub Release
+- 上传主题包到 Release 资产
 
 ## 📂 项目结构
 
@@ -103,3 +130,49 @@ ai-dev-theme/
 ## 📄 开源协议
 
 本项目基于 GNU General Public License v2 或更高版本授权 - 详情请参阅 [LICENSE](LICENSE) 文件。
+
+## 📦 主题打包（Packaging）
+
+本主题包含一个简单的打包脚本，用于生成可发布的主题 ZIP 包，脚本路径：
+
+```
+./scripts/package-theme.sh
+```
+
+主要功能：
+- 自动（可选）执行前端构建：当主题目录下存在 `package.json` 且包含 `build` 脚本时，脚本会尝试运行 `npm run build`（若系统存在 `npm`）。
+- 使用 `rsync` 拷贝主题文件到临时目录并自动排除开发相关文件（例如 `.git`、`node_modules`、`assets/js/src`、`assets/scss`、`package.json` 等）。
+- 从 `style.css` 读取主题名称与版本号以生成 ZIP 名称，输出文件位于 `dist/` 目录下，格式为 `slug-version.zip`。
+
+示例：
+
+1. 在仓库根目录直接运行（使用当前目录作为主题目录）：
+
+```bash
+./scripts/package-theme.sh
+```
+
+2. 指定主题目录：
+
+```bash
+./scripts/package-theme.sh /path/to/ai-dev-company-wordpress-theme
+```
+
+脚本行为说明：
+- 若检测到 `package.json` 中包含 `build`，脚本会尝试先执行 `npm install`（非交互式）再执行 `npm run build`，以确保 `assets/js/build` 与 `assets/css` 为生产构建状态。
+- 打包过程会将生成的 ZIP 放到 `dist/` 目录中（脚本会自动创建该目录）。
+- 若需自定义排除项，可直接编辑脚本顶部的 `rsync --exclude` 列表。
+
+CI 集成建议：
+- 在 GitHub Actions / GitLab CI 中可以在构建步骤加入：
+
+```yaml
+- name: Package theme
+  run: ./scripts/package-theme.sh
+```
+
+并把生成的 ZIP 作为 artifact 上传到构建产物中以便发布。
+
+安全和发布注意事项：
+- 不要在 release 包中包含 `.env`、私钥或任何敏感信息。脚本默认会排除 `.env` 和常见开发文件夹。
+- 发布前请确认 `languages/*.mo`、`assets/js/build/`、`assets/css/` 等为最新构建产物。
