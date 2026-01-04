@@ -1,5 +1,7 @@
 name: Package Theme Release
 
+permissions:
+  contents: write
 on:
   push:
     tags:
