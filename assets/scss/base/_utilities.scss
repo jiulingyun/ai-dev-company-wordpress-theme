@@ -178,6 +178,8 @@ img[loading="lazy"] {
 .align-end { align-items: flex-end !important; }
 .flex-grow-1 { flex-grow: 1 !important; }
 .flex-shrink-0 { flex-shrink: 0 !important; }
+/* Allow utilities to enable wrapping for flex containers */
+.flex-wrap { flex-wrap: wrap !important; }
 
 /* Responsive Display Utilities */
 @media (min-width: 992px) {

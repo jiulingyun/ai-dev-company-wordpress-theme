@@ -147,8 +147,8 @@ class AI_Advantages extends Widget_Base {
 		// No global CTA/icon color — handled per repeater item via $item['cta_text'], $item['cta_url'], $item['icon_color']
 		?>
 		<div class="ai-advantages-grid grid grid--auto-fit gap-lg" style="--grid-min-width: <?php echo 100 / $columns * 0.8; ?>%;">
-			<?php foreach ( $settings['advantages'] as $index => $item ) :
-				$delay = ($index + 1) * 100;
+			<?php foreach ( $settings['advantages'] as $index => $item ) : 
+				$delay = ($index + 1) * 100; 
 				// per-item CTA/icon handling
 				$icon_color_item = ! empty( $item['icon_color'] ) ? $item['icon_color'] : '';
 				$cta_text_item = ! empty( $item['cta_text'] ) ? $item['cta_text'] : __( 'Learn More', 'ai-dev-theme' );

@@ -8,6 +8,9 @@
 $technologies = get_the_terms( get_the_ID(), 'technology' );
 $industries   = get_the_terms( get_the_ID(), 'industry' );
 $subtitle     = get_post_meta( get_the_ID(), 'project_subtitle', true );
+
+// Fallback: Check for manually entered technologies
+$manual_technologies = get_post_meta( get_the_ID(), 'project_technologies', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'project-card h-100 d-flex flex-column' ); ?>>
@@ -44,17 +47,42 @@ $subtitle     = get_post_meta( get_the_ID(), 'project_subtitle', true );
 			<?php the_excerpt(); ?>
 		</div>
 
-		<footer class="project-card__footer mt-auto">
-            <?php if ( ! empty( $technologies ) && ! is_wp_error( $technologies ) ) : ?>
-                <div class="project-card__technologies d-flex flex-wrap gap-xs mb-md">
-                    <?php foreach ( array_slice( $technologies, 0, 3 ) as $tech ) : ?>
+        <footer class="project-card__footer mt-auto">
+            <?php
+            // Get technologies - either from taxonomy or manual input
+            $tech_items = [];
+            if ( ! empty( $technologies ) && ! is_wp_error( $technologies ) ) {
+                // Use taxonomy terms
+                $tech_items = array_slice( $technologies, 0, 3 );
+            } elseif ( ! empty( $manual_technologies ) ) {
+                // Use manually entered technologies (comma-separated)
+                $manual_tech_array = array_map( 'trim', explode( ',', $manual_technologies ) );
+                $tech_items = array_slice( $manual_tech_array, 0, 3 );
+            }
+
+            if ( ! empty( $tech_items ) ) : ?>
+                <div class="project-card__technologies d-flex flex-wrap gap-xs mb-md align-items-start">
+                    <?php foreach ( $tech_items as $tech ) : ?>
                         <span class="badge badge--tech bg-background text-muted border border-secondary" style="font-size: 0.75rem;">
-                            <?php echo esc_html( $tech->name ); ?>
+                            <?php echo esc_html( is_object( $tech ) ? $tech->name : $tech ); ?>
                         </span>
                     <?php endforeach; ?>
-                    <?php if ( count( $technologies ) > 3 ) : ?>
-                        <span class="badge badge--tech bg-background text-muted border border-secondary" style="font-size: 0.75rem;">+<?php echo count( $technologies ) - 3; ?></span>
+                    <?php
+                    $total_count = 0;
+                    if ( ! empty( $technologies ) && ! is_wp_error( $technologies ) ) {
+                        $total_count = count( $technologies );
+                    } elseif ( ! empty( $manual_technologies ) ) {
+                        $manual_tech_array = array_map( 'trim', explode( ',', $manual_technologies ) );
+                        $total_count = count( $manual_tech_array );
+                    }
+                    if ( $total_count > 3 ) : ?>
+                        <span class="badge badge--tech bg-background text-muted border border-secondary" style="font-size: 0.75rem;">+<?php echo $total_count - 3; ?></span>
                     <?php endif; ?>
+                </div>
+            <?php else : ?>
+                <!-- Debug: No technologies found or error -->
+                <div class="project-card__technologies d-flex flex-wrap gap-xs mb-md align-items-start">
+                    <span class="badge badge--tech bg-background text-muted border border-secondary" style="font-size: 0.75rem;">No Tech</span>
                 </div>
             <?php endif; ?>
 

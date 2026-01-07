@@ -41,12 +41,14 @@ class CPT_Projects {
         $subtitle      = get_post_meta( $post->ID, 'project_subtitle', true );
         $client        = get_post_meta( $post->ID, 'project_client', true );
         $url           = get_post_meta( $post->ID, 'project_url', true );
+        $technologies  = get_post_meta( $post->ID, 'project_technologies', true );
         $delivery_time = get_post_meta( $post->ID, 'project_delivery_time', true );
         $ai_code_pct   = get_post_meta( $post->ID, 'project_ai_code_pct', true );
         $team_size     = get_post_meta( $post->ID, 'project_team_size', true );
         $demo_qr       = get_post_meta( $post->ID, 'project_demo_qr', true );
         $demo_user     = get_post_meta( $post->ID, 'project_demo_user', true );
         $demo_pass     = get_post_meta( $post->ID, 'project_demo_pass', true );
+        ?>
         ?>
         <p>
             <label for="project_subtitle"><?php esc_html_e( 'Subtitle', 'ai-dev-theme' ); ?></label>
@@ -59,6 +61,11 @@ class CPT_Projects {
         <p>
             <label for="project_url"><?php esc_html_e( 'Project URL (Demo)', 'ai-dev-theme' ); ?></label>
             <input type="url" id="project_url" name="project_url" value="<?php echo esc_attr( $url ); ?>" class="widefat" />
+        </p>
+        <p>
+            <label for="project_technologies"><?php esc_html_e( 'Technologies (comma-separated)', 'ai-dev-theme' ); ?></label>
+            <input type="text" id="project_technologies" name="project_technologies" value="<?php echo esc_attr( $technologies ); ?>" class="widefat" placeholder="e.g. Java, Python, Vue" />
+            <span class="description"><?php esc_html_e( 'Enter technologies separated by commas. This is a fallback if taxonomy is not used.', 'ai-dev-theme' ); ?></span>
         </p>
         <p>
             <label for="project_demo_qr"><?php esc_html_e( 'Demo QR Code Image URL', 'ai-dev-theme' ); ?></label>
@@ -117,6 +124,7 @@ class CPT_Projects {
             'project_subtitle',
             'project_client',
             'project_url',
+            'project_technologies',
             'project_delivery_time',
             'project_ai_code_pct',
             'project_team_size',

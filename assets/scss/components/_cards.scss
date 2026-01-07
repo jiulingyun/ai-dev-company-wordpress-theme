@@ -106,6 +106,8 @@
   margin-right: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
   white-space: nowrap; /* Prevent line breaks inside badges */
+  vertical-align: top; /* Ensure proper alignment */
+  flex-shrink: 0; /* Prevent shrinking in flex containers */
   
   &--tech {
     background-color: rgba(0, 240, 255, 0.1);
@@ -116,5 +118,56 @@
       background-color: rgba(0, 240, 255, 0.2);
       box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
     }
+  }
+}
+
+/* Reduce vertical spacing between badges inside project cards and ensure wrapping */
+.project-card__technologies {
+  .badge {
+    margin-bottom: var(--spacing-xs); /* smaller gap so badges cluster horizontally */
+    padding: 0.2em 0.6em; /* slightly smaller pills to fit more on a line */
+    font-size: calc(var(--font-size-xs) - 0.05rem);
+  }
+}
+
+/* Force horizontal layout for project card technology badges and prevent unintended full-width stacking */
+.project-card__technologies.d-flex {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: var(--spacing-xs) !important;
+}
+
+.project-card__technologies.d-flex .badge {
+  display: inline-flex !important; /* ensure badges are inline flex items */
+  flex: 0 0 auto !important;       /* prevent badges from stretching to full width */
+  width: auto !important;
+  margin-bottom: 0.5rem !important; /* compact vertical gap */
+}
+
+/* Give the technologies column room inside the footer and prevent the button from forcing full-width */
+.project-card__footer {
+  .project-card__technologies {
+    flex: 1 1 auto; /* allow tech list to take available space */
+    min-width: 0; /* allow it to shrink properly inside flex */
+  }
+
+  .button {
+    flex: 0 0 auto; /* prevent button from stretching */
+    width: auto !important;
+  }
+}
+
+/* Prevent utility `.w-100` from forcing the footer button to full width inside project cards.
+   Still allow full-width buttons on very small screens for accessibility. */
+.project-card__footer .button.w-100 {
+  width: auto !important;
+  flex: 0 0 auto !important;
+  min-width: 0;
+}
+
+@media (max-width: 575.98px) {
+  .project-card__footer .button.w-100 {
+    width: 100% !important;
+    display: block;
   }
 }
